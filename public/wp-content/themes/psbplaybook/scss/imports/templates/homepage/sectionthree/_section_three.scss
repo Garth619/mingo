@@ -1,0 +1,325 @@
+#section-three {
+  padding: 50px 15px 32px;
+  @include mq(small_tablet) {
+    padding: 70px 15px;
+  }
+  @include mq(small_laptop) {
+    padding: 113px 51px 65px 85px;
+  }
+  @include mq(large_laptop) {
+    padding: 152px 75px 65px;
+  }
+  @include mq(small_monitor) {
+    padding: 152px 75px 100px;
+  }
+}
+
+#sec-three-inner {
+  @include mq(small_laptop) {
+    max-width: 1115px;
+    @include margin_lr();
+    @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    max-width: 1305px;
+  }
+  @include mq(small_laptop) {
+    max-width: 1445px;
+  }
+}
+
+#sec-three-top {
+  @include mq(small_laptop) {
+    flex-shrink: 0;
+    flex-basis: 475px;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 575px;
+  }
+}
+
+span#sec-three-title {
+  display: block;
+  @include type(
+    (
+      size: 50px,
+      height: 50px,
+      family: $secondaryfont,
+      color: $blueone,
+      weight: 500,
+      align: center,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    @include quick_type(55px, 50px, null);
+  }
+  @include mq(small_laptop) {
+    text-align: left;
+  }
+
+  br {
+    @include mq(small_tablet) {
+      display: none;
+    }
+  }
+}
+
+#sec-three-featured-post {
+  margin-top: 25px;
+  max-width: 475px;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    margin-top: 40px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 28px;
+    max-width: 100%;
+    @include margin_lr(0);
+  }
+  @include mq(large_laptop) {
+    margin-top: 41px;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    #sec-three-large-image {
+      padding: 0 15px;
+      overflow: hidden;
+      @include mq(small_tablet) {
+        padding: 0;
+      }
+      img {
+        transform: scale(1);
+        transition: all 600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+        @include image();
+      }
+    }
+    span {
+      display: block;
+      &#sec-three-featured-date {
+        @include mq(small_tablet) {
+          text-align: left;
+        }
+      }
+      &#sec-three-description {
+        margin-top: 15px;
+        padding: 0 15px;
+        @include type(
+          (
+            size: 17px,
+            height: 30px,
+            family: $primaryfont,
+            weight: 600,
+            color: $blueone,
+          )
+        );
+        @include mq(small_tablet) {
+          padding: 0px;
+        }
+      }
+    }
+  }
+  &:hover {
+    a {
+      #sec-three-large-image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+span.sec-three-subtitle {
+  display: block;
+  padding: 36px 15px 15px;
+  border-bottom: 2px solid $bluefour;
+  @include type(
+    (
+      size: 23px,
+      height: 21px,
+      family: $secondaryfont,
+      color: $golddark,
+      weight: 600,
+      align: left,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    padding: 40px 0px 20px;
+    text-align: left;
+  }
+  @include mq(large_laptop) {
+    padding: 31px 0px 20px;
+  }
+}
+
+#sec-three-bottom {
+  max-width: 615px;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    padding-top: 40px;
+  }
+  @include mq(small_laptop) {
+    padding-top: 0;
+    margin-left: 75px;
+    margin-right: 0;
+    max-width: 100%;
+  }
+  @include mq(small_monitor) {
+    margin-left: 195px;
+  }
+}
+
+#sec-three-prev {
+  margin-top: 25px;
+  @include mq(small_tablet) {
+    margin-top: 40px;
+  }
+}
+
+span {
+  &#sec-three-prev-episodes-title {
+    padding-left: 75px;
+    padding-right: 75px;
+    text-align: center;
+    @include mq(small_tablet) {
+    }
+    @include mq(small_laptop) {
+      padding-left: 0px;
+      padding-right: 0px;
+      text-align: left;
+    }
+    @include mq(large_laptop) {
+      padding: 0px 0px 20px;
+    }
+  }
+}
+
+.sec-three-prev-single {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #c6ced8;
+
+  @include mq(small_tablet) {
+    @include flex();
+  }
+  @include mq(small_laptop) {
+    padding-bottom: 45px;
+    margin-bottom: 35px;
+  }
+  &:hover {
+    .sec-three-prev-single-content {
+      span.sec-three-prev-title {
+        color: #043c98;
+        text-decoration: underline;
+      }
+    }
+  }
+  &:last-of-type {
+    border: none;
+  }
+  .playbook-video {
+    @include mq(small_tablet) {
+      @include box(241px, 128px);
+    }
+  }
+}
+
+.sec-three-prev-single-content {
+  @include mq(small_tablet) {
+    flex-grow: 1;
+    order: 1;
+    text-align: left;
+  }
+  a {
+    text-decoration: none;
+    span {
+      display: block;
+      &.sec-thress-prev-epi-num {
+        margin-top: 10px;
+        @include type(
+          (
+            size: 13px,
+            height: 19px,
+            spacing: 0.65px,
+            family: $primaryfont,
+            color: $golddark,
+            weight: 800,
+            transform: uppercase,
+          )
+        );
+      }
+      &.sec-three-prev-title {
+        margin-top: 10px;
+        padding: 0 20px;
+        transition: all 200ms ease-in-out;
+        text-decoration: none;
+        max-width: 340px;
+        @include margin_lr();
+        @include type(
+          (
+            size: 18px,
+            height: 25px,
+            color: $blueone,
+            family: $primaryfont,
+            weight: 800,
+          )
+        );
+        @include mq(small_tablet) {
+          padding: 0;
+          max-width: 100%;
+        }
+        br {
+          @include mq(small_monitor) {
+            display: none;
+          }
+        }
+      }
+      &.sec-three-prev-date {
+        margin-top: 12px;
+        @include type(
+          (
+            size: 13px,
+            height: 15px,
+            family: $primaryfont,
+            weight: 500,
+            color: $grey,
+          )
+        );
+      }
+    }
+  }
+}
+
+.sec-three-prev-single-video {
+  @include mq(small_tablet) {
+    order: 2;
+    margin-left: 80px;
+    margin-right: 20px;
+  }
+  @include mq(small_laptop) {
+    margin-left: 30px;
+  }
+  .playbook-video {
+    max-width: 241px;
+    height: 128px;
+    @include margin_lr();
+    .playbook-wistia {
+      z-index: 2;
+    }
+    .playbook-video-overlay {
+      //z-index: 1;
+      .playbook-play-button {
+      }
+    }
+    img.playbook-video-image {
+      // object-fit: cover;
+      // @include abs(0, null, null, 0);
+    }
+  }
+}
