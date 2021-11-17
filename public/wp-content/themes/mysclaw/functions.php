@@ -3,24 +3,78 @@
 /* Front Facing Styles and Scripts
 -------------------------------------------------------------- */
 
-function load_my_styles_scripts()
-{
+// function load_my_styles_scripts()
+// {
 
-    // Styles
+//     // Styles
 
-    wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
+//     wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
 
-    // Disables jquery then registers it again to go into footer
+//     // Disables jquery then registers it again to go into footer
+
+//     wp_deregister_script('jquery');
+//     wp_register_script('jquery', includes_url('/js/jquery/jquery.min.js'), false, null, true);
+//     wp_enqueue_script('jquery');
+
+//     wp_enqueue_script('jquery-custom', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true);
+
+// }
+
+// add_action('wp_enqueue_scripts', 'load_my_styles_scripts', 20);
+
+add_action('wp_enqueue_scripts', function () {
 
     wp_deregister_script('jquery');
     wp_register_script('jquery', includes_url('/js/jquery/jquery.min.js'), false, null, true);
     wp_enqueue_script('jquery');
 
-    wp_enqueue_script('jquery-custom', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true);
+    $dirJS = new DirectoryIterator(get_stylesheet_directory() . '/js');
 
-}
+    foreach ($dirJS as $file) {
+        if (pathinfo($file, PATHINFO_EXTENSION) === 'js') {
+            $fullName = basename($file);
+            $name = substr(basename($fullName), 0, strpos(basename($fullName), '.'));
 
-add_action('wp_enqueue_scripts', 'load_my_styles_scripts', 20);
+            // Set Dependencies for any script.
+            // Since jQuery is already set as a priority requirement no need to list it as a dependency here.
+            switch ($name) {
+
+                // case 'examplename':
+                //     $deps = array('exampleDependency');
+                //     break;
+
+                default:
+                    $deps = null;
+                    break;
+            }
+
+            // string #defer is added to the filename, used as an identifier to Defer the specific script
+            // It is filtered, using the 'script_loader_tag' filter.
+            wp_enqueue_script($name, get_template_directory_uri() . '/js/' . $fullName . '#defer', $deps, null, true);
+        }
+    }
+
+    // Main is Custom Coded by the 1P21 Team.
+    // ( Used with an IF Statement, for Legacy Compatability )
+    if (file_exists(get_template_directory() . '/main-min.js')):
+        wp_register_script('mainjs', get_template_directory_uri() . '/main-min.js', '', false, true);
+        wp_enqueue_script('mainjs');
+    endif;
+}, 10);
+
+/** JS - Defer Third Party or Manually Added Script
+ */
+add_filter('script_loader_tag', function ($tag, $handle, $src) {
+
+    if (strpos($src, '#defer') === false):
+        return $tag;
+    else:
+        $tag = str_replace('#defer', '', $tag);
+        $tag = str_replace('<script', '<script defer data-handle="' . $handle . '"', $tag);
+        return $tag;
+    endif;
+
+}, 10, 3);
 
 /* CSS in Header for Lighthouse
 -------------------------------------------------------------- */
