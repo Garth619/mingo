@@ -2,23 +2,42 @@ body {
   &.sticky {
     #header-right {
       @include fixed(0, null, null, 0);
+      @include mq(small_tablet) {
+        position: static;
+      }
     }
   }
 }
 
 header {
+  background: $white;
+  @include mq(small_tablet) {
+    width: 100%;
+    @include fixed(0, null, null, 0);
+  }
 }
 
 #header-inner {
+  @include mq(small_tablet) {
+    @include flex(space-between);
+  }
 }
 
 #header-left {
   width: 100%;
   padding: 13px;
+  @include mq(small_tablet) {
+    padding: 13px 38px;
+    width: auto;
+    flex-shrink: 0;
+  }
   a#logo {
     display: block;
     max-width: 250px;
     @include margin_lr();
+    @include mq(small_tablet) {
+      @include margin_lr(0);
+    }
     img {
       @include image();
       width: 100%;
@@ -29,6 +48,10 @@ header {
 #header-right {
   width: 100%;
   position: relative;
+  @include mq(small_tablet) {
+    flex-grow: 1;
+    position: static;
+  }
 }
 
 #header-right-contact {
@@ -37,11 +60,18 @@ header {
   width: calc(100% - 91px);
   position: relative;
   z-index: 2;
+  @include mq(small_tablet) {
+    background: transparent;
+    padding: 25px 30px 0 30px;
+  }
 }
 
 #header-free-consult {
   position: relative;
   z-index: 2;
+  @include mq(small_tablet) {
+    @include flex(null, flex-end, column);
+  }
   span,
   a {
     @include type(
@@ -58,6 +88,10 @@ header {
     font-size: 13px;
     display: block;
     margin-bottom: 3px;
+    @include mq(small_tablet) {
+      position: relative;
+      left: -3px;
+    }
   }
   a {
     font-size: 20px;

@@ -297,11 +297,6 @@ jQuery(document).ready(function ($) {
     $("html, body").toggleClass("fixed");
   });
 
-  $("#nav-close").on("click", function (e) {
-    $("nav, #nav-bg").removeClass("open");
-    $("html, body").css("overflow-y", "scroll");
-  });
-
   function navDesktop() {
     $("header nav").addClass("nav_desktop");
 

@@ -2,13 +2,23 @@ nav {
   background: $bluetwo;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  transform: translateY(-25px);
+  transform: translate(0, -25px);
   opacity: 0;
   visibility: hidden;
   transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out,
-    transform 300ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transform 600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   @include box(100%, calc(100vh - 85px));
-  @include abs(85px, null, null, 0, 1);
+  @include abs(85px, 0, null, null, 1);
+  @include mq(small_tablet) {
+    top: 84px;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: none;
+    height: calc(100vh - 84px);
+    transform: translate(0, 0px);
+    transition: all 200ms ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+    @include flex(flex-end);
+  }
   ul {
     list-style: none;
     li {
@@ -80,12 +90,46 @@ nav {
 
 nav {
   &.open {
-    transform: translateY(0px);
+    transform: translate(0, 0px);
     opacity: 1;
     visibility: visible;
+    .menu-header {
+      @include mq(small_tablet) {
+        transform: translate(0%, 0);
+        transition-delay: 100ms;
+      }
+    }
   }
 }
 
 .menu-header {
   padding: 60px 30px;
+  @include mq(small_tablet) {
+    background: $bluetwo;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    transform: translate(100%, 0);
+    transition: transform 600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include box(340px, calc(100%));
+  }
+}
+
+#nav-bg {
+  display: none;
+  @include mq(small_tablet) {
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    transition: all 200ms ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+    @include box(calc(100vh - 219px), calc(100vh - 84px));
+    @include fixed(84px, null, null, 0);
+  }
+  &.open {
+    @include mq(small_tablet) {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 400ms;
+    }
+  }
 }
