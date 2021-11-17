@@ -30,46 +30,11 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
   <link rel="profile" href="http://gmpg.org/xfn/11" />
   <link rel="pingback" href="<?php bloginfo('pingback_url');?>" />
 
-  <?php if (get_field('host_google_fonts_locally', 'option') == "Yes"): ?>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-  <style>
-  <?php if (have_rows('locally_hosted_google_fonts_repeater', 'option')): ?><?php while (have_rows('locally_hosted_google_fonts_repeater', 'option')): the_row();
-
-  ?>@font-face {
-    font-family: '<?php the_sub_field('font_family', 'option');?>';
-    font-style: <?php the_sub_field('font_style', 'option');
-    ?>;
-    font-weight: <?php the_sub_field('font_weight', 'option');
-    ?>;
-    font-display: <?php the_sub_field('font_display', 'option');
-    ?>;
-    src: local('<?php the_sub_field('src: local', 'option');?>'), local('<?php the_sub_field('local', 'option');?>'),
-      url('<?php the_sub_field('font_file_woff2', 'option');?>') format('woff2');
-  }
-
-  <?php endwhile;
-  ?><?php endif;
-  ?>
-  </style>
-
-  <?php else: ?>
-
-  <?php if (get_field('fonts', 'option')): ?>
-
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-
-  <style>
-  <?php while (has_sub_field('fonts', 'option')): ?>@import url(<?php the_sub_field('font_url');
-  ?>);
-
-  <?php endwhile;
-  ?>
-  </style>
-
-  <?php endif;
-?>
-
-  <?php endif;?>
+  <link rel="stylesheet" href="https://use.typekit.net/bga3qek.css">
 
   <style>
   <?php the_field('review_css', 'option');
@@ -88,6 +53,55 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
 
   <header>
 
-    <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu'));?>
+    <div id='header-inner'>
+
+      <div id='header-left'>
+
+        <a id='logo' href='<?php bloginfo('url');?>'>
+
+          <picture>
+
+            <!-- <source media='(min-width: 1380px)' data-srcset='<?php bloginfo('template_directory');?>/images'> -->
+
+            <img src='<?php bloginfo('template_directory');?>/images/logo-lt.svg' alt='' />
+
+          </picture>
+
+        </a><!-- logo -->
+
+      </div><!-- header-left -->
+
+      <div id='header-right'>
+
+        <div id='header-right-contact'>
+
+          <div id='header-free-consult'>
+
+            <span>free consultation</span>
+
+            <a id='phone' href='tel:+14142737400'>(414) 273-7400</a><!-- phone -->
+
+          </div><!-- header-free-consult -->
+
+          <a class='button spanish-button' href=''>español</a>
+          <!-- button spanish-button -->
+
+        </div><!-- header-right-contact -->
+
+        <div id='menu-wrapper'>
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div><!-- menu-wrapper -->
+
+        <nav>
+          <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu'));?>
+        </nav>
+
+      </div><!-- header-right -->
+
+    </div><!-- header-inner -->
 
   </header>

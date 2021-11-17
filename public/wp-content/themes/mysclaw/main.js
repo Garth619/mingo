@@ -77,8 +77,8 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  // createWaypoint("section-one", "body", "fade-header", -185, null, true);
-  // createWaypoint("internal-main", "body", "fade-header", -185, null, true);
+  //createWaypoint("section-one", "body", "sticky", 85, null, true);
+  createWaypoint("header-right", "body", "sticky", 0, null, true);
 
   /* Smooth Scroll down to section on click (<a href="#id_of_section_to_be_scrolled_to">)
   --------------------------------------------------------------------------------------- */
@@ -292,9 +292,9 @@ jQuery(document).ready(function ($) {
 
   //$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
-  $("body.logged-in #menu-wrapper").on("click", function (e) {
-    $("nav, #nav-bg").addClass("open");
-    $("html, body").css("overflow-y", "hidden");
+  $("#menu-wrapper").on("click", function (e) {
+    $("nav").toggleClass("open");
+    $("html, body").toggleClass("fixed");
   });
 
   $("#nav-close").on("click", function (e) {
@@ -309,13 +309,13 @@ jQuery(document).ready(function ($) {
       .next("ul.sub-menu")
       .removeClass("open");
 
-    $("header nav").removeClass("nav_tablet");
+    $("header nav").removeClass("nav_device");
   }
 
-  function navTablet() {
+  function navDevice() {
     $("header nav").removeClass("nav_desktop");
 
-    $("header nav").addClass("nav_tablet");
+    $("header nav").addClass("nav_device");
   }
 
   function tabletClick() {
@@ -333,7 +333,7 @@ jQuery(document).ready(function ($) {
   }
 
   if ($(window).width() < 1170) {
-    navTablet();
+    navDevice();
 
     $("header nav li.menu-item-has-children > a")
       .off()
@@ -353,7 +353,7 @@ jQuery(document).ready(function ($) {
       }
 
       if ($(window).width() < 1170) {
-        navTablet();
+        navDevice();
 
         // off
 

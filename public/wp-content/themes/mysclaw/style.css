@@ -580,7 +580,7 @@ h4 {
 .content {
   font-size: 17px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-style: normal;
   text-decoration: none;
@@ -592,7 +592,7 @@ h4 {
   padding-bottom: 20px;
   font-size: 20px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 800;
   font-style: normal;
   text-decoration: none;
@@ -602,7 +602,7 @@ h4 {
   margin-bottom: 20px;
   font-size: 22px;
   line-height: 25px;
-  font-family: "Khand", sans-serif;
+  font-family: paralucent, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-style: normal;
@@ -612,7 +612,7 @@ h4 {
   padding-bottom: 13px;
   font-size: 17px;
   line-height: 30px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 800;
   font-style: normal;
   text-decoration: none;
@@ -720,6 +720,10 @@ img.aligncenter {
   display: block;
 }
 
+#internal-main {
+  height: 1000px;
+}
+
 #general-form {
   padding-bottom: 20px;
 }
@@ -730,7 +734,7 @@ img.aligncenter {
   margin-bottom: 10px;
   font-size: 25px;
   line-height: 25px;
-  font-family: "Khand", sans-serif;
+  font-family: paralucent, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-style: normal;
@@ -739,7 +743,7 @@ img.aligncenter {
 #general-form span#general-form-description {
   font-size: 17px;
   line-height: 27px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-style: normal;
   text-decoration: none;
@@ -792,7 +796,7 @@ img.aligncenter {
   display: block;
   font-size: 16px;
   line-height: 19px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-style: normal;
   text-decoration: none;
@@ -809,7 +813,7 @@ img.aligncenter {
   box-shadow: inset 0px 2px 5px #0000001a;
   font-size: 16px;
   line-height: 19px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-style: normal;
   text-decoration: none;
@@ -859,7 +863,7 @@ img.aligncenter {
   background: transparent;
   font-size: 22px;
   line-height: 25px;
-  font-family: "Khand", sans-serif;
+  font-family: paralucent, sans-serif;
   color: #fff;
   font-weight: 500;
   text-align: center;
@@ -873,4 +877,181 @@ img.aligncenter {
   text-align: center;
   font-style: normal;
   text-decoration: none;
+}
+body.sticky #header-right {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#header-left {
+  width: 100%;
+  padding: 13px;
+}
+#header-left a#logo {
+  display: block;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#header-left a#logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 100%;
+}
+
+#header-right {
+  width: 100%;
+  position: relative;
+}
+
+#header-right-contact {
+  background: #f2f2f2;
+  padding: 25px 38px;
+  width: calc(100% - 91px);
+  position: relative;
+  z-index: 2;
+}
+
+#header-free-consult {
+  position: relative;
+  z-index: 2;
+}
+#header-free-consult span,
+#header-free-consult a {
+  letter-spacing: 1.3px;
+  font-family: paralucent, sans-serif;
+  color: #fd3939;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+#header-free-consult span {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 3px;
+}
+#header-free-consult a {
+  font-size: 20px;
+  display: inline-block;
+}
+
+a.spanish-button {
+  display: none;
+}
+
+#menu-wrapper {
+  background: #02081c;
+  width: 91px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#menu-wrapper span {
+  display: block;
+  background: #fff;
+  margin-bottom: 9px;
+  width: 32px;
+  height: 2px;
+}
+#menu-wrapper span:last-of-type {
+  margin-bottom: 0;
+}
+
+nav {
+  background: #02081c;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  transform: translateY(-25px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out, transform 300ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  width: 100%;
+  height: calc(100vh - 85px);
+  position: absolute;
+  top: 85px;
+  left: 0;
+  z-index: 1;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  line-height: 19px;
+  font-family: paralucent, sans-serif;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+nav ul li.current-menu-item > a {
+  color: #a57d4c;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 38px;
+  transition: all 200ms ease-in-out;
+}
+
+nav ul.menu li.menu-item-has-children > a {
+  position: relative;
+  display: inline-block;
+}
+nav ul.menu li.menu-item-has-children > a::after {
+  transition: all 200ms ease-in-out;
+  position: absolute;
+  top: 7px;
+  right: -14px;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-top: 7px solid #fff;
+  border-bottom: none;
+}
+nav ul.menu li.current-menu-ancestor > a {
+  color: #a57d4c;
+}
+nav ul.menu li.current-menu-ancestor > a::after {
+  width: 0;
+  height: 0;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-top: 7px solid #a57d4c;
+  border-bottom: none;
+}
+
+nav ul.sub-menu {
+  display: none;
+}
+
+nav.open {
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-header {
+  padding: 60px 30px;
+}
+
+#section-one {
+  background: pink;
+  width: 100%;
+  height: 1000px;
 }

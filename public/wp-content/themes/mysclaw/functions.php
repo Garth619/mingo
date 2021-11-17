@@ -3,24 +3,16 @@
 /* Front Facing Styles and Scripts
 -------------------------------------------------------------- */
 
-// function load_my_styles_scripts()
-// {
+function load_my_styles_scripts()
+{
 
-//     // Styles
+    // Styles
 
-//     wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
+    wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
 
-//     // Disables jquery then registers it again to go into footer
+}
 
-//     wp_deregister_script('jquery');
-//     wp_register_script('jquery', includes_url('/js/jquery/jquery.min.js'), false, null, true);
-//     wp_enqueue_script('jquery');
-
-//     wp_enqueue_script('jquery-custom', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true);
-
-// }
-
-// add_action('wp_enqueue_scripts', 'load_my_styles_scripts', 20);
+add_action('wp_enqueue_scripts', 'load_my_styles_scripts', 20);
 
 add_action('wp_enqueue_scripts', function () {
 

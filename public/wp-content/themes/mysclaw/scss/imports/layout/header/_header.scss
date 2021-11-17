@@ -1,0 +1,87 @@
+body {
+  &.sticky {
+    #header-right {
+      @include fixed(0, null, null, 0);
+    }
+  }
+}
+
+header {
+}
+
+#header-inner {
+}
+
+#header-left {
+  width: 100%;
+  padding: 13px;
+  a#logo {
+    display: block;
+    max-width: 250px;
+    @include margin_lr();
+    img {
+      @include image();
+      width: 100%;
+    }
+  }
+}
+
+#header-right {
+  width: 100%;
+  position: relative;
+}
+
+#header-right-contact {
+  background: $offwhite;
+  padding: 25px 38px;
+  width: calc(100% - 91px);
+  position: relative;
+  z-index: 2;
+}
+
+#header-free-consult {
+  position: relative;
+  z-index: 2;
+  span,
+  a {
+    @include type(
+      (
+        spacing: 1.3px,
+        family: $secondaryfont,
+        color: $red,
+        weight: 600,
+        transform: uppercase,
+      )
+    );
+  }
+  span {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 3px;
+  }
+  a {
+    font-size: 20px;
+    display: inline-block;
+  }
+}
+
+a.spanish-button {
+  display: none;
+}
+
+#menu-wrapper {
+  // background: red;
+  background: $bluetwo;
+  @include box(91px, 100%);
+  @include abs(0, 0, null, null, 2);
+  @include flex(center, center, column);
+  span {
+    display: block;
+    background: $white;
+    margin-bottom: 9px;
+    @include box(32px, 2px);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
