@@ -19,6 +19,15 @@ nav {
     background: rgba(0, 0, 0, 0.5);
     @include flex(flex-end);
   }
+  @include mq(small_laptop) {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: transparent;
+    transform: none;
+    margin-top: 12px;
+    @include box(auto, auto);
+  }
   ul {
     list-style: none;
     li {
@@ -36,14 +45,26 @@ nav {
       &.current-menu-item {
         > a {
           color: $brown;
+          @include mq(small_laptop) {
+            color: $brownlight;
+          }
         }
       }
       a {
         color: $white;
+        cursor: pointer;
         text-decoration: none;
         display: block;
         margin-bottom: 38px;
         transition: all 200ms ease-in-out;
+        @include mq(small_laptop) {
+          margin-bottom: 0px;
+        }
+        &:hover {
+          @include mq(small_laptop) {
+            color: $brownlight;
+          }
+        }
       }
     }
   }
@@ -51,17 +72,36 @@ nav {
 
 nav {
   ul.menu {
+    @include mq(small_laptop) {
+      @include flex(space-between);
+    }
     li {
       &.menu-item-has-children {
+        position: relative;
+        @include mq(small_laptop) {
+          padding-bottom: 20px;
+        }
+        &:hover {
+          > a {
+            @include mq(small_laptop) {
+              color: $brownlight;
+            }
+            &::after {
+              @include mq(small_laptop) {
+                @include tri(down, 4px, 7px, $brownlight);
+              }
+            }
+          }
+          > ul.sub-menu {
+            @include mq(small_laptop) {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
         > a {
           position: relative;
           display: inline-block;
-          // &.active {
-          //   color: $brown;
-          //   &::after {
-          //     @include tri(down, 4px, 7px, $brown);
-          //   }
-          // }
           &::after {
             transition: all 200ms ease-in-out;
             @include abs(7px, -14px, null, null);
@@ -73,8 +113,14 @@ nav {
       &.current-menu-ancestor {
         > a {
           color: $brown;
+          @include mq(small_laptop) {
+            color: $brownlight;
+          }
           &::after {
             @include tri(down, 4px, 7px, $brown);
+            @include mq(small_laptop) {
+              @include tri(down, 4px, 7px, $brownlight);
+            }
           }
         }
       }
@@ -85,6 +131,22 @@ nav {
 nav {
   ul.sub-menu {
     display: none;
+    @include mq(small_laptop) {
+      display: block;
+      background: $blue;
+      width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      padding: 15px 18px 8px;
+      transition: all 200ms ease-in-out;
+      @include abs(30px, null, null, -18px);
+      li {
+        text-align: left;
+        a {
+          margin-bottom: 7px;
+        }
+      }
+    }
   }
 }
 
@@ -111,6 +173,13 @@ nav {
     transform: translate(100%, 0);
     transition: transform 600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include box(340px, calc(100%));
+  }
+  @include mq(small_laptop) {
+    transform: none;
+    width: 100%;
+    overflow-y: visible;
+    padding: 0;
+    background: transparent;
   }
 }
 

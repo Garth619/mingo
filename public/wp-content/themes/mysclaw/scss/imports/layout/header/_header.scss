@@ -15,11 +15,19 @@ header {
     width: 100%;
     @include fixed(0, null, null, 0);
   }
+  @include mq(small_laptop) {
+    background: transparent;
+    background: black;
+    padding-bottom: 10px;
+  }
 }
 
 #header-inner {
   @include mq(small_tablet) {
     @include flex(space-between);
+  }
+  @include mq(small_laptop) {
+    padding: 0 28px;
   }
 }
 
@@ -30,6 +38,10 @@ header {
     padding: 13px 38px;
     width: auto;
     flex-shrink: 0;
+  }
+  @include mq(small_laptop) {
+    margin-top: 8px;
+    padding: 13px 38px 0 0;
   }
   a#logo {
     display: block;
@@ -64,6 +76,13 @@ header {
     background: transparent;
     padding: 25px 30px 0 30px;
   }
+  @include mq(small_laptop) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 0;
+  }
 }
 
 #header-free-consult {
@@ -71,6 +90,10 @@ header {
   z-index: 2;
   @include mq(small_tablet) {
     @include flex(null, flex-end, column);
+  }
+  @include mq(small_laptop) {
+    flex-direction: row;
+    justify-content: flex-end;
   }
   span,
   a {
@@ -96,11 +119,26 @@ header {
   a {
     font-size: 20px;
     display: inline-block;
+    @include mq(small_laptop) {
+      color: $white;
+      margin-left: 9px;
+      margin-right: 10px;
+    }
   }
 }
 
 a.spanish-button {
   display: none;
+  @include mq(small_laptop) {
+    display: block;
+    font-size: 12px;
+    padding: 12px 14px;
+    border: 2px solid $brownlight;
+    color: $brownlight;
+    &:hover {
+      background: $brownlight;
+    }
+  }
 }
 
 #menu-wrapper {
@@ -109,6 +147,9 @@ a.spanish-button {
   @include box(91px, 100%);
   @include abs(0, 0, null, null, 2);
   @include flex(center, center, column);
+  @include mq(small_laptop) {
+    display: none;
+  }
   span {
     display: block;
     background: $white;

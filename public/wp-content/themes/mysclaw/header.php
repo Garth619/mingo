@@ -61,7 +61,7 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
 
           <picture>
 
-            <!-- <source media='(min-width: 1380px)' data-srcset='<?php bloginfo('template_directory');?>/images'> -->
+            <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory');?>/images/logo.svg'>
 
             <img src='<?php bloginfo('template_directory');?>/images/logo-lt.svg' alt='' />
 
