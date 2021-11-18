@@ -1,5 +1,6 @@
 .button {
   max-width: max-content;
+  display: block;
   background: $black;
   border-radius: 50px;
   border: 2px solid $brown;
@@ -16,5 +17,76 @@
   &:hover {
     background: $brown;
     color: $white;
+  }
+}
+
+.button-two {
+  max-width: max-content;
+  display: block;
+  background: $red;
+  border-radius: 50px;
+  @include margin_lr();
+  @include type(
+    (
+      family: $secondaryfont,
+      color: $white,
+      weight: 700,
+      align: center,
+      transform: uppercase,
+    )
+  );
+}
+
+.global-video {
+  position: relative;
+  &:hover {
+    .play-button {
+      &::before {
+        background: $red;
+      }
+      &::after {
+        @include tri(right, 7px, 8px, $white);
+      }
+    }
+  }
+}
+
+.mywistia {
+  @include abs(0, null, null, 0, 1);
+  @include box(100%, 100%);
+}
+
+.play-button {
+  display: block;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  padding: 1px;
+  background: rgba(165, 125, 76, 0.7);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.16);
+  @include box(47px, 47px);
+  @include mq(small_tablet) {
+    @include box(59px, 59px);
+  }
+  &:before {
+    background: $white;
+    border-radius: 50%;
+    margin: auto;
+    @include abs(0, 0, 0, 0);
+    @include box(38px, 38px);
+    @include contentdisplay();
+    @include mq(small_tablet) {
+      @include box(48px, 48px);
+    }
+  }
+  &::after {
+    @include contentdisplay(block);
+    @include tri(right, 7px, 8px, $red);
+    margin: auto;
+    @include abs(0, 0, 0, 0);
+    @include mq(small_tablet) {
+      @include tri(right, 8px, 10px, $red);
+    }
   }
 }

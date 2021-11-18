@@ -11,14 +11,17 @@ body {
 
 header {
   background: $white;
+  position: relative;
+  z-index: 5;
   @include mq(small_tablet) {
     width: 100%;
     @include fixed(0, null, null, 0);
   }
   @include mq(small_laptop) {
     background: transparent;
-    background: black;
+    //background: black;
     padding-bottom: 10px;
+    position: absolute;
   }
 }
 

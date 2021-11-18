@@ -1,4 +1,135 @@
+body.sticky {
+  #section-one {
+    margin-top: 86px;
+  }
+}
+
 #section-one {
-  background: pink;
-  @include box(100%, 1000px);
+  position: relative;
+  @include mq(small_tablet) {
+    margin-top: 84px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 0px;
+  }
+  &::before {
+    @include mq(small_laptop) {
+      background: linear-gradient(
+        to bottom,
+        $bluetwo 12%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      @include contentdisplay();
+      @include box(100%, 120px);
+      @include abs(0, null, null, 0, 1);
+    }
+  }
+}
+
+#sec-one-inner {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  @include mq(small_tablet) {
+    padding: 100px 50px 118px;
+  }
+  @include mq(small_laptop) {
+    padding: 185px 50px 200px;
+  }
+}
+
+#sec-one-video {
+  @include flex(center, center);
+  @include box(130px, 84px);
+  @include margin_lr();
+  @include mq(small_tablet) {
+    @include box(162px, 106px);
+  }
+  img#video-thumb {
+    object-fit: cover;
+    @include image();
+    @include abs(0, null, null, 0);
+  }
+}
+
+#sec-one-title {
+  display: block;
+  margin-top: 25px;
+  @include margin_lr();
+  @include type(
+    (
+      size: 39px,
+      height: 39px,
+      spacing: 0.97px,
+      family: $secondaryfont,
+      color: $white,
+      weight: 700,
+      align: center,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    @include quick_type(62px, 62px, 1.55px);
+  }
+  @include mq(small_laptop) {
+    @include quick_type(77px, 77px, 1.93px);
+  }
+}
+
+img#hero {
+  object-fit: cover;
+  @include image();
+  @include box(100%, 100%);
+  @include abs(0, null, null, 0);
+}
+
+ul#sec-one-selling-points {
+  list-style: none;
+  max-width: 200px;
+  margin-top: 15px;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    max-width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+  @include mq(small_laptop) {
+    margin-top: 25px;
+  }
+  li {
+    @include type(
+      (
+        size: 14px,
+        height: 24px,
+        spacing: 1.19px,
+        family: $secondaryfont,
+        color: $white,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
+    @include mq(small_tablet) {
+      display: inline-block;
+    }
+    @include mq(small_laptop) {
+      font-size: 16px;
+      letter-spacing: 1.36px;
+    }
+    &::before {
+      color: $red;
+      @include contentdisplay(inline-block, "•");
+    }
+    &:first-of-type {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.sec-one-button {
+  padding: 20px 35px;
+  font-size: 13px;
+  margin-top: 25px;
+  letter-spacing: 1.1px;
 }
