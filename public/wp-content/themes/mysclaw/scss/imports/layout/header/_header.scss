@@ -29,6 +29,13 @@ header {
   @include mq(small_laptop) {
     padding: 0 28px;
   }
+  @include mq(large_laptop) {
+    padding: 0 40px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1920px;
+    @include margin_lr();
+  }
 }
 
 #header-left {
@@ -49,6 +56,12 @@ header {
     @include margin_lr();
     @include mq(small_tablet) {
       @include margin_lr(0);
+    }
+    @include mq(large_laptop) {
+      max-width: 332px;
+    }
+    @include mq(small_monitor) {
+      max-width: 365px;
     }
     img {
       @include image();
@@ -115,6 +128,12 @@ header {
       position: relative;
       left: -3px;
     }
+    @include mq(large_laptop) {
+      @include quick_type(16px, null, 1.6px);
+    }
+    @include mq(small_monitor) {
+      @include quick_type(19px, null, 1.9px);
+    }
   }
   a {
     font-size: 20px;
@@ -124,6 +143,14 @@ header {
       margin-left: 9px;
       margin-right: 10px;
     }
+    @include mq(large_laptop) {
+      font-size: 25px;
+      margin-left: 21px;
+      margin-right: 22px;
+    }
+    @include mq(small_monitor) {
+      font-size: 29px;
+    }
   }
 }
 
@@ -132,12 +159,18 @@ a.spanish-button {
   @include mq(small_laptop) {
     display: block;
     font-size: 12px;
-    padding: 12px 14px;
-    border: 2px solid $brownlight;
+    padding: 10px 14px;
     color: $brownlight;
     &:hover {
       background: $brownlight;
     }
+  }
+  @include mq(large_laptop) {
+    padding: 14px 24px;
+  }
+  @include mq(small_monitor) {
+    font-size: 15px;
+    padding: 16px 25px;
   }
 }
 

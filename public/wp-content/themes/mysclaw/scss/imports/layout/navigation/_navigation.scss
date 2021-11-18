@@ -28,6 +28,9 @@ nav {
     margin-top: 12px;
     @include box(auto, auto);
   }
+  @include mq(large_laptop) {
+    margin-top: 20px;
+  }
   ul {
     list-style: none;
     li {
@@ -42,6 +45,9 @@ nav {
           align: center,
         )
       );
+      @include mq(small_monitor) {
+        @include quick_type(18px, 22px, null);
+      }
       &.current-menu-item {
         > a {
           color: $brown;
@@ -73,9 +79,18 @@ nav {
 nav {
   ul.menu {
     @include mq(small_laptop) {
-      @include flex(space-between);
+      @include flex(flex-end);
     }
-    li {
+    > li {
+      @include mq(small_laptop) {
+        margin-left: 33px;
+      }
+      @include mq(large_laptop) {
+        margin-left: 40px;
+      }
+      @include mq(small_monitor) {
+        margin-left: 60px;
+      }
       &.menu-item-has-children {
         position: relative;
         @include mq(small_laptop) {

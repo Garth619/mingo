@@ -938,6 +938,18 @@ header {
     padding: 0 28px;
   }
 }
+@media screen and (min-width: 1380px) {
+  #header-inner {
+    padding: 0 40px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #header-inner {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 #header-left {
   width: 100%;
@@ -966,6 +978,16 @@ header {
   #header-left a#logo {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #header-left a#logo {
+    max-width: 332px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #header-left a#logo {
+    max-width: 365px;
   }
 }
 #header-left a#logo img {
@@ -1047,6 +1069,18 @@ header {
     left: -3px;
   }
 }
+@media screen and (min-width: 1380px) {
+  #header-free-consult span {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #header-free-consult span {
+    font-size: 19px;
+    letter-spacing: 1.9px;
+  }
+}
 #header-free-consult a {
   font-size: 20px;
   display: inline-block;
@@ -1058,6 +1092,18 @@ header {
     margin-right: 10px;
   }
 }
+@media screen and (min-width: 1380px) {
+  #header-free-consult a {
+    font-size: 25px;
+    margin-left: 21px;
+    margin-right: 22px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #header-free-consult a {
+    font-size: 29px;
+  }
+}
 
 a.spanish-button {
   display: none;
@@ -1066,12 +1112,22 @@ a.spanish-button {
   a.spanish-button {
     display: block;
     font-size: 12px;
-    padding: 12px 14px;
-    border: 2px solid #ccad7d;
+    padding: 10px 14px;
     color: #ccad7d;
   }
   a.spanish-button:hover {
     background: #ccad7d;
+  }
+}
+@media screen and (min-width: 1380px) {
+  a.spanish-button {
+    padding: 14px 24px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  a.spanish-button {
+    font-size: 15px;
+    padding: 16px 25px;
   }
 }
 
@@ -1144,6 +1200,11 @@ nav {
     height: auto;
   }
 }
+@media screen and (min-width: 1380px) {
+  nav {
+    margin-top: 20px;
+  }
+}
 nav ul {
   list-style: none;
 }
@@ -1157,6 +1218,12 @@ nav ul li {
   text-align: center;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 1695px) {
+  nav ul li {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 nav ul li.current-menu-item > a {
   color: #a57d4c;
@@ -1188,24 +1255,39 @@ nav ul li a {
 @media screen and (min-width: 1170px) {
   nav ul.menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 }
-nav ul.menu li.menu-item-has-children {
+@media screen and (min-width: 1170px) {
+  nav ul.menu > li {
+    margin-left: 33px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  nav ul.menu > li {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  nav ul.menu > li {
+    margin-left: 60px;
+  }
+}
+nav ul.menu > li.menu-item-has-children {
   position: relative;
 }
 @media screen and (min-width: 1170px) {
-  nav ul.menu li.menu-item-has-children {
+  nav ul.menu > li.menu-item-has-children {
     padding-bottom: 20px;
   }
 }
 @media screen and (min-width: 1170px) {
-  nav ul.menu li.menu-item-has-children:hover > a {
+  nav ul.menu > li.menu-item-has-children:hover > a {
     color: #ccad7d;
   }
 }
 @media screen and (min-width: 1170px) {
-  nav ul.menu li.menu-item-has-children:hover > a::after {
+  nav ul.menu > li.menu-item-has-children:hover > a::after {
     width: 0;
     height: 0;
     border-right: 4px solid transparent;
@@ -1215,16 +1297,16 @@ nav ul.menu li.menu-item-has-children {
   }
 }
 @media screen and (min-width: 1170px) {
-  nav ul.menu li.menu-item-has-children:hover > ul.sub-menu {
+  nav ul.menu > li.menu-item-has-children:hover > ul.sub-menu {
     opacity: 1;
     visibility: visible;
   }
 }
-nav ul.menu li.menu-item-has-children > a {
+nav ul.menu > li.menu-item-has-children > a {
   position: relative;
   display: inline-block;
 }
-nav ul.menu li.menu-item-has-children > a::after {
+nav ul.menu > li.menu-item-has-children > a::after {
   transition: all 200ms ease-in-out;
   position: absolute;
   top: 7px;
@@ -1238,15 +1320,15 @@ nav ul.menu li.menu-item-has-children > a::after {
   border-top: 7px solid #fff;
   border-bottom: none;
 }
-nav ul.menu li.current-menu-ancestor > a {
+nav ul.menu > li.current-menu-ancestor > a {
   color: #a57d4c;
 }
 @media screen and (min-width: 1170px) {
-  nav ul.menu li.current-menu-ancestor > a {
+  nav ul.menu > li.current-menu-ancestor > a {
     color: #ccad7d;
   }
 }
-nav ul.menu li.current-menu-ancestor > a::after {
+nav ul.menu > li.current-menu-ancestor > a::after {
   width: 0;
   height: 0;
   border-right: 4px solid transparent;
@@ -1255,7 +1337,7 @@ nav ul.menu li.current-menu-ancestor > a::after {
   border-bottom: none;
 }
 @media screen and (min-width: 1170px) {
-  nav ul.menu li.current-menu-ancestor > a::after {
+  nav ul.menu > li.current-menu-ancestor > a::after {
     width: 0;
     height: 0;
     border-right: 4px solid transparent;
