@@ -1,0 +1,142 @@
+footer {
+  background: url(images/bkg-pattern.jpg) repeat;
+}
+
+#footer-inner {
+  padding: 50px 30px 40px;
+}
+
+span#footer-form-title {
+  display: block;
+  margin-bottom: 20px;
+  @include type(
+    (
+      size: 34px,
+      height: 36px,
+      spacing: 1.7px,
+      family: $secondaryfont,
+      color: $red,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
+}
+
+.gform_wrapper.gravity-theme .gform_fields {
+  grid-row-gap: 8px !important;
+}
+
+#footer-form {
+  background: $white;
+  border-left: 4px solid $red;
+  padding: 36px 20px 10px;
+  .gform_wrapper {
+    .gfields {
+    }
+
+    .gfield {
+      position: relative;
+      &::after {
+        @include abs(19px, 10px, null, null);
+        @include contentdisplay(block, "*");
+        @include type(
+          (
+            size: 14px,
+            family: $secondaryfont,
+            color: $red,
+            weight: 700,
+          )
+        );
+      }
+      .gfield_label {
+        display: none;
+      }
+      input,
+      textarea {
+        padding: 10px 20px 10px 14px;
+        border: 1px solid $brown;
+        @include type(
+          (
+            size: 14px,
+            family: $primaryfont,
+            color: $black,
+          )
+        );
+      }
+      textarea {
+        height: 150px;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        color: $black;
+        opacity: 1;
+      }
+    }
+    .gfield_html {
+      &::after {
+        display: none;
+      }
+    }
+    .my-required {
+      display: block;
+      margin-top: 13px;
+      @include type(
+        (
+          size: 12px,
+          height: 11px,
+          spacing: 1.2px,
+          family: $secondaryfont,
+          color: $red,
+          weight: 700,
+          transform: uppercase,
+        )
+      );
+    }
+    .my-notice {
+      display: flex;
+      margin-top: 13px;
+      @include type(
+        (
+          size: 12px,
+          height: 14px,
+          spacing: 0.3px,
+          family: $secondaryfont,
+          color: $blue,
+          weight: 600,
+        )
+      );
+      span {
+        color: $brown;
+        margin-right: 5px;
+      }
+    }
+    input[type="submit"] {
+      border: none;
+      cursor: pointer;
+      max-width: max-content;
+      display: block;
+      background: $red;
+      border-radius: 50px;
+      padding: 15px 65px;
+      transition: background 200ms ease-in-out;
+      @include margin_lr();
+      @include type(
+        (
+          size: 12px,
+          family: $secondaryfont,
+          color: $white,
+          spacing: 2.4px,
+          weight: 700,
+          align: center,
+          transform: uppercase,
+        )
+      );
+      &:hover {
+        background: $reddark;
+      }
+    }
+    .gform_validation_errors {
+      display: none;
+    }
+  }
+}

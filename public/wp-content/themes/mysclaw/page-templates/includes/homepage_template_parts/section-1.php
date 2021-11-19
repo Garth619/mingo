@@ -30,7 +30,9 @@
 
   <picture>
 
-    <source media='(min-width: 768px)' data-srcset='<?php bloginfo('template_directory');?>/images/hero-tab.jpg'>
+    <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory');?>/images/hero.jpg'>
+
+    <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory');?>/images/hero-tab.jpg'>
 
     <img id='hero' src='<?php bloginfo('template_directory');?>/images/hero-mob.jpg' alt='' />
 

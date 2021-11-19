@@ -83,7 +83,7 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
 
           </div><!-- header-free-consult -->
 
-          <a class='button spanish-button' href=''>español</a>
+          <a class='button-one spanish-button' href=''>español</a>
           <!-- button spanish-button -->
 
         </div><!-- header-right-contact -->

@@ -1,6 +1,9 @@
 body.sticky {
   #section-one {
     margin-top: 86px;
+    @include mq(small_laptop) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -29,12 +32,18 @@ body.sticky {
 #sec-one-inner {
   position: relative;
   z-index: 1;
-  padding: 50px;
+  padding: 50px 20px;
   @include mq(small_tablet) {
     padding: 100px 50px 118px;
   }
   @include mq(small_laptop) {
     padding: 185px 50px 200px;
+  }
+  @include mq(large_laptop) {
+    padding: 207px 50px 200px;
+  }
+  @include mq(small_monitor) {
+    padding: 207px 50px 400px;
   }
 }
 
@@ -44,6 +53,9 @@ body.sticky {
   @include margin_lr();
   @include mq(small_tablet) {
     @include box(162px, 106px);
+  }
+  @include mq(large_laptop) {
+    @include box(205px, 133px);
   }
   img#video-thumb {
     object-fit: cover;
@@ -74,6 +86,13 @@ body.sticky {
   @include mq(small_laptop) {
     @include quick_type(77px, 77px, 1.93px);
   }
+  @include mq(large_laptop) {
+    @include quick_type(89px, 89px, 1.93px);
+  }
+  @include mq(small_monitor) {
+    margin-top: 41px;
+    @include quick_type(121px, 121px, 3.02px);
+  }
 }
 
 img#hero {
@@ -96,6 +115,9 @@ ul#sec-one-selling-points {
   @include mq(small_laptop) {
     margin-top: 25px;
   }
+  @include mq(small_monitor) {
+    margin-top: 45px;
+  }
   li {
     @include type(
       (
@@ -115,9 +137,16 @@ ul#sec-one-selling-points {
       font-size: 16px;
       letter-spacing: 1.36px;
     }
+    @include mq(large_laptop) {
+      font-size: 19px;
+      letter-spacing: 1.61px;
+    }
     &::before {
       color: $red;
       @include contentdisplay(inline-block, "•");
+      @include mq(small_laptop) {
+        margin: 0 5px;
+      }
     }
     &:first-of-type {
       &::before {
@@ -132,4 +161,13 @@ ul#sec-one-selling-points {
   font-size: 13px;
   margin-top: 25px;
   letter-spacing: 1.1px;
+  @include mq(large_laptop) {
+    margin-top: 40px;
+    font-size: 16px;
+    padding: 27px 35px;
+  }
+  @include mq(small_monitor) {
+    font-size: 19px;
+    padding: 29px 35px;
+  }
 }

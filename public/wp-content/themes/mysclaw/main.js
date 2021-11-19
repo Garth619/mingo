@@ -77,8 +77,7 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  //createWaypoint("section-one", "body", "sticky", 85, null, true);
-  createWaypoint("header-right", "body", "sticky", 0, null, true);
+  createWaypoint("section-one", "body", "sticky", 85, null, true);
 
   /* Smooth Scroll down to section on click (<a href="#id_of_section_to_be_scrolled_to">)
   --------------------------------------------------------------------------------------- */
