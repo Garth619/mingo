@@ -91,6 +91,12 @@ nav {
       @include mq(small_monitor) {
         margin-left: 60px;
       }
+      &:nth-last-child(-n + 2) {
+        > ul.sub-menu {
+          left: auto;
+          right: -20px;
+        }
+      }
       &.menu-item-has-children {
         position: relative;
         @include mq(small_laptop) {

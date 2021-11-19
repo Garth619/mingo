@@ -1,9 +1,38 @@
 footer {
   background: url(images/bkg-pattern.jpg) repeat;
+  position: relative;
+  @include mq(small_laptop) {
+    // background-image: url(images/bkg-ft.jpg), url(images/bkg-pattern.jpg);
+    // background-position: center top, center bottom;
+    // background-repeat: no-repeat, repeat;
+    // background-size: ;
+  }
+}
+
+img#footer-bg {
+  @include box(100%, 508px);
+  object-fit: cover;
+  @include abs(0, null, null, 0);
 }
 
 #footer-inner {
-  padding: 50px 30px 40px;
+  padding: 55px 30px 30px;
+  max-width: 550px;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    padding: 80px 50px 40px;
+    max-width: 880px;
+    position: relative;
+    z-index: 1;
+  }
+  @include mq(small_laptop) {
+    padding: 130px 50px 40px;
+    max-width: 1081px;
+  }
+  @include mq(large_laptop) {
+    padding: 196px 50px 70px;
+    max-width: 1250px;
+  }
 }
 
 span#footer-form-title {
@@ -20,22 +49,56 @@ span#footer-form-title {
       transform: uppercase,
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(60px, 63px, 3px);
+  }
+  @include mq(small_laptop) {
+    margin-bottom: 25px;
+    max-width: 500px;
+  }
+  @include mq(large_laptop) {
+    margin-bottom: 39px;
+  }
 }
 
 .gform_wrapper.gravity-theme .gform_fields {
   grid-row-gap: 8px !important;
+  @include mq(small_tablet) {
+    grid-row-gap: 11px !important;
+    @include mq(small_tablet) {
+      display: flex !important;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      grid-column-gap: 0 !important;
+    }
+  }
 }
 
 #footer-form {
   background: $white;
   border-left: 4px solid $red;
   padding: 36px 20px 10px;
+  @include mq(small_tablet) {
+    border-left: 10px solid $red;
+    padding: 63px 20px 10px;
+  }
+  @include mq(small_laptop) {
+    padding: 74px 90px 45px;
+  }
+  @include mq(large_laptop) {
+    padding: 74px 105px 45px;
+  }
   .gform_wrapper {
     .gfields {
     }
-
+    #field_1_4 {
+      flex-basis: 100%;
+    }
     .gfield {
       position: relative;
+      @include mq(small_tablet) {
+        flex-basis: calc(33% - 4px);
+      }
       &::after {
         @include abs(19px, 10px, null, null);
         @include contentdisplay(block, "*");
@@ -55,24 +118,45 @@ span#footer-form-title {
       textarea {
         padding: 10px 20px 10px 14px;
         border: 1px solid $brown;
+        height: 53px;
         @include type(
           (
             size: 14px,
             family: $primaryfont,
-            color: $black,
+            weight: 500,
+            color: black,
           )
         );
+        @include mq(small_laptop) {
+          height: 47px;
+        }
+        @include mq(large_laptop) {
+          font-size: 16px;
+          height: 56px;
+        }
       }
       textarea {
         height: 150px;
+        @include mq(small_tablet) {
+          height: 185px;
+        }
+        @include mq(small_laptop) {
+          height: 162px;
+        }
+        @include mq(large_laptop) {
+          height: 192px;
+        }
       }
       input::placeholder,
       textarea::placeholder {
-        color: $black;
+        color: black;
         opacity: 1;
       }
     }
     .gfield_html {
+      @include mq(small_laptop) {
+        flex-basis: 420px;
+      }
       &::after {
         display: none;
       }
@@ -91,6 +175,12 @@ span#footer-form-title {
           transform: uppercase,
         )
       );
+      @include mq(small_laptop) {
+        margin-top: 6px;
+      }
+      @include mq(large_laptop) {
+        margin-top: 13px;
+      }
     }
     .my-notice {
       display: flex;
@@ -105,9 +195,18 @@ span#footer-form-title {
           weight: 600,
         )
       );
+      @include mq(small_laptop) {
+        display: block;
+      }
       span {
         color: $brown;
         margin-right: 5px;
+      }
+    }
+    .gform_footer {
+      @include mq(small_tablet) {
+        width: 100%;
+        @include flex(flex-end);
       }
     }
     input[type="submit"] {
@@ -131,6 +230,20 @@ span#footer-form-title {
           transform: uppercase,
         )
       );
+      @include mq(small_tablet) {
+        max-width: 100%;
+        padding: 0;
+        margin-top: -85px;
+        @include box(185px, 55px);
+        @include margin_lr(0);
+      }
+      @include mq(small_laptop) {
+        margin-top: -65px;
+        @include box(185px, 47px);
+      }
+      @include mq(large_laptop) {
+        @include box(205px, 55px);
+      }
       &:hover {
         background: $reddark;
       }
@@ -138,5 +251,117 @@ span#footer-form-title {
     .gform_validation_errors {
       display: none;
     }
+  }
+}
+
+#footer-contact {
+  @include mq(small_laptop) {
+    @include abs(165px, 150px, null, null);
+  }
+  @include mq(large_laptop) {
+    top: 234px;
+  }
+}
+
+#footer-address {
+  display: block;
+  margin-top: 30px;
+  @include type(
+    (
+      size: 13px,
+      height: 18px,
+      family: $primaryfont,
+      color: $white,
+      align: center,
+      weight: 500,
+    )
+  );
+  @include mq(small_tablet) {
+    margin-top: 47px;
+    @include quick_type(14px, 19px, null);
+  }
+  @include mq(small_laptop) {
+    color: $blue;
+    text-align: left;
+  }
+  @include mq(large_laptop) {
+    @include quick_type(16px, 22px, null);
+  }
+}
+
+a#footer-phone {
+  display: block;
+  margin-top: 20px;
+  @include type(
+    (
+      size: 15px,
+      family: $secondaryfont,
+      color: $brown,
+      weight: 700,
+      align: center,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 17px;
+  }
+  @include mq(small_laptop) {
+    text-align: left;
+    margin-top: 15px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 10px;
+  }
+}
+
+#copyright {
+  @include mq(small_laptop) {
+    margin-top: 38px;
+    padding: 0 30px;
+    @include flex(space-between, center);
+  }
+  @include mq(large_laptop) {
+    padding: 0 15px;
+    margin-top: 48px;
+  }
+  ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 40px;
+    @include mq(small_laptop) {
+      margin-top: 0px;
+    }
+    li {
+      display: inline-block;
+      @include type(
+        (
+          size: 12px,
+          height: 17px,
+          family: $primaryfont,
+          color: $white,
+          weight: 400,
+        )
+      );
+      a {
+        color: $white;
+        display: inline-block;
+        text-decoration: underline;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: $brown;
+        }
+      }
+    }
+  }
+}
+
+a#ilawermarketing {
+  margin-top: 20px;
+  display: block;
+  @include mq(small_laptop) {
+    margin-top: 0px;
+  }
+  img {
+    @include image();
+    @include margin_lr();
   }
 }
