@@ -1613,6 +1613,12 @@ img#footer-bg {
     max-width: 1250px;
   }
 }
+@media screen and (min-width: 1695px) {
+  #footer-inner {
+    max-width: 1360px;
+    padding: 265px 50px 70px;
+  }
+}
 
 span#footer-form-title {
   display: block;
@@ -1643,6 +1649,13 @@ span#footer-form-title {
 @media screen and (min-width: 1380px) {
   span#footer-form-title {
     margin-bottom: 39px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  span#footer-form-title {
+    font-size: 72px;
+    line-height: 75px;
+    letter-spacing: 3.6px;
   }
 }
 
@@ -1682,6 +1695,11 @@ span#footer-form-title {
 @media screen and (min-width: 1380px) {
   #footer-form {
     padding: 74px 105px 45px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #footer-form {
+    padding: 90px 105px 45px;
   }
 }
 #footer-form .gform_wrapper #field_1_4 {
@@ -1736,6 +1754,13 @@ span#footer-form-title {
     height: 56px;
   }
 }
+@media screen and (min-width: 1695px) {
+  #footer-form .gform_wrapper .gfield input,
+#footer-form .gform_wrapper .gfield textarea {
+    font-size: 18px;
+    height: 68px;
+  }
+}
 #footer-form .gform_wrapper .gfield textarea {
   height: 150px;
 }
@@ -1752,6 +1777,11 @@ span#footer-form-title {
 @media screen and (min-width: 1380px) {
   #footer-form .gform_wrapper .gfield textarea {
     height: 192px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #footer-form .gform_wrapper .gfield textarea {
+    height: 226px;
   }
 }
 #footer-form .gform_wrapper .gfield input::placeholder,
@@ -1859,8 +1889,16 @@ span#footer-form-title {
 }
 @media screen and (min-width: 1380px) {
   #footer-form .gform_wrapper input[type=submit] {
+    font-size: 13px;
     width: 205px;
     height: 55px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #footer-form .gform_wrapper input[type=submit] {
+    font-size: 16px;
+    width: 235px;
+    height: 66px;
   }
 }
 #footer-form .gform_wrapper input[type=submit]:hover {
@@ -1880,6 +1918,11 @@ span#footer-form-title {
 @media screen and (min-width: 1380px) {
   #footer-contact {
     top: 234px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #footer-contact {
+    top: 317px;
   }
 }
 
@@ -1942,6 +1985,12 @@ a#footer-phone {
     margin-top: 10px;
   }
 }
+@media screen and (min-width: 1695px) {
+  a#footer-phone {
+    font-size: 21px;
+    margin-top: 20px;
+  }
+}
 
 @media screen and (min-width: 1170px) {
   #copyright {
@@ -1956,6 +2005,11 @@ a#footer-phone {
   #copyright {
     padding: 0 15px;
     margin-top: 48px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #copyright {
+    margin-top: 70px;
   }
 }
 #copyright ul {

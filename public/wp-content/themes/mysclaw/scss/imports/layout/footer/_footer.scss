@@ -33,6 +33,10 @@ img#footer-bg {
     padding: 196px 50px 70px;
     max-width: 1250px;
   }
+  @include mq(small_monitor) {
+    max-width: 1360px;
+    padding: 265px 50px 70px;
+  }
 }
 
 span#footer-form-title {
@@ -58,6 +62,9 @@ span#footer-form-title {
   }
   @include mq(large_laptop) {
     margin-bottom: 39px;
+  }
+  @include mq(small_monitor) {
+    @include quick_type(72px, 75px, 3.6px);
   }
 }
 
@@ -87,6 +94,9 @@ span#footer-form-title {
   }
   @include mq(large_laptop) {
     padding: 74px 105px 45px;
+  }
+  @include mq(small_monitor) {
+    padding: 90px 105px 45px;
   }
   .gform_wrapper {
     .gfields {
@@ -134,6 +144,10 @@ span#footer-form-title {
           font-size: 16px;
           height: 56px;
         }
+        @include mq(small_monitor) {
+          font-size: 18px;
+          height: 68px;
+        }
       }
       textarea {
         height: 150px;
@@ -145,6 +159,9 @@ span#footer-form-title {
         }
         @include mq(large_laptop) {
           height: 192px;
+        }
+        @include mq(small_monitor) {
+          height: 226px;
         }
       }
       input::placeholder,
@@ -242,7 +259,12 @@ span#footer-form-title {
         @include box(185px, 47px);
       }
       @include mq(large_laptop) {
+        font-size: 13px;
         @include box(205px, 55px);
+      }
+      @include mq(small_monitor) {
+        font-size: 16px;
+        @include box(235px, 66px);
       }
       &:hover {
         background: $reddark;
@@ -260,6 +282,9 @@ span#footer-form-title {
   }
   @include mq(large_laptop) {
     top: 234px;
+  }
+  @include mq(small_monitor) {
+    top: 317px;
   }
 }
 
@@ -311,6 +336,10 @@ a#footer-phone {
   @include mq(large_laptop) {
     margin-top: 10px;
   }
+  @include mq(small_monitor) {
+    font-size: 21px;
+    margin-top: 20px;
+  }
 }
 
 #copyright {
@@ -322,6 +351,9 @@ a#footer-phone {
   @include mq(large_laptop) {
     padding: 0 15px;
     margin-top: 48px;
+  }
+  @include mq(small_monitor) {
+    margin-top: 70px;
   }
   ul {
     list-style: none;
