@@ -3,5 +3,37 @@ body {
 }
 
 #internal-main {
-  height: 1000px; // remove
+  @include mq(small_tablet) {
+    margin-top: 84px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 117px;
+  }
+}
+
+#page-container {
+  &.single-col {
+    padding: 55px 30px;
+  }
+  &.two-col {
+    #page-content-inner {
+      padding: 55px 30px 27px;
+    }
+  }
+}
+
+#page-content {
+}
+
+#page-title {
+  padding-bottom: 33px;
+  @include type(
+    (
+      size: 40px,
+      height: 42px,
+      family: $secondaryfont,
+      color: $bluetwo,
+      weight: 700,
+    )
+  );
 }

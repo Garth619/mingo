@@ -1,55 +1,52 @@
 .content {
   @include type(
     (
-      size: 17px,
-      height: 30px,
-      family: $primaryfont,
-      weight: 600,
+      size: 16px,
+      height: 28px,
+      color: $black,
     )
   );
-  strong {
-    font-weight: 800;
-  }
+
   h2 {
-    padding-bottom: 20px;
+    padding-bottom: 12px;
     @include type(
       (
-        size: 20px,
-        height: 30px,
-        family: $primaryfont,
-        weight: 800,
+        size: 24px,
+        height: 33px,
+        family: $thirdfont,
+        color: $browndark,
       )
     );
   }
   h3 {
     padding-bottom: 13px;
-    margin-bottom: 20px;
     @include type(
       (
         size: 22px,
         height: 25px,
         family: $secondaryfont,
         weight: 600,
-        transform: uppercase,
       )
     );
   }
-  h4 {
-    padding-bottom: 13px;
-    @include type(
-      (
-        size: 17px,
-        height: 30px,
-        family: $primaryfont,
-        weight: 800,
-      )
-    );
-  }
+  //   h4 {
+  //     padding-bottom: 13px;
+  //     @include type(
+  //       (
+  //         size: 17px,
+  //         height: 30px,
+  //         family: $primaryfont,
+  //         weight: 800,
+  //       )
+  //     );
+  //   }
   a,
   .go_back {
+    color: $red;
     text-decoration: underline;
     transition: all 200ms ease-in-out;
     &:hover {
+      color: $brown;
     }
   }
   p,
@@ -57,11 +54,17 @@
   ol {
     margin-bottom: 27px;
   }
+  ul,
+  ol {
+    li {
+      margin-bottom: 13px;
+    }
+  }
   ul {
     margin-left: 20px;
     li {
-      margin-bottom: 23px;
       &::marker {
+        color: $red;
       }
     }
   }
@@ -72,87 +75,86 @@
       counter-increment: item;
       position: relative;
       padding-left: 30px;
-      margin-bottom: 23px;
     }
     > li:before {
       content: counter(item) ".";
       font-weight: 800;
-
+      color: $red;
       @include abs(0, null, null, 0);
     }
   }
-}
+  // }
 
-.wp-block-image {
-  .alignleft {
-    @media screen and (min-width: 1100px) {
-      img {
-        float: left;
-        margin-right: 39px;
-      }
-    }
-  }
-  .aligncenter {
-    img {
-      @include margin_lr();
-    }
-  }
-  .alignright {
-    @media screen and (min-width: 1100px) {
-      img {
-        float: right;
-        margin-left: 39px;
-      }
-    }
-  }
-  img {
-    margin-bottom: 30px;
-    @include image();
-    @include margin_lr();
-  }
-}
+  // .wp-block-image {
+  //   .alignleft {
+  //     @media screen and (min-width: 1100px) {
+  //       img {
+  //         float: left;
+  //         margin-right: 39px;
+  //       }
+  //     }
+  //   }
+  //   .aligncenter {
+  //     img {
+  //       @include margin_lr();
+  //     }
+  //   }
+  //   .alignright {
+  //     @media screen and (min-width: 1100px) {
+  //       img {
+  //         float: right;
+  //         margin-left: 39px;
+  //       }
+  //     }
+  //   }
+  //   img {
+  //     margin-bottom: 30px;
+  //     @include image();
+  //     @include margin_lr();
+  //   }
+  // }
 
-.alignleft,
-img.alignleft {
-  display: block;
-  float: left;
-  margin-right: 24px;
-  margin-top: 4px;
-  @include image();
-  @include mq(xlarge_mobile) {
-    margin: 20px auto 30px;
-    float: none;
-  }
-}
-.alignright,
-img.alignright {
-  display: block;
-  float: right;
-  margin-left: 24px;
-  margin-top: 4px;
-  @include image();
-  @include mq(xlarge_mobile) {
-    margin: 20px auto 30px;
-    float: none;
-  }
-}
-.aligncenter,
-.aligncenter img,
-img.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  @include image();
-}
-img.alignleft,
-img.alignright,
-img.aligncenter {
-  margin-bottom: 12px;
-  @include image();
-  @include mq(xlarge_mobile) {
-    margin: 20px auto 30px;
-    float: none;
-  }
+  // .alignleft,
+  // img.alignleft {
+  //   display: block;
+  //   float: left;
+  //   margin-right: 24px;
+  //   margin-top: 4px;
+  //   @include image();
+  //   @include mq(xlarge_mobile) {
+  //     margin: 20px auto 30px;
+  //     float: none;
+  //   }
+  // }
+  // .alignright,
+  // img.alignright {
+  //   display: block;
+  //   float: right;
+  //   margin-left: 24px;
+  //   margin-top: 4px;
+  //   @include image();
+  //   @include mq(xlarge_mobile) {
+  //     margin: 20px auto 30px;
+  //     float: none;
+  //   }
+  // }
+  // .aligncenter,
+  // .aligncenter img,
+  // img.aligncenter {
+  //   clear: both;
+  //   display: block;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   text-align: center;
+  //   @include image();
+  // }
+  // img.alignleft,
+  // img.alignright,
+  // img.aligncenter {
+  //   margin-bottom: 12px;
+  //   @include image();
+  //   @include mq(xlarge_mobile) {
+  //     margin: 20px auto 30px;
+  //     float: none;
+  //   }
 }

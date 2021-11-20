@@ -1,0 +1,85 @@
+#banner-wrapper {
+  position: relative;
+  padding: 45px 20px;
+  @include mq(small_tablet) {
+    padding: 66px 20px 53px;
+  }
+  @include mq(small_laptop) {
+    padding: 66px 20px;
+  }
+  @include mq(large_laptop) {
+    padding: 75px 20px 95px;
+  }
+  @include mq(small_monitor) {
+    padding: 116px 20px 110px;
+  }
+}
+
+#banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+#banner-title {
+  display: block;
+  max-width: 245px;
+  @include margin_lr();
+  @include type(
+    (
+      size: 39px,
+      height: 40px,
+      spacing: 0.97px,
+      family: $secondaryfont,
+      color: $white,
+      weight: 700,
+      align: center,
+      transform: uppercase,
+    )
+  );
+  @media screen and (min-width: 445px) {
+    max-width: 445px;
+  }
+  @include mq(small_tablet) {
+    max-width: 645px;
+  }
+  @include mq(tablet) {
+  }
+  @include mq(small_laptop) {
+    max-width: 745px;
+    @include quick_type(49px, 57px, 1.23px);
+  }
+  @include mq(large_laptop) {
+    //max-width: 595px;
+    @include quick_type(65px, 75px, 1.63px);
+  }
+  br {
+    display: none;
+    @media screen and (min-width: 445px) {
+      display: inline-block;
+    }
+  }
+}
+
+.banner-button {
+  font-size: 13px;
+  margin-top: 25px;
+  letter-spacing: 1.1px;
+  padding: 20px 46px;
+  @include mq(small_laptop) {
+    font-size: 16px;
+    margin-top: 20px;
+    letter-spacing: 1.36px;
+  }
+  @include mq(small_monitor) {
+    margin-top: 28px;
+    font-size: 19px;
+    padding: 24px 46px;
+    letter-spacing: 1.61px;
+  }
+}
+
+img#banner-image {
+  object-fit: cover;
+  @include box(100%, 100%);
+  @include abs(0, null, null, 0);
+}

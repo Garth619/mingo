@@ -6,6 +6,19 @@ body {
         position: static;
       }
     }
+    #header-inner {
+      @include mq(large_laptop) {
+        padding: 0 40px 0 27px;
+      }
+    }
+  }
+}
+
+body:not(.page-template-template-home) {
+  header {
+    @include mq(small_laptop) {
+      background: $blue;
+    }
   }
 }
 

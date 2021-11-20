@@ -578,60 +578,56 @@ h4 {
 }
 
 .content {
-  font-size: 17px;
-  line-height: 30px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: #101010;
+  font-weight: 400;
   font-style: normal;
   text-decoration: none;
 }
-.content strong {
-  font-weight: 800;
-}
 .content h2 {
-  padding-bottom: 20px;
-  font-size: 20px;
-  line-height: 30px;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
+  padding-bottom: 12px;
+  font-size: 24px;
+  line-height: 33px;
+  font-family: ivypresto-display, serif;
+  color: #9b6029;
+  font-weight: 400;
   font-style: normal;
   text-decoration: none;
 }
 .content h3 {
   padding-bottom: 13px;
-  margin-bottom: 20px;
   font-size: 22px;
   line-height: 25px;
   font-family: paralucent, sans-serif;
   font-weight: 600;
-  text-transform: uppercase;
-  font-style: normal;
-  text-decoration: none;
-}
-.content h4 {
-  padding-bottom: 13px;
-  font-size: 17px;
-  line-height: 30px;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
   font-style: normal;
   text-decoration: none;
 }
 .content a,
 .content .go_back {
+  color: #fd3939;
   text-decoration: underline;
   transition: all 200ms ease-in-out;
+}
+.content a:hover,
+.content .go_back:hover {
+  color: #a57d4c;
 }
 .content p,
 .content ul,
 .content ol {
   margin-bottom: 27px;
 }
+.content ul li,
+.content ol li {
+  margin-bottom: 13px;
+}
 .content ul {
   margin-left: 20px;
 }
-.content ul li {
-  margin-bottom: 23px;
+.content ul li::marker {
+  color: #fd3939;
 }
 .content ol {
   list-style: none;
@@ -641,91 +637,47 @@ h4 {
   counter-increment: item;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 23px;
 }
 .content ol > li:before {
   content: counter(item) ".";
   font-weight: 800;
+  color: #fd3939;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-@media screen and (min-width: 1100px) {
-  .wp-block-image .alignleft img {
-    float: left;
-    margin-right: 39px;
-  }
-}
-.wp-block-image .aligncenter img {
-  margin-left: auto;
-  margin-right: auto;
-}
-@media screen and (min-width: 1100px) {
-  .wp-block-image .alignright img {
-    float: right;
-    margin-left: 39px;
-  }
-}
-.wp-block-image img {
-  margin-bottom: 30px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.alignleft,
-img.alignleft {
-  display: block;
-  float: left;
-  margin-right: 24px;
-  margin-top: 4px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.alignright,
-img.alignright {
-  display: block;
-  float: right;
-  margin-left: 24px;
-  margin-top: 4px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.aligncenter,
-.aligncenter img,
-img.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-img.alignleft,
-img.alignright,
-img.aligncenter {
-  margin-bottom: 12px;
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 body {
   font-family: "Inter", sans-serif;
 }
 
-#internal-main {
-  height: 1000px;
+@media screen and (min-width: 768px) {
+  #internal-main {
+    margin-top: 84px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  #internal-main {
+    margin-top: 117px;
+  }
+}
+
+#page-container.single-col {
+  padding: 55px 30px;
+}
+#page-container.two-col #page-content-inner {
+  padding: 55px 30px 27px;
+}
+
+#page-title {
+  padding-bottom: 33px;
+  font-size: 40px;
+  line-height: 42px;
+  font-family: paralucent, sans-serif;
+  color: #02081c;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
 }
 
 .button-one {
@@ -1043,6 +995,17 @@ body.sticky #header-right {
     position: static;
   }
 }
+@media screen and (min-width: 1380px) {
+  body.sticky #header-inner {
+    padding: 0 40px 0 27px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  body:not(.page-template-template-home) header {
+    background: #222537;
+  }
+}
 
 header {
   background: #fff;
@@ -1296,6 +1259,12 @@ a.spanish-button {
 }
 #menu-wrapper span:last-of-type {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 1380px) {
+  body:not(.page-template-template-home) nav {
+    margin-top: 8px;
+  }
 }
 
 nav {
@@ -1572,6 +1541,117 @@ nav.open {
     visibility: visible;
     transition-delay: 400ms;
   }
+}
+
+#banner-wrapper {
+  position: relative;
+  padding: 45px 20px;
+}
+@media screen and (min-width: 768px) {
+  #banner-wrapper {
+    padding: 66px 20px 53px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  #banner-wrapper {
+    padding: 66px 20px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #banner-wrapper {
+    padding: 75px 20px 95px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #banner-wrapper {
+    padding: 116px 20px 110px;
+  }
+}
+
+#banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+#banner-title {
+  display: block;
+  max-width: 245px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 39px;
+  letter-spacing: 0.97px;
+  line-height: 40px;
+  font-family: paralucent, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 445px) {
+  #banner-title {
+    max-width: 445px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #banner-title {
+    max-width: 645px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  #banner-title {
+    max-width: 745px;
+    font-size: 49px;
+    line-height: 57px;
+    letter-spacing: 1.23px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #banner-title {
+    font-size: 65px;
+    line-height: 75px;
+    letter-spacing: 1.63px;
+  }
+}
+#banner-title br {
+  display: none;
+}
+@media screen and (min-width: 445px) {
+  #banner-title br {
+    display: inline-block;
+  }
+}
+
+.banner-button {
+  font-size: 13px;
+  margin-top: 25px;
+  letter-spacing: 1.1px;
+  padding: 20px 46px;
+}
+@media screen and (min-width: 1170px) {
+  .banner-button {
+    font-size: 16px;
+    margin-top: 20px;
+    letter-spacing: 1.36px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  .banner-button {
+    margin-top: 28px;
+    font-size: 19px;
+    padding: 24px 46px;
+    letter-spacing: 1.61px;
+  }
+}
+
+img#banner-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 footer {
