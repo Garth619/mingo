@@ -1,0 +1,115 @@
+#sidebar-wrapper {
+  @include mq(small_laptop) {
+    flex-shrink: 0;
+    flex-basis: 280px;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 306px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 376px;
+  }
+  .widget {
+    padding: 50px 28px 38px;
+    background: $offwhite;
+    @include mq(small_tablet) {
+      padding: 50px 45px 38px;
+    }
+    @include mq(small_laptop) {
+      padding: 25px 35px 9px;
+    }
+    @include mq(large_laptop) {
+      padding: 30px 45px 14px;
+    }
+    @include mq(small_monitor) {
+      padding: 41px 45px 25px;
+    }
+    h3 {
+      padding-bottom: 18px;
+      padding-right: 30px;
+      position: relative;
+      @include type(
+        (
+          size: 16px,
+          height: 20px,
+          family: $secondaryfont,
+          color: $red,
+          weight: 600,
+          transform: uppercase,
+        )
+      );
+      @include mq(large_laptop) {
+        @include quick_type(18px, 22px, null);
+      }
+      @include mq(small_monitor) {
+        @include quick_type(22px, 26px, null);
+      }
+      &::after {
+        @include abs(7px, 0, null, null);
+        @include tri(down, 4px, 7px, $red);
+        @include contentdisplay();
+        @include mq(small_monitor) {
+          @include abs(10px, 0, null, null);
+        }
+      }
+    }
+    .menu-practice-areas-container {
+      ul {
+        list-style: none;
+        li {
+          a {
+            display: block;
+            padding: 21px 0;
+            border-top: 1px solid #bfbfbf;
+            transition: all 200ms ease-in-out;
+            @include type(
+              (
+                size: 16px,
+                height: 20px,
+                family: $secondaryfont,
+                color: $blue,
+                weight: 600,
+              )
+            );
+            @include mq(large_laptop) {
+              @include quick_type(18px, 22px, null);
+            }
+            &:hover {
+              @include mq(small_laptop) {
+                color: $brown;
+              }
+            }
+          }
+        }
+      }
+      ul.menu {
+        > li {
+          &.menu-item-has-children {
+            > a {
+              position: relative;
+              padding-right: 30px;
+              &.active {
+                color: $red;
+                &::after {
+                  @include tri(down, 4px, 7px, $red);
+                }
+              }
+              &::after {
+                transition: all 200ms ease-in-out;
+                @include abs(29px, 0, null, null);
+                @include tri(down, 4px, 7px, $blue);
+                @include contentdisplay();
+              }
+            }
+          }
+        }
+      }
+    }
+    ul.sub-menu {
+      display: none;
+      &:hover {
+        color: $brown;
+      }
+    }
+  }
+}

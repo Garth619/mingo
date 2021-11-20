@@ -78,6 +78,7 @@ jQuery(document).ready(function ($) {
   }
 
   createWaypoint("section-one", "body", "sticky", 85, null, true);
+  createWaypoint("internal-main", "body", "sticky", 85, null, true);
 
   /* Smooth Scroll down to section on click (<a href="#id_of_section_to_be_scrolled_to">)
   --------------------------------------------------------------------------------------- */
@@ -260,14 +261,14 @@ jQuery(document).ready(function ($) {
   /* Sidebar slideToggle
 --------------------------------------------------------------------------------------- */
 
+  $(".widget h3").on("click", function (e) {
+    $(this).next(".menu-practice-areas-container").slideToggle();
+    $(this).toggleClass("close");
+  });
+
   $(".widget ul.menu > li.menu-item-has-children a").on("click", function (e) {
     $(this).toggleClass("active");
     $(this).next("ul").slideToggle();
-  });
-
-  $(".widget h3").on("click", function (e) {
-    $(this).next("ul").slideToggle();
-    $(this).toggleClass("close");
   });
 
   /* Sidebar Current Class for Blog Sidebars

@@ -10,50 +10,26 @@
 
   <div id='page-container' class='two-col'>
 
+    <div id='mt-scroll-wrapper'>
+
+      <div id='mt-scroll'>
+
+        <span>M</span>
+        <span>T</span>
+
+      </div><!-- mt-scroll -->
+
+    </div><!-- mt-scroll-wrapper -->
+
     <div id='page-content'>
 
       <div id='page-content-inner' class='content'>
 
-        <h1 id='page-title'><?php the_title();?></h1><!-- page-header -->
+        <?php if (!get_field('banner_h1') == "Yes"): ?>
 
-        <h2>Lorem ipsum dolor sit amet, dignissim vel tellus eu</h2>
+        <h1 id='page-title'><?php the_title();?></h1><!-- page-title -->
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis lectus, dignissim vel tellus eu,
-          malesuada faucibus massa. Nam venenatis lacus ac eleifend lacinia. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus. Aliquam in sem venenatis, rutrum dui at, commodo metus. </p>
-
-        <p>Aliquam pellentesque enim urna, id laoreet justo viverra vitae. Proin eleifend tortor consequat elementum
-          mattis. Sed blandit lacus a consequat iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-          Mauris ut purus sit amet tellus sollicitudin auctor. Orci varius natoque penatibus et magnis dis parturient
-          montes, nascetur ridiculus mus. Mauris tempus elementum neque ac imperdiet. Nullam porttitor aliquet faucibus.
-        </p>
-
-        <h3>Heading Style 3 - lore spun</h3>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis lectus, dignissim vel tellus eu,
-          malesuada faucibus massa. Nam venenatis lacus ac eleifend lacinia. Orci varius natoque penatibus et magnis dis
-        </p>
-
-        <ul>
-          <li>Aliquam pellentesque enim urna, id laoreet justo viverra vitae.</li>
-          <li>Aliquam pellentesque enim urna, id laoreet justo viverra vitae.</li>
-          <li>Aliquam pellentesque enim urna, id laoreet justo viverra vitae.</li>
-          <li>Aliquam pellentesque enim urna, id laoreet justo viverra vitae.</li>
-        </ul>
-
-        <p>
-          parturient montes, nascetur ridiculus mus. Aliquam in sem venenatis, rutrum dui at, commodo metus. Aliquam
-          pellentesque enim urna, id laoreet justo viverra vitae. Proin eleifend tortor consequat elementum mattis.</p>
-        <ol>
-          <li>Aliquam pellentesque enim urna, id laoreet justo viverra vitae.</li>
-          <li>Aliquam pellentesque enim urna, id laoreet justo viverra vitae.</li>
-          <li>Aliquam pellentesque enim urna, id laoreet justo viverra vitae.</li>
-          <li>Aliquam pellentesque enim urna, id laoreet justo viverra vitae.</li>
-        </ol>
-        <p> Sed
-          blandit lacus a consequat iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ut
-          purus sit amet tellus sollicitudin auctor. Orci varius natoque penatibus et magnis dis parturient montes,
-          nascetur ridiculus mus. Mauris tempus elementum neque ac imperdiet. Nullam porttitor aliquet faucibus.</p>
+        <?php endif;?>
 
         <?php the_content();?>
 
