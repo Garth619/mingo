@@ -1,3 +1,3 @@
 <?php
 
-/* Template Name: Previous Episodes */?>
+/* Template Name: Blog */?>

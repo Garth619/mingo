@@ -373,3 +373,18 @@ function ilaw_post_thumbnail_sizes_attr($attr, $attachment, $size)
     return $attr;
 }
 add_filter('wp_get_attachment_image_attributes', 'ilaw_post_thumbnail_sizes_attr', 10, 3);
+
+/* Adjusts the max-width depending on larger or smaller titles
+-------------------------------------------------------------- */
+
+function banner_title_width($banner_title)
+{
+    $banner_title_width = 'small-banner-width';
+    if (strlen($banner_title) > 45) {
+        $banner_title_width = 'large-banner-width';
+    }
+
+    return $banner_title_width;
+}
+
+add_action('init', 'banner_title_width');

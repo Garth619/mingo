@@ -11,6 +11,7 @@
   }
   .widget {
     padding: 50px 28px 38px;
+    margin-bottom: 25px;
     background: $offwhite;
     @include mq(small_tablet) {
       padding: 50px 45px 38px;
@@ -53,10 +54,16 @@
         }
       }
     }
-    .menu-practice-areas-container {
+    div {
       ul {
         list-style: none;
         li {
+          &.current-menu-item,
+          &.blog-active {
+            a {
+              color: $red;
+            }
+          }
           a {
             display: block;
             padding: 21px 0;
@@ -76,7 +83,7 @@
             }
             &:hover {
               @include mq(small_laptop) {
-                color: $brown;
+                color: $red;
               }
             }
           }
@@ -102,6 +109,14 @@
               }
             }
           }
+          &.current-menu-ancestor {
+            > a {
+              color: $red;
+              &::after {
+                @include tri(down, 4px, 7px, $red);
+              }
+            }
+          }
         }
       }
     }
@@ -110,6 +125,19 @@
       &:hover {
         color: $brown;
       }
+    }
+  }
+}
+
+.sidebar-blog {
+  .widget {
+    &:first-of-type {
+      ul {
+        display: block;
+      }
+    }
+    ul {
+      display: none;
     }
   }
 }

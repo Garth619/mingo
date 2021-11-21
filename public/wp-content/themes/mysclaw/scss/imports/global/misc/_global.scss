@@ -84,12 +84,13 @@ body.sticky {
       padding: 95px 104px 72px 92px;
       @include margin_lr();
     }
-    #page-content-inner {
+    #page-content {
       padding: 55px 30px 27px;
       @include mq(small_tablet) {
         padding: 71px 45px 27px;
       }
       @include mq(small_laptop) {
+        flex-grow: 1;
         padding: 0px 95px 0px 45px;
       }
       @include mq(small_monitor) {

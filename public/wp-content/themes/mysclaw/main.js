@@ -262,7 +262,12 @@ jQuery(document).ready(function ($) {
 --------------------------------------------------------------------------------------- */
 
   $(".widget h3").on("click", function (e) {
-    $(this).next(".menu-practice-areas-container").slideToggle();
+    $(this).next("div").slideToggle();
+    $(this).toggleClass("close");
+  });
+
+  $(".sidebar-blog .widget h3").on("click", function (e) {
+    $(this).next("ul").slideToggle();
     $(this).toggleClass("close");
   });
 

@@ -22,7 +22,7 @@
 
 #banner-title {
   display: block;
-  max-width: 245px;
+
   @include margin_lr();
   @include type(
     (
@@ -36,21 +36,35 @@
       transform: uppercase,
     )
   );
-  @media screen and (min-width: 445px) {
-    max-width: 445px;
-  }
-  @include mq(small_tablet) {
-    max-width: 645px;
-  }
-  @include mq(tablet) {
-  }
+
   @include mq(small_laptop) {
-    max-width: 745px;
     @include quick_type(49px, 57px, 1.23px);
   }
   @include mq(large_laptop) {
-    //max-width: 595px;
     @include quick_type(65px, 75px, 1.63px);
+  }
+  &.small-banner-width {
+    max-width: 245px;
+    @media screen and (min-width: 445px) {
+      max-width: 445px;
+    }
+    @include mq(small_tablet) {
+      max-width: 535px;
+    }
+    @include mq(small_laptop) {
+      max-width: 745px;
+    }
+  }
+  &.large-banner-width {
+    @include mq(small_tablet) {
+      max-width: 755px;
+    }
+    @include mq(small_laptop) {
+      max-width: 955px;
+    }
+    @include mq(large_laptop) {
+      max-width: 1300px;
+    }
   }
   br {
     display: none;
