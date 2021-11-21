@@ -20,6 +20,17 @@
     padding-bottom: 39px;
     @include quick_type(72px, 75px, null);
   }
+  &.page-title-center {
+    text-align: center;
+  }
+  &.page-title-large {
+    @include mq(large_laptop) {
+      @include quick_type(60px, 63px, null);
+    }
+    @include mq(small_monitor) {
+      @include quick_type(72px, 75px, null);
+    }
+  }
 }
 
 .content {

@@ -47,7 +47,7 @@ header {
     padding: 0 28px;
   }
   @include mq(large_laptop) {
-    padding: 0 40px;
+    padding: 0 40px 0 27px;
   }
   @include mq(small_monitor) {
     max-width: 1920px;
