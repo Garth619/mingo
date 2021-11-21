@@ -1,14 +1,15 @@
 .button-one {
   max-width: max-content;
   display: block;
-  background: $black;
+  background: $blue;
   border-radius: 50px;
   border: 2px solid $brown;
+  transition: all 200ms ease-in-out;
   @include type(
     (
       spacing: 1.8px,
       family: $secondaryfont,
-      color: $brownlight,
+      color: $brown,
       weight: 700,
       align: center,
       transform: uppercase,

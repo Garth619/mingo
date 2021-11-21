@@ -1,0 +1,157 @@
+#blog-feed {
+}
+
+.blog-post {
+  padding-bottom: 46px;
+
+  margin-bottom: 36px;
+  border-bottom: 1px solid #c7c7c7;
+  @include mq(large_laptop) {
+    margin-bottom: 46px;
+  }
+}
+
+h2.post-header {
+  a {
+    color: $browndark;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.post-meta {
+  padding-top: 10px;
+  margin-bottom: 14px;
+  @include type(
+    (
+      size: 16px,
+      height: 19px,
+      family: $secondaryfont,
+      weight: 600,
+      color: $blue,
+      transform: uppercase,
+    )
+  );
+  span {
+    display: inline;
+  }
+  ul {
+    display: inline;
+    list-style: none;
+    margin-left: 0;
+    li {
+      padding-left: 0;
+      display: inline;
+      &::after {
+        color: $red;
+        @include contentdisplay(inline-block, ",");
+      }
+      &:last-of-type {
+        &::after {
+          display: none;
+        }
+      }
+      a {
+        color: $red;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.blog-button {
+  margin-top: 18px;
+  font-size: 14px;
+  padding: 16px 20px;
+}
+
+#paged_wrapper {
+  position: relative;
+  ul {
+    list-style: none;
+    padding: 0 70px;
+    @include flex(center, null, null, wrap);
+    li {
+      @include type(
+        (
+          size: 16px,
+          height: 19px,
+          family: $secondaryfont,
+          color: $blue,
+          weight: 600,
+          transform: uppercase,
+        )
+      );
+      &.myprev,
+      &.mynext {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        @include box(auto, auto);
+        a {
+          color: $blue;
+          transition: all 200ms ease-in-out;
+          border-radius: 0;
+          @include box(auto, auto);
+          &:hover {
+            color: $brown;
+            text-decoration: underline;
+          }
+          &::before {
+            display: none;
+          }
+        }
+      }
+      &.myprev {
+        left: 0;
+      }
+      &.mynext {
+        right: 0;
+      }
+      &.ddd {
+        position: relative;
+        top: 4px;
+      }
+      &.active {
+        a {
+          text-decoration: underline;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $red;
+        display: block;
+        position: relative;
+        transition: all 200ms ease-in-out;
+        position: relative;
+        z-index: 1;
+        @include flex(center, center);
+        @include box(27px, 27px);
+        &:hover {
+          color: $white;
+          &::before {
+            opacity: 1;
+          }
+        }
+        &::before {
+          background: $red;
+          border-radius: 50%;
+          transform-origin: center;
+          transform: scale(1.3);
+          opacity: 0;
+          transition: all 200ms ease-in-out;
+          @include box(100%, 100%);
+          @include abs(0, null, null, 0, -1);
+          @include contentdisplay();
+        }
+      }
+    }
+  }
+}

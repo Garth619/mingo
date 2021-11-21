@@ -13,6 +13,9 @@
     padding: 50px 28px 38px;
     margin-bottom: 25px;
     background: $offwhite;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     @include mq(small_tablet) {
       padding: 50px 45px 38px;
     }
@@ -26,6 +29,7 @@
       padding: 41px 45px 25px;
     }
     h3 {
+      cursor: pointer;
       padding-bottom: 18px;
       padding-right: 30px;
       position: relative;

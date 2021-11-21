@@ -290,7 +290,7 @@ function my_numeric_posts_nav()
 
     /** Previous Post Link */
     if (get_previous_posts_link()) {
-        printf('<li class="myprev">%s</li>' . "\n", get_previous_posts_link('Prev Page'));
+        printf('<li class="myprev">%s</li>' . "\n", get_previous_posts_link('Prev'));
     }
 // put "prev" string in get_previous_posts_link
 
@@ -316,7 +316,7 @@ function my_numeric_posts_nav()
     /** Link to last page, plus ellipses if necessary */
     if (!in_array($max, $links)) {
         if (!in_array($max - 1, $links)) {
-            echo '<li>…</li>' . "\n";
+            echo '<li class="ddd">…</li>' . "\n";
         }
 
         $class = $paged == $max ? ' class="active"' : '';
@@ -325,7 +325,7 @@ function my_numeric_posts_nav()
 
     /** Next Post Link */
     if (get_next_posts_link()) {
-        printf('<li class="mynext">%s</li>' . "\n", get_next_posts_link('Next Page'));
+        printf('<li class="mynext">%s</li>' . "\n", get_next_posts_link('Next'));
     }
     // put "next" string in get_previous_posts_link
 

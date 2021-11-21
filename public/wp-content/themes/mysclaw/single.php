@@ -22,6 +22,16 @@
 
         <?php endif;?>
 
+        <div class='post-meta'>
+
+          <span class='post-date'>Posted <?php $pfx_date = get_the_date();
+echo $pfx_date;?> in </span>
+          <!-- post-date -->
+
+          <?php echo get_the_category_list(); ?>
+
+        </div><!-- post-meta -->
+
         <?php the_content();?>
 
       </div><!-- page-content-inner -->

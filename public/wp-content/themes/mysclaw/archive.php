@@ -14,7 +14,7 @@
 
     <div id='page-content'>
 
-      <div id='page-content-inner' class='content'>
+      <div id='page-content-inner'>
 
         <?php if (!get_field('banner_h1_blog', 'option') == "Yes"): ?>
 

@@ -5,7 +5,7 @@
       size: 40px,
       height: 42px,
       family: $secondaryfont,
-      color: $bluetwo,
+      color: $blue,
       weight: 700,
     )
   );
@@ -13,9 +13,11 @@
     padding-bottom: 19px;
   }
   @include mq(small_laptop) {
+    padding-bottom: 29px;
     @include quick_type(50px, 51px, null);
   }
   @include mq(small_monitor) {
+    padding-bottom: 39px;
     @include quick_type(72px, 75px, null);
   }
 }
@@ -28,6 +30,9 @@
       color: $black,
     )
   );
+  @include mq(large_laptop) {
+    @include quick_type(18px, 32px, null);
+  }
   h2 {
     padding-bottom: 12px;
     @include type(
@@ -38,6 +43,9 @@
         color: $browndark,
       )
     );
+    @include mq(small_monitor) {
+      @include quick_type(28px, 40px, null);
+    }
   }
   h3 {
     padding-bottom: 13px;

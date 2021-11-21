@@ -582,7 +582,7 @@ h4 {
   font-size: 40px;
   line-height: 42px;
   font-family: paralucent, sans-serif;
-  color: #02081c;
+  color: #222537;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -594,12 +594,14 @@ h4 {
 }
 @media screen and (min-width: 1170px) {
   #page-title {
+    padding-bottom: 29px;
     font-size: 50px;
     line-height: 51px;
   }
 }
 @media screen and (min-width: 1695px) {
   #page-title {
+    padding-bottom: 39px;
     font-size: 72px;
     line-height: 75px;
   }
@@ -613,6 +615,12 @@ h4 {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 1380px) {
+  .content {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
 .content h2 {
   padding-bottom: 12px;
   font-size: 24px;
@@ -622,6 +630,12 @@ h4 {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 1695px) {
+  .content h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 .content h3 {
   padding-bottom: 13px;
@@ -875,12 +889,13 @@ body.sticky #internal-main {
 .button-one {
   max-width: max-content;
   display: block;
-  background: #101010;
+  background: #222537;
   border-radius: 50px;
   border: 2px solid #a57d4c;
+  transition: all 200ms ease-in-out;
   letter-spacing: 1.8px;
   font-family: paralucent, sans-serif;
-  color: #ccad7d;
+  color: #a57d4c;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -1889,6 +1904,9 @@ img#banner-image {
   margin-bottom: 25px;
   background: #f2f2f2;
 }
+#sidebar-wrapper .widget:last-of-type {
+  margin-bottom: 0;
+}
 @media screen and (min-width: 768px) {
   #sidebar-wrapper .widget {
     padding: 50px 45px 38px;
@@ -1910,6 +1928,7 @@ img#banner-image {
   }
 }
 #sidebar-wrapper .widget h3 {
+  cursor: pointer;
   padding-bottom: 18px;
   padding-right: 30px;
   position: relative;
@@ -2758,4 +2777,162 @@ ul#sec-one-selling-points li:first-of-type::before {
     font-size: 19px;
     padding: 29px 35px;
   }
+}
+
+.blog-post {
+  padding-bottom: 46px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid #c7c7c7;
+}
+@media screen and (min-width: 1380px) {
+  .blog-post {
+    margin-bottom: 46px;
+  }
+}
+
+h2.post-header a {
+  color: #9b6029;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+h2.post-header a:hover {
+  color: #fd3939;
+}
+
+.post-meta {
+  padding-top: 10px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: paralucent, sans-serif;
+  color: #222537;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+.post-meta span {
+  display: inline;
+}
+.post-meta ul {
+  display: inline;
+  list-style: none;
+  margin-left: 0;
+}
+.post-meta ul li {
+  padding-left: 0;
+  display: inline;
+}
+.post-meta ul li::after {
+  color: #fd3939;
+  content: ",";
+  display: inline-block;
+}
+.post-meta ul li:last-of-type::after {
+  display: none;
+}
+.post-meta ul li a {
+  color: #fd3939;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+.post-meta ul li a:hover {
+  text-decoration: underline;
+}
+
+.blog-button {
+  margin-top: 18px;
+  font-size: 14px;
+  padding: 16px 20px;
+}
+
+#paged_wrapper {
+  position: relative;
+}
+#paged_wrapper ul {
+  list-style: none;
+  padding: 0 70px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#paged_wrapper ul li {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: paralucent, sans-serif;
+  color: #222537;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+#paged_wrapper ul li.myprev, #paged_wrapper ul li.mynext {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: auto;
+  height: auto;
+}
+#paged_wrapper ul li.myprev a, #paged_wrapper ul li.mynext a {
+  color: #222537;
+  transition: all 200ms ease-in-out;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+}
+#paged_wrapper ul li.myprev a:hover, #paged_wrapper ul li.mynext a:hover {
+  color: #a57d4c;
+  text-decoration: underline;
+}
+#paged_wrapper ul li.myprev a::before, #paged_wrapper ul li.mynext a::before {
+  display: none;
+}
+#paged_wrapper ul li.myprev {
+  left: 0;
+}
+#paged_wrapper ul li.mynext {
+  right: 0;
+}
+#paged_wrapper ul li.ddd {
+  position: relative;
+  top: 4px;
+}
+#paged_wrapper ul li.active a {
+  text-decoration: underline;
+}
+#paged_wrapper ul li a {
+  text-decoration: none;
+  color: #fd3939;
+  display: block;
+  position: relative;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+}
+#paged_wrapper ul li a:hover {
+  color: #fff;
+}
+#paged_wrapper ul li a:hover::before {
+  opacity: 1;
+}
+#paged_wrapper ul li a::before {
+  background: #fd3939;
+  border-radius: 50%;
+  transform-origin: center;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  display: block;
 }

@@ -18,39 +18,29 @@
 
   <div class='blog-post<?php echo $novideo; ?>'>
 
-    <div class='post-meta-wrapper'>
+    <div class='content'>
 
-      <div class='post-meta'>
+      <h2 class="post-header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
 
-        <span class='post-author'>Post by <?php the_author();?></span><!-- post-author -->
+    </div><!-- content -->
 
-        <span class='post-date'><?php $pfx_date = get_the_date();
-        echo $pfx_date;?></span>
-        <!-- post-date -->
+    <div class='post-meta'>
 
-        <?php echo get_the_category_list(); ?>
+      <span class='post-date'>Posted <?php $pfx_date = get_the_date();
+        echo $pfx_date;?> in </span>
+      <!-- post-date -->
 
-      </div><!-- post-meta -->
+      <?php echo get_the_category_list(); ?>
 
-      <div class='content'>
+    </div><!-- post-meta -->
 
-        <h2 class="post-header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+    <div class='content'>
 
-      </div><!-- content -->
+      <?php echo wp_trim_words(get_the_content(), 44, '...'); ?>
 
-    </div><!-- post-meta-wrapper -->
+    </div><!-- content -->
 
-    <div class='post-content content'>
-
-      <div>
-
-        <?php echo wp_trim_words(get_the_content(), 54, '...'); ?>
-
-      </div>
-
-      <a class="learn-more" href="<?php the_permalink();?>">Learn More</a>
-
-    </div><!-- post-content -->
+    <a class="button-one blog-button" href="<?php the_permalink();?>">Learn More</a>
 
     <?php edit_post_link(__('Edit'), '', '');?>
 
