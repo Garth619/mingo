@@ -24,20 +24,35 @@ get_header();?>
 
     <div id='testimonial-wrapper' class='single-col-wrapper'>
 
+      <?php if (have_rows('testimonials')): ?>
+      <?php while (have_rows('testimonials')): the_row();?>
+
       <div class='single-testimonial'>
 
         <div class='single-testi-header'>
 
-          <?php echo file_get_contents(get_template_directory() . '/images/ico-wreath-L.svg'); ?>
+          <img src='<?php bloginfo('template_directory');?>/images/ico-wreath-L.svg' alt='' />
 
-          <span class='single-testi-title'>Mark and his team go into representing a client 110%</span>
+          <span class='single-testi-title'><?php the_sub_field('intro');?></span>
           <!-- single-testi-title -->
 
-          <?php echo file_get_contents(get_template_directory() . '/images/ico-wreath-R.svg'); ?>
+          <img src='<?php bloginfo('template_directory');?>/images/ico-wreath-R.svg' alt='' />
 
         </div><!-- single-testi-header -->
 
+        <div class='single-testi-content'>
+
+          <p><?php the_sub_field('content');?></p>
+
+          <span class='name'><?php the_sub_field('name');?></span><!-- name -->
+
+        </div><!-- single-testi-content -->
+
       </div><!-- single-testimonial -->
+
+      <?php endwhile;?>
+
+      <?php endif;?>
 
     </div><!-- testimonial-wrapper -->
 

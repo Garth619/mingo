@@ -66,6 +66,19 @@ body.sticky {
   }
 }
 
+body.no-banner {
+  #page-container {
+    &.single-col {
+      @include mq(small_laptop) {
+        padding-top: 80px;
+      }
+      @include mq(small_monitor) {
+        padding-top: 130px;
+      }
+    }
+  }
+}
+
 #page-container {
   position: relative;
   &.single-col {

@@ -17,7 +17,8 @@
 
 // components
 
-@import "imports/components/buttons", "imports/components/internal_forms";
+@import "imports/components/buttons",
+  "imports/components/internal_content_forms";
 
 // layout
 
@@ -32,6 +33,7 @@
   "imports/templates/homepage/section_four",
   "imports/templates/homepage/section_five", "imports/templates/about",
   "imports/templates/padirectory", "imports/templates/videocenter",
-  "imports/templates/template-blog", "imports/templates/not-found";
+  "imports/templates/blog", "imports/templates/testimonials",
+  "imports/templates/not-found";
 
 @import "imports/layout/animations";

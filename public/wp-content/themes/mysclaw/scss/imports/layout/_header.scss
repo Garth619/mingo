@@ -37,6 +37,17 @@ header {
     padding-bottom: 10px;
     position: absolute;
   }
+  &::after {
+    @include mq(small_tablet) {
+      background: #d1d1d1;
+      @include abs(null, 0, 0, null);
+      @include box(100%, 1px);
+      @include contentdisplay();
+    }
+    @include mq(small_laptop) {
+      display: none;
+    }
+  }
 }
 
 #header-inner {

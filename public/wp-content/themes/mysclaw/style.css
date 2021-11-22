@@ -856,6 +856,17 @@ body.sticky #internal-main {
   }
 }
 
+@media screen and (min-width: 1170px) {
+  body.no-banner #page-container.single-col {
+    padding-top: 80px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  body.no-banner #page-container.single-col {
+    padding-top: 130px;
+  }
+}
+
 #page-container {
   position: relative;
 }
@@ -1276,6 +1287,23 @@ header {
     background: transparent;
     padding-bottom: 10px;
     position: absolute;
+  }
+}
+@media screen and (min-width: 768px) {
+  header::after {
+    background: #d1d1d1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    content: "";
+    display: block;
+  }
+}
+@media screen and (min-width: 1170px) {
+  header::after {
+    display: none;
   }
 }
 
@@ -3257,4 +3285,147 @@ h2.post-header a:hover {
   z-index: -1;
   content: "";
   display: block;
+}
+
+#testimonial-wrapper {
+  max-width: 590px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  #testimonial-wrapper {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  #testimonial-wrapper {
+    max-width: 790px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #testimonial-wrapper {
+    max-width: 1000px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #testimonial-wrapper {
+    max-width: 1210px;
+  }
+}
+
+.single-testimonial {
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #c7cec7;
+}
+@media screen and (min-width: 1170px) {
+  .single-testimonial {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .single-testimonial {
+    padding-bottom: 80px;
+    margin-bottom: 75px;
+  }
+}
+.single-testimonial:last-of-type {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom: 0;
+}
+@media screen and (min-width: 1170px) {
+  .single-testimonial:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+.single-testimonial .single-testi-header {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1380px) {
+  .single-testimonial .single-testi-header {
+    max-width: 560px;
+  }
+}
+.single-testimonial .single-testi-header svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 45px;
+  height: 95px;
+}
+.single-testimonial .single-testi-header .single-testi-title {
+  width: calc(100% - 140px);
+  margin-top: 25px;
+  font-size: 17px;
+  letter-spacing: 1.2px;
+  line-height: 21px;
+  font-family: paralucent, sans-serif;
+  color: #fd3939;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 1380px) {
+  .single-testimonial .single-testi-header .single-testi-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.single-testimonial .single-testi-content {
+  margin-top: 25px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: ivypresto-display, serif;
+  color: #222537;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 1170px) {
+  .single-testimonial .single-testi-content {
+    max-width: 590px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .single-testimonial .single-testi-content {
+    max-width: 800px;
+    margin-top: 35px;
+    font-size: 32px;
+    line-height: 47px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  .single-testimonial .single-testi-content {
+    max-width: 910px;
+    font-size: 38px;
+    line-height: 51px;
+  }
+}
+.single-testimonial .single-testi-content p {
+  margin-bottom: 30px;
+}
+.single-testimonial .single-testi-content .name {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  line-height: 22px;
+  font-family: paralucent, sans-serif;
+  color: #a57d4c;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
 }

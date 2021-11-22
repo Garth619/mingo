@@ -49,7 +49,19 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
 
 </head>
 
-<body <?php body_class();?>>
+<?php
+
+$disable_banner = get_field('disable_banner');
+
+if ($disable_banner) {
+    $internal_banner = 'no-banner';
+} else {
+    $internal_banner = 'has-banner';
+}
+
+?>
+
+<body <?php body_class($internal_banner);?>>
 
   <header>
 

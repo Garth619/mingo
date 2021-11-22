@@ -1,0 +1,115 @@
+#testimonial-wrapper {
+  max-width: 590px;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    margin-top: 40px;
+  }
+  @include mq(small_laptop) {
+    max-width: 790px;
+  }
+  @include mq(large_laptop) {
+    max-width: 1000px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1210px;
+  }
+}
+
+.single-testimonial {
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #c7cec7;
+  @include mq(small_laptop) {
+    margin-bottom: 40px;
+  }
+  @include mq(large_laptop) {
+    padding-bottom: 80px;
+    margin-bottom: 75px;
+  }
+  &:last-of-type {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0;
+    @include mq(small_laptop) {
+      margin-bottom: 40px;
+    }
+    @include mq(large_laptop) {
+      //margin-bottom: 75px;
+    }
+  }
+  .single-testi-header {
+    max-width: 440px;
+    @include margin_lr();
+    @include flex(space-between);
+    @include mq(large_laptop) {
+      max-width: 560px;
+    }
+    svg {
+      @include image();
+      @include box(45px, 95px);
+    }
+    .single-testi-title {
+      width: calc(100% - 140px);
+      margin-top: 25px;
+      @include type(
+        (
+          size: 17px,
+          height: 21px,
+          spacing: 1.2px,
+          family: $secondaryfont,
+          color: $red,
+          weight: 700,
+          align: center,
+          transform: uppercase,
+        )
+      );
+      @include mq(large_laptop) {
+        @include quick_type(20px, 24px, null);
+      }
+    }
+  }
+  .single-testi-content {
+    margin-top: 25px;
+    @include type(
+      (
+        size: 20px,
+        height: 30px,
+        family: $thirdfont,
+        color: $blue,
+        align: center,
+      )
+    );
+    @include mq(small_laptop) {
+      max-width: 590px;
+      @include margin_lr();
+      @include quick_type(25px, 35px, null);
+    }
+    @include mq(large_laptop) {
+      max-width: 800px;
+      margin-top: 35px;
+      @include quick_type(32px, 47px, null);
+    }
+    @include mq(small_monitor) {
+      max-width: 910px;
+      @include quick_type(38px, 51px, null);
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    .name {
+      display: block;
+      @include type(
+        (
+          size: 18px,
+          height: 22px,
+          spacing: 1.8px,
+          family: $secondaryfont,
+          color: $brown,
+          weight: 600,
+          align: center,
+          transform: uppercase,
+        )
+      );
+    }
+  }
+}
