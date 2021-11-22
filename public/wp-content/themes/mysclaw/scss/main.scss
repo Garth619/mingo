@@ -1,7 +1,7 @@
 // vars/mixins
 
-@import "imports/global/fonts/variables", "imports/global/colors/variables",
-  "imports/global/mediaqueries/variables", "imports/utils/mixins_do_not_edit";
+@import "imports/global/fonts", "imports/global/colors",
+  "imports/global/mediaqueries", "imports/utils/mixins_do_not_edit";
 
 // third party files
 
@@ -13,28 +13,25 @@
 
 // global
 
-@import "imports/global/content/content", "imports/global/misc/global";
+@import "imports/global/content", "imports/global/global";
 
 // components
 
-@import "imports/components/buttons/buttons",
-  "imports/components/internal_forms/internal_content_forms";
+@import "imports/components/buttons", "imports/components/internal_forms";
 
 // layout
 
-@import "imports/layout/header/header", "imports/layout/navigation/navigation",
-  "imports/layout/banner/banner", "imports/layout/sidebar/sidebar",
-  "imports/layout/footer/footer";
+@import "imports/layout/header", "imports/layout/navigation",
+  "imports/layout/banner", "imports/layout/sidebar", "imports/layout/footer";
 
 // page templates
 
-@import "imports/templates/homepage/sectionone/section_one",
-  "imports/templates/homepage/sectiontwo/section_two",
-  "imports/templates/homepage/sectionthree/section_three",
-  "imports/templates/homepage/sectionfour/section_four",
-  "imports/templates/homepage/sectionfive/section_five",
-  "imports/templates/about/template-about",
-  "imports/templates/padirectory/padirectory",
-  "imports/templates/blog/template-blog", "imports/templates/404/not-found";
+@import "imports/templates/homepage/section_one",
+  "imports/templates/homepage/section_two",
+  "imports/templates/homepage/section_three",
+  "imports/templates/homepage/section_four",
+  "imports/templates/homepage/section_five", "imports/templates/about",
+  "imports/templates/padirectory", "imports/templates/videocenter",
+  "imports/templates/template-blog", "imports/templates/not-found";
 
 @import "imports/layout/animations";

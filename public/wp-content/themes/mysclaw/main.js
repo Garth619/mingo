@@ -35,9 +35,9 @@ jQuery(document).ready(function ($) {
     );
   }
 
-  if ($("div").hasClass("playbook-thumbnail")) {
-    loadWistia(this, "_all");
-  }
+  // if ($("div").hasClass("playbook-thumbnail")) {
+  //   loadWistia(this, "_all");
+  // }
 
   $(".wistia_embed").on("click", checkWistia);
 
