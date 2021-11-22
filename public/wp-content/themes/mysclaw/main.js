@@ -288,6 +288,14 @@ jQuery(document).ready(function ($) {
       $(this).addClass("blog-active");
   });
 
+  /* Case Results Mobile Tap
+--------------------------------------------------------------------------------------- */
+
+  $(".single-case-result").on("click", function (e) {
+    $(".single-case-result").not(this).removeClass("click");
+    $(this).toggleClass("click");
+  });
+
   /* Resize Nav Functions
 --------------------------------------------------------------------------------------- */
 
