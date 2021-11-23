@@ -24,6 +24,9 @@
     text-align: center;
   }
   &.page-title-large {
+    @include mq(small_tablet) {
+      @include quick_type(50px, 52px, null);
+    }
     @include mq(large_laptop) {
       @include quick_type(60px, 63px, null);
     }

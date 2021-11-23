@@ -291,10 +291,25 @@ jQuery(document).ready(function ($) {
   /* Case Results Mobile Tap
 --------------------------------------------------------------------------------------- */
 
-  $(".single-case-result").on("click", function (e) {
+  function crClick() {
     $(".single-case-result").not(this).removeClass("click");
     $(this).toggleClass("click");
-  });
+  }
+
+  if ($(window).width() < 1170) {
+    $(".single-case-result").off().on("click", crClick);
+  }
+
+  $(window).resize(
+    _.debounce(function () {
+      if ($(window).width() >= 1170) {
+        $(".single-case-result").off("click", crClick);
+      }
+      if ($(window).width() < 1170) {
+        $(".single-case-result").off().on("click", crClick);
+      }
+    }, 100)
+  );
 
   /* Resize Nav Functions
 --------------------------------------------------------------------------------------- */

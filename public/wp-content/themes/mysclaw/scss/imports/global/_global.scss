@@ -83,6 +83,9 @@ body.no-banner {
   position: relative;
   &.single-col {
     padding: 55px 30px;
+    @include mq(small_tablet) {
+      padding: 55px 45px;
+    }
     @include mq(small_laptop) {
       padding: 55px 62px;
     }

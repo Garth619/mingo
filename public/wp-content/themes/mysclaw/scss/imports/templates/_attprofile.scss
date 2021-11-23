@@ -1,0 +1,109 @@
+#att-header {
+  max-width: 360px;
+  margin-bottom: 23px;
+  @include margin_lr();
+  @include flex(space-between);
+  @include mq(large_laptop) {
+    max-width: 432px;
+    margin-bottom: 40px;
+  }
+  @include mq(small_monitor) {
+    margin-top: -30px;
+    margin-bottom: 20px;
+  }
+  img {
+    @include image();
+    @include box(40px, 90px);
+    @include mq(small_laptop) {
+      @include box(45px, 95px);
+    }
+  }
+  #att-header-subtitle {
+    width: calc(100% - 140px);
+    margin-top: 25px;
+    @include type(
+      (
+        size: 17px,
+        height: 21px,
+        spacing: 1.2px,
+        family: $secondaryfont,
+        color: $red,
+        weight: 700,
+        align: center,
+        transform: uppercase,
+      )
+    );
+    @include mq(large_laptop) {
+      @include quick_type(20px, 24px, null);
+    }
+  }
+}
+
+#att-wrapper {
+  @include mq(small_laptop) {
+    padding-top: 30px;
+    max-width: 1000px;
+    @include margin_lr();
+    @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    padding-top: 80px;
+    max-width: 1140px;
+  }
+  @include mq(small_monitor) {
+    padding-top: 99px;
+    max-width: 1620px;
+    padding-left: 130px;
+  }
+  .content {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+#att-left {
+  max-width: 536px;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    padding-top: 25px;
+  }
+  @include mq(small_laptop) {
+    order: 2;
+    width: 100%;
+    flex-shrink: 0;
+    max-width: 400px;
+    padding-top: 0px;
+    margin-left: 60px;
+    @include margin_lr(0);
+    margin-left: 60px;
+  }
+  @include mq(large_laptop) {
+    margin-left: 110px;
+  }
+  @include mq(small_monitor) {
+    max-width: 536px;
+    margin-left: 0px;
+  }
+}
+
+#att-profile {
+  overflow: hidden;
+  img#att-img {
+    @include image();
+  }
+}
+
+#att-right {
+  padding-top: 40px;
+  @include mq(small_tablet) {
+    padding-top: 60px;
+  }
+  @include mq(small_laptop) {
+    order: 1;
+    padding-top: 0px;
+    flex-grow: 1;
+  }
+  @include mq(small_monitor) {
+    max-width: 670px;
+  }
+}

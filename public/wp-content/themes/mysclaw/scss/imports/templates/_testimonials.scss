@@ -38,15 +38,18 @@
     }
   }
   .single-testi-header {
-    max-width: 440px;
+    max-width: 410px;
     @include margin_lr();
     @include flex(space-between);
     @include mq(large_laptop) {
       max-width: 560px;
     }
-    svg {
+    img {
       @include image();
-      @include box(45px, 95px);
+      @include box(40px, 90px);
+      @include mq(small_tablet) {
+        @include box(45px, 95px);
+      }
     }
     .single-testi-title {
       width: calc(100% - 140px);
