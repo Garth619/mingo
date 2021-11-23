@@ -1,0 +1,91 @@
+#about-wrapper {
+}
+
+#about-left {
+}
+
+#about-img-wrapper {
+  margin-bottom: 30px;
+  overflow: hidden;
+  img#about-img {
+    @include image();
+  }
+}
+
+#about-slider-wrapper {
+  padding-top: 20px;
+}
+
+span#about-slider-title {
+  display: block;
+  @include flex(null, center);
+  @include type(
+    (
+      size: 18px,
+      height: 18px,
+      family: $secondaryfont,
+      color: $blue,
+      weight: 600,
+      transform: uppercase,
+    )
+  );
+  &::before {
+    flex-shrink: 0;
+    background: $red;
+    margin-right: 20px;
+    @include box(4px, 45px);
+    @include contentdisplay();
+  }
+}
+
+#about-slider-inner {
+  margin-top: 40px;
+}
+
+#about-slider {
+}
+
+.about-slide {
+  .about-slide-inner {
+    height: 115px;
+    @include flex(center, center);
+    img {
+      @include image();
+      max-height: 115px;
+    }
+  }
+}
+
+#arrow-buttons {
+  border: 1px solid $brown;
+  border-radius: 50px;
+  background: $offwhite;
+  padding: 0 20px;
+  margin-top: 40px;
+  @include flex(space-between, center);
+  @include box(93px, 45px);
+  @include margin_lr();
+  .arrow-button {
+    cursor: pointer;
+    svg {
+      @include image();
+      @include box(10px, auto);
+      .cls-1 {
+        fill: $brown;
+        transition: all 200ms ease-in-out;
+      }
+    }
+    &:hover {
+      svg {
+        .cls-1 {
+          fill: $blue;
+        }
+      }
+    }
+  }
+  #arrow-button-right {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

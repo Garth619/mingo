@@ -110,6 +110,57 @@ jQuery(document).ready(function ($) {
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
 
+  //about - slider;
+
+  $("#about-slider").slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    mobileFirst: true,
+    arrows: true,
+    prevArrow: "#arrow-button-left",
+    nextArrow: "#arrow-button-right",
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          adaptiveHeight: false,
+          fade: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 1170,
+        settings: {
+          adaptiveHeight: false,
+          fade: false,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 1380,
+        settings: {
+          adaptiveHeight: false,
+          fade: false,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 1695,
+        settings: {
+          adaptiveHeight: false,
+          fade: false,
+          slidesToShow: 6,
+          slidesToScroll: 6,
+        },
+      },
+    ],
+  });
+
   // var $status = $("#sec-two-arrow-counter");
   // var $slickElement = $("#sec-two-sp-slideshow");
 
