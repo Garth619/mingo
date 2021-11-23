@@ -95,7 +95,7 @@ if ($disable_banner) {
 
           </div><!-- header-free-consult -->
 
-          <a class='button-one spanish-button' href=''>español</a>
+          <a class='button-one spanish-button' href='/espanol'>español</a>
           <!-- button spanish-button -->
 
         </div><!-- header-right-contact -->
