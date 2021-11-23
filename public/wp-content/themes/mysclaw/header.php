@@ -53,10 +53,12 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
 
 $disable_banner = get_field('disable_banner');
 
-if ($disable_banner) {
-    $internal_banner = 'no-banner';
-} else {
-    $internal_banner = 'has-banner';
+if (!is_front_page()) {
+    if ($disable_banner) {
+        $internal_banner = 'no-banner';
+    } else {
+        $internal_banner = 'has-banner';
+    }
 }
 
 ?>
