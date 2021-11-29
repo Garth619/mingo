@@ -8,7 +8,7 @@
 
         <div class='sec-two-slide-inner'>
 
-          <img src='<?php bloginfo('template_directory');?>/images/ico-01.svg' alt='' />
+          <img id='medical-icon' src='<?php bloginfo('template_directory');?>/images/ico-01.svg' alt='' />
 
           <span class='sec-two-slide-amount'>$320,000</span><!-- sec-two-slide-amount -->
 
@@ -26,7 +26,7 @@
 
         <div class='sec-two-slide-inner'>
 
-          <img src='<?php bloginfo('template_directory');?>/images/ico-03.svg' alt='' />
+          <img id='boat-icon' src='<?php bloginfo('template_directory');?>/images/ico-03.svg' alt='' />
 
           <span class='sec-two-slide-amount'>$150,000</span><!-- sec-two-slide-amount -->
 
@@ -44,7 +44,7 @@
 
         <div class='sec-two-slide-inner'>
 
-          <img src='<?php bloginfo('template_directory');?>/images/ico-02.svg' alt='' />
+          <img id='car-icon' src='<?php bloginfo('template_directory');?>/images/ico-02.svg' alt='' />
 
           <span class='sec-two-slide-amount'>$125,000</span><!-- sec-two-slide-amount -->
 

@@ -4,6 +4,14 @@
   @include mq(small_tablet) {
     padding: 0;
   }
+  @include mq(small_laptop) {
+    border-right: 9px solid $red;
+    width: calc(100% - 40px);
+  }
+  @include mq(small_monitor) {
+    border-right: 17px solid $red;
+    width: calc(100% - 85px);
+  }
 }
 
 #sec-two-slider-wrapper {
@@ -16,6 +24,15 @@
 }
 
 #sec-two-slider {
+  @include mq(small_tablet) {
+    height: 425px;
+  }
+  @include mq(large_laptop) {
+    height: 503px;
+  }
+  @include mq(small_monitor) {
+    height: 584px;
+  }
 }
 
 .sec-two-slide {
@@ -27,14 +44,27 @@
       height: 425px;
       border-right: 1px solid rgba(103, 103, 103, 0.32);
     }
+    @include mq(small_laptop) {
+      padding: 133px 40px 0;
+    }
+    @include mq(large_laptop) {
+      height: 503px;
+      padding: 163px 61px 0;
+    }
+    @include mq(small_monitor) {
+      padding: 185px 95px 0;
+    }
     img {
-      margin-top: 35px;
       @include image();
       @include box(auto, 50px);
-      @include abs(0, 0, null, null);
+      @include abs(35px, 0, null, null);
       @include mq(small_tablet) {
         @include box(auto, 55px);
-        @include abs(0, 25px, null, null);
+        @include abs(35px, 25px, null, null);
+      }
+      @include mq(large_laptop) {
+        @include box(auto, 68px);
+        @include abs(45px, 25px, null, null);
       }
     }
     span {
@@ -48,6 +78,15 @@
             color: $brown,
           )
         );
+        @include mq(small_laptop) {
+          font-size: 40px;
+        }
+        @include mq(large_laptop) {
+          font-size: 50px;
+        }
+        @include mq(small_monitor) {
+          font-size: 68px;
+        }
       }
       &.sec-two-slide-type {
         margin-top: 25px;
@@ -64,6 +103,13 @@
         @include mq(small_tablet) {
           margin-top: 20px;
         }
+        @include mq(small_laptop) {
+          margin-top: 15px;
+        }
+        @include mq(small_monitor) {
+          font-size: 18px;
+          margin-top: 45px;
+        }
       }
       &.sec-two-slide-descrip {
         margin-top: 10px;
@@ -78,6 +124,17 @@
         );
         @include mq(small_tablet) {
           margin-top: 20px;
+        }
+        @include mq(small_laptop) {
+          margin-top: 16px;
+          @include quick_type(14px, 25px, null);
+        }
+        @include mq(large_laptop) {
+          @include quick_type(16px, 25px, null);
+        }
+        @include mq(small_monitor) {
+          margin-top: 20px;
+          @include quick_type(18px, 34px, null);
         }
       }
     }
