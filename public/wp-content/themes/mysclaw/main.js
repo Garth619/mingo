@@ -122,27 +122,14 @@ jQuery(document).ready(function ($) {
     dots: false,
     responsive: [
       {
-        breakpoint: 625,
+        breakpoint: 767,
         settings: {
           adaptiveHeight: false,
           fade: false,
-          arrows: true,
-          prevArrow: "#arrow-button-left",
-          nextArrow: "#arrow-button-right",
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 1093,
-        settings: {
-          adaptiveHeight: false,
-          fade: false,
-          arrows: true,
-          prevArrow: "#arrow-button-left",
-          nextArrow: "#arrow-button-right",
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          arrows: false,
+
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
       {
