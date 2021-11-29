@@ -1,0 +1,41 @@
+#section-three {
+  background: $offwhite;
+  padding: 60px 30px 20px;
+  @include mq(small_laptop) {
+    margin-top: -305px;
+  }
+  @include mq(large_laptop) {
+    margin-top: -408px;
+  }
+}
+
+#sec-three-inner {
+}
+
+#sec-three-image-wrapper {
+  display: none;
+  @include mq(small_laptop) {
+    overflow: hidden;
+  }
+  img {
+    @include mq(small_laptop) {
+      @include image();
+    }
+  }
+}
+
+#sec-three-content {
+  #sec-three-title {
+    margin-bottom: 45px;
+    @include type(
+      (
+        size: 40px,
+        height: 42px,
+        family: $secondaryfont,
+        color: $blue,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
+  }
+}
