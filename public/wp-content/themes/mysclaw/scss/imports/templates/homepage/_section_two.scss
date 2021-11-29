@@ -1,0 +1,65 @@
+#section-two {
+  background: $white;
+  padding: 0 30px 55px;
+}
+
+#sec-two-slider-wrapper {
+}
+
+#sec-two-slider {
+}
+
+.sec-two-slide {
+  position: relative;
+  .sec-two-slide-inner {
+    padding: 90px 0 0;
+    img {
+      margin-top: 35px;
+      @include image();
+      @include box(auto, 50px);
+      @include abs(0, 0, null, null);
+    }
+    span {
+      display: block;
+      &.sec-two-slide-amount {
+        @include type(
+          (
+            size: 50px,
+            height: 50px,
+            family: $thirdfont,
+            color: $brown,
+          )
+        );
+      }
+      &.sec-two-slide-type {
+        margin-top: 25px;
+        @include type(
+          (
+            size: 15px,
+            spacing: 1.5px,
+            family: $secondaryfont,
+            color: $red,
+            weight: 700,
+            transform: uppercase,
+          )
+        );
+      }
+      &.sec-two-slide-descrip {
+        margin-top: 10px;
+        @include type(
+          (
+            size: 16px,
+            height: 27px,
+            family: $primaryfont,
+            color: #676767,
+            weight: 500,
+          )
+        );
+      }
+    }
+  }
+}
+
+#arrow-buttons.sec-two-arrow-buttons {
+  @include margin_lr(0);
+}

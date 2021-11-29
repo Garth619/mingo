@@ -1,19 +1,89 @@
 #about-wrapper {
+  @include mq(small_laptop) {
+    max-width: 950px;
+    @include margin_lr();
+    @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    max-width: 1250px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1320px;
+  }
+  @include mq(monitor) {
+    max-width: 1630px;
+  }
 }
 
-#about-left {
+#about-top {
+  @include mq(small_laptop) {
+    flex-grow: 1;
+  }
+  @include mq(large_laptop) {
+    padding-left: 70px;
+  }
+  @include mq(monitor) {
+    padding-left: 140px;
+  }
+  #page-title.page-title-center {
+    @include mq(small_laptop) {
+      text-align: left;
+    }
+  }
+  .about-img-wrapper {
+    @include mq(small_laptop) {
+      display: none;
+    }
+  }
 }
 
-#about-img-wrapper {
+#about-bottom {
+  display: none;
+  @include mq(small_laptop) {
+    flex-basis: 350px;
+    flex-shrink: 0;
+    margin-left: 60px;
+    display: block;
+    margin-top: 20px;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 470px;
+  }
+  @include mq(monitor) {
+    margin-left: 120px;
+    flex-basis: 651px;
+  }
+}
+
+.about-img-wrapper {
   margin-bottom: 30px;
   overflow: hidden;
-  img#about-img {
+  max-width: 651px;
+  @include margin_lr();
+  img.about-img {
     @include image();
+    width: 100%;
   }
 }
 
 #about-slider-wrapper {
   padding-top: 20px;
+  @include mq(small_laptop) {
+    max-width: 950px;
+    margin-bottom: 70px;
+    @include margin_lr();
+  }
+  @include mq(large_laptop) {
+    max-width: 1120px;
+  }
+  @include mq(small_monitor) {
+    padding-top: 80px;
+    max-width: 1320px;
+  }
+  @include mq(monitor) {
+    padding-left: 140px;
+    max-width: 1630px;
+  }
 }
 
 span#about-slider-title {
@@ -29,6 +99,9 @@ span#about-slider-title {
       transform: uppercase,
     )
   );
+  @include mq(small_monitor) {
+    padding-bottom: 37px;
+  }
   &::before {
     flex-shrink: 0;
     background: $red;
@@ -40,15 +113,24 @@ span#about-slider-title {
 
 #about-slider-inner {
   margin-top: 40px;
+  @media screen and (min-width: 850px) {
+    @include flex(space-between);
+  }
 }
 
 #about-slider {
+  @media screen and (min-width: 850px) {
+    width: calc(100% - 143px);
+  }
 }
 
 .about-slide {
   .about-slide-inner {
     height: 115px;
     @include flex(center, center);
+    @media screen and (min-width: 850px) {
+      @include flex(flex-start, center);
+    }
     img {
       @include image();
       max-height: 115px;
@@ -78,7 +160,7 @@ span#about-slider-title {
     &:hover {
       svg {
         .cls-1 {
-          fill: $blue;
+          fill: $red;
         }
       }
     }

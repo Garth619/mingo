@@ -110,7 +110,67 @@ jQuery(document).ready(function ($) {
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
 
-  //about - slider;
+  $("#sec-two-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: true,
+    adaptiveHeight: true,
+    prevArrow: "#arrow-button-left",
+    nextArrow: "#arrow-button-right",
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 625,
+        settings: {
+          adaptiveHeight: false,
+          fade: false,
+          arrows: true,
+          prevArrow: "#arrow-button-left",
+          nextArrow: "#arrow-button-right",
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 1093,
+        settings: {
+          adaptiveHeight: false,
+          fade: false,
+          arrows: true,
+          prevArrow: "#arrow-button-left",
+          nextArrow: "#arrow-button-right",
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 1380,
+        settings: {
+          adaptiveHeight: false,
+          fade: false,
+          arrows: true,
+          prevArrow: "#arrow-button-left",
+          nextArrow: "#arrow-button-right",
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 1800,
+        settings: {
+          adaptiveHeight: false,
+          fade: false,
+          arrows: true,
+          prevArrow: "#arrow-button-left",
+          nextArrow: "#arrow-button-right",
+          slidesToShow: 5,
+          slidesToScroll: 5,
+        },
+      },
+    ],
+  });
 
   $("#about-slider").slick({
     infinite: true,
@@ -123,21 +183,27 @@ jQuery(document).ready(function ($) {
     dots: false,
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 625,
         settings: {
           adaptiveHeight: false,
           fade: false,
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          arrows: true,
+          prevArrow: "#arrow-button-left",
+          nextArrow: "#arrow-button-right",
+          slidesToShow: 3,
+          slidesToScroll: 3,
         },
       },
       {
-        breakpoint: 1170,
+        breakpoint: 1093,
         settings: {
           adaptiveHeight: false,
           fade: false,
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          arrows: true,
+          prevArrow: "#arrow-button-left",
+          nextArrow: "#arrow-button-right",
+          slidesToShow: 4,
+          slidesToScroll: 4,
         },
       },
       {
@@ -145,17 +211,23 @@ jQuery(document).ready(function ($) {
         settings: {
           adaptiveHeight: false,
           fade: false,
+          arrows: true,
+          prevArrow: "#arrow-button-left",
+          nextArrow: "#arrow-button-right",
           slidesToShow: 4,
           slidesToScroll: 4,
         },
       },
       {
-        breakpoint: 1695,
+        breakpoint: 1800,
         settings: {
           adaptiveHeight: false,
           fade: false,
-          slidesToShow: 6,
-          slidesToScroll: 6,
+          arrows: true,
+          prevArrow: "#arrow-button-left",
+          nextArrow: "#arrow-button-right",
+          slidesToShow: 5,
+          slidesToScroll: 5,
         },
       },
     ],

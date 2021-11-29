@@ -18,7 +18,7 @@ get_header();?>
 
     <div id='about-wrapper'>
 
-      <div id='about-left' class='content'>
+      <div id='about-top' class='content'>
 
         <?php if (!get_field('banner_h1') == "Yes"): ?>
 
@@ -26,79 +26,63 @@ get_header();?>
 
         <?php endif;?>
 
-        <div id='about-img-wrapper'>
+        <?php $about_image = get_field('about_image');?>
 
-          <img id='about-img' src='<?php bloginfo('template_directory');?>/images/Img-2.jpg' alt='' />
+        <?php if ($about_image) {?>
+
+        <div class='about-img-wrapper'>
+
+          <img class='about-img' src="<?php echo $about_image['url']; ?>" alt="<?php echo $about_image['alt']; ?>" />
 
         </div><!-- about-img-wrapper -->
 
+        <?php }?>
+
         <?php the_content();?>
 
-      </div><!-- about-left -->
+      </div><!-- about-top -->
 
-      <div id='about-right' class='content'>
+      <div id='about-bottom'>
 
-      </div><!-- about-right -->
+        <?php if ($about_image) {?>
+
+        <div class='about-img-wrapper'>
+
+          <img class='about-img' src="<?php echo $about_image['url']; ?>" alt="<?php echo $about_image['alt']; ?>" />
+
+        </div><!-- about-img-wrapper -->
+
+        <?php }?>
+
+      </div><!-- about-bottom -->
 
     </div><!-- about-wrapper -->
 
+    <?php if (have_rows('about_logos')): ?>
+
     <div id='about-slider-wrapper'>
 
-      <span id='about-slider-title'>AwARDS + ACCOLADES</span><!-- about-slider-title -->
+      <span id='about-slider-title'><?php the_field('about_slide_title');?></span><!-- about-slider-title -->
 
       <div id='about-slider-inner'>
 
         <div id='about-slider'>
 
-          <div class='about-slide'>
-
-            <div class='about-slide-inner'>
-
-              <img src='<?php bloginfo('template_directory');?>/images/aw-1.jpg' alt='' />
-
-            </div><!-- about-slide-inner -->
-
-          </div><!-- about-slide -->
+          <?php while (have_rows('about_logos')): the_row();?>
 
           <div class='about-slide'>
 
             <div class='about-slide-inner'>
 
-              <img src='<?php bloginfo('template_directory');?>/images/aw-2.jpg' alt='' />
+              <?php $logos = get_sub_field('logos');?>
+
+              <img src="<?php echo $logos['url']; ?>" alt="<?php echo $logos['alt']; ?>" />
 
             </div><!-- about-slide-inner -->
 
           </div><!-- about-slide -->
 
-          <div class='about-slide'>
-
-            <div class='about-slide-inner'>
-
-              <img src='<?php bloginfo('template_directory');?>/images/aw-3.jpg' alt='' />
-
-            </div><!-- about-slide-inner -->
-
-          </div><!-- about-slide -->
-
-          <div class='about-slide'>
-
-            <div class='about-slide-inner'>
-
-              <img src='<?php bloginfo('template_directory');?>/images/aw-4.jpg' alt='' />
-
-            </div><!-- about-slide-inner -->
-
-          </div><!-- about-slide -->
-
-          <div class='about-slide'>
-
-            <div class='about-slide-inner'>
-
-              <img src='<?php bloginfo('template_directory');?>/images/aw-5.jpg' alt='' />
-
-            </div><!-- about-slide-inner -->
-
-          </div><!-- about-slide -->
+          <?php endwhile;?>
 
         </div><!-- about-slider -->
 
@@ -121,6 +105,8 @@ get_header();?>
       </div><!-- about-slider-inner -->
 
     </div><!-- about-slider-wrapper -->
+
+    <?php endif;?>
 
   </div><!-- page-container -->
 
