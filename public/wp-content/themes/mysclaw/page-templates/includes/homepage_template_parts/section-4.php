@@ -1,5 +1,7 @@
 <section id='section-four'>
 
+  <?php get_template_part('page-templates/includes/template', 'mtscroll');?>
+
   <div id='sec-four-top'>
 
     <div id='sec-four-header'>
@@ -14,9 +16,6 @@
     </div><!-- sec-four-header -->
 
     <div id='sec-four-intro'>
-
-      <p>If for any reason you’re not completely satisfied with the way your case is being handled within the first 30
-        days, you are free to take your case to another lawyer with no charge for costs expended and no fee.</p>
 
       <p>If for any reason you’re not completely satisfied with the way your case is being handled within the first 30
         days, you are free to take your case to another lawyer with no charge for costs expended and no fee.</p>

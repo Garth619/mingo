@@ -1,32 +1,62 @@
 #section-four {
-  background: #fff;
   padding: 60px 30px 30px;
+  @include mq(small_tablet) {
+    padding: 60px 45px 45px;
+  }
+  @include mq(small_laptop) {
+    padding: 100px 45px 45px;
+    position: relative;
+    z-index: 0;
+  }
+  @include mq(large_laptop) {
+    padding: 120px 45px 65px;
+  }
   @include mq(small_monitor) {
-    margin-top: -40px;
+    padding: 200px 45px 133px;
+  }
+  @include mq(monitor) {
+    padding: 241px 45px 133px;
   }
 }
 
 #sec-four-top {
+  @include mq(small_tablet) {
+    max-width: 630px;
+    @include margin_lr();
+  }
+  @include mq(small_laptop) {
+    max-width: 680px;
+  }
+  @include mq(large_laptop) {
+    max-width: 840px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1070px;
+  }
 }
 
 #sec-four-header {
-  max-width: 360px;
+  max-width: 300px;
   margin-bottom: 23px;
   @include margin_lr();
   @include flex(space-between);
   @include mq(large_laptop) {
-    max-width: 432px;
-    margin-bottom: 40px;
+    max-width: 380px;
+    margin-bottom: 24px;
   }
   @include mq(small_monitor) {
     margin-top: -30px;
     margin-bottom: 20px;
+    max-width: 450px;
   }
   img {
     @include image();
     @include box(30px, 70px);
-    @include mq(small_laptop) {
-      @include box(45px, 95px);
+    @include mq(small_tablet) {
+      @include box(40px, 80px);
+    }
+    @include mq(large_laptop) {
+      @include box(65px, 105px);
     }
   }
   #sec-four-subtitle {
@@ -36,7 +66,7 @@
       (
         size: 16px,
         height: 19px,
-        spacing: 1.2px,
+        spacing: 1.6px,
         family: $secondaryfont,
         color: $red,
         weight: 700,
@@ -45,7 +75,11 @@
       )
     );
     @include mq(large_laptop) {
+      margin-top: 25px;
       @include quick_type(20px, 24px, null);
+    }
+    @include mq(small_monitor) {
+      @include quick_type(25px, 29px, 2px);
     }
   }
 }
@@ -58,9 +92,19 @@
       height: 32px,
       family: $thirdfont,
       color: $blue,
+      spacing: 1.1px,
       align: center,
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(31px, 42px, 1.55px);
+  }
+  @include mq(large_laptop) {
+    @include quick_type(38px, 51px, 1.9px);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(48px, 65px, 2.4px);
+  }
   p {
     margin-bottom: 20px;
   }
@@ -70,11 +114,39 @@
   font-size: 13px;
   padding: 10px 35px;
   letter-spacing: 1.63px;
+  @include mq(small_tablet) {
+    padding: 6px 35px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 30px;
+  }
+  @include mq(large_laptop) {
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 6px 42px;
+  }
+  @include mq(small_monitor) {
+    padding: 0px 42px;
+  }
 }
 
 #sec-four-content {
   padding-top: 75px;
+  @include mq(small_laptop) {
+    padding: 100px 90px 25px;
+    @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    max-width: 1280px;
+    @include margin_lr();
+  }
+  @include mq(small_monitor) {
+    padding: 150px 90px 25px;
+    max-width: 1435px;
+  }
 }
 
 .sec-four-col {
+  flex-shrink: 0;
+  flex-basis: calc(50% - 60px);
 }

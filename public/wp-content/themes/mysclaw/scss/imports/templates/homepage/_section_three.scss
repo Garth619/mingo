@@ -6,6 +6,8 @@
   }
   @include mq(small_laptop) {
     margin-top: -305px;
+    // position: relative;
+    // z-index: 1;
     padding: 74px 128px 85px 95px;
   }
   @include mq(large_laptop) {
@@ -14,6 +16,9 @@
   }
   @include mq(monitor) {
     padding: 74px 210px 0px 145px;
+    // height: 1400px;
+    // height: calc(100% - 499px);
+    //margin-bottom: -30px;
   }
 }
 
@@ -30,6 +35,9 @@
     max-width: 1565px;
     @include margin_lr();
   }
+  @include mq(monitor) {
+    padding: 473px 0px 0;
+  }
 }
 
 #sec-three-image-wrapper {
@@ -43,13 +51,17 @@
   }
   @include mq(large_laptop) {
     flex-basis: 520px;
+    margin-right: 96px;
   }
   @include mq(small_monitor) {
     margin-right: 100px;
+    flex-basis: 618px;
   }
   @include mq(monitor) {
     flex-basis: 762px;
     margin-right: 149px;
+    position: relative;
+    top: 40px;
   }
   img {
     @include mq(small_laptop) {
@@ -67,7 +79,10 @@
   }
   @include mq(small_monitor) {
     margin-top: 55px;
-    margin-bottom: 100px;
+  }
+  @include mq(monitor) {
+    margin-bottom: 60px;
+    margin-top: 95px;
   }
   #sec-three-title {
     margin-bottom: 45px;
