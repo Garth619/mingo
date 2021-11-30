@@ -7,6 +7,8 @@ img#sec-five-bg-img {
   display: none;
   @include mq(small_tablet) {
     display: block;
+    object-fit: cover;
+    @include box(100%, 100%);
     @include abs(0, null, null, 0);
   }
 }
@@ -25,6 +27,16 @@ img#sec-five-bg-img {
   padding: 55px 30px 32px;
   @include mq(small_tablet) {
     padding: 103px 43px 71px;
+  }
+  @include mq(small_laptop) {
+    padding: 103px 93px 57px;
+    @include flex(space-between, flex-end);
+  }
+  @include mq(large_laptop) {
+    padding: 103px 55px 42px;
+  }
+  @include mq(small_monitor) {
+    padding: 187px 89px 38px 154px;
   }
 }
 
@@ -46,6 +58,14 @@ img#sec-five-bg-img {
     max-width: 475px;
     @include quick_type(68px, 68px, 3.4px);
   }
+  @include mq(large_laptop) {
+    margin-bottom: 21px;
+  }
+  @include mq(small_monitor) {
+    max-width: 735px;
+    margin-bottom: 61px;
+    @include quick_type(105px, 105px, 5.25px);
+  }
 }
 
 #arrow-buttons.sec-five-arrow-buttons {
@@ -61,6 +81,15 @@ img#sec-five-bg-img {
   @include mq(small_tablet) {
     padding: 0 0 0 43px;
   }
+  @include mq(small_laptop) {
+    padding: 0 93px;
+  }
+  @include mq(large_laptop) {
+    padding: 0 55px;
+  }
+  @include mq(small_monitor) {
+    padding: 0 89px;
+  }
   .slick-track {
     @include mq(small_tablet) {
       @include flex();
@@ -75,12 +104,31 @@ img#sec-five-bg-img {
       height: inherit;
       border-width: 8px;
     }
+    @include mq(small_laptop) {
+      margin: 0 20px;
+    }
+    @include mq(large_laptop) {
+      margin: 0 13px;
+    }
+    @include mq(small_monitor) {
+      margin: 0 16px;
+    }
   }
   .slick-list {
     margin: 0 -10px;
     @include mq(small_tablet) {
       margin: 0 -24px;
       width: 1180px;
+    }
+    @include mq(small_laptop) {
+      margin: 0 -20px;
+      width: initial;
+    }
+    @include mq(large_laptop) {
+      margin: 0 -13px;
+    }
+    @include mq(small_monitor) {
+      margin: 0 -16px;
     }
   }
 }
@@ -91,11 +139,27 @@ img#sec-five-bg-img {
     border-width: 8px;
     padding: 68px 56px;
   }
+  @include mq(small_laptop) {
+    padding: 61px 45px;
+  }
+  @include mq(large_laptop) {
+    padding: 69px 45px;
+  }
+  @include mq(small_monitor) {
+    padding: 95px 65px;
+  }
+  @include mq(monitor) {
+    padding: 95px 85px;
+  }
   .sec-five-inner {
     img.stars {
       @include image();
       width: 150px;
       margin-bottom: 20px;
+      @include mq(small_monitor) {
+        width: 163px;
+        margin-bottom: 27px;
+      }
     }
     span {
       display: block;
@@ -108,6 +172,17 @@ img#sec-five-bg-img {
             color: $red,
           )
         );
+        @include mq(small_laptop) {
+          max-width: 292px;
+          @include quick_type(24px, 33px, null);
+        }
+        @include mq(large_laptop) {
+          @include quick_type(26px, 33px, null);
+        }
+        @include mq(small_monitor) {
+          max-width: 100%;
+          @include quick_type(32px, 39px, null);
+        }
       }
       &.sec-five-descrip {
         margin-top: 18px;
@@ -122,6 +197,15 @@ img#sec-five-bg-img {
         );
         @include mq(small_tablet) {
           margin-top: 14px;
+        }
+        @include mq(small_laptop) {
+          @include quick_type(14px, 26px, null);
+        }
+        @include mq(large_laptop) {
+          @include quick_type(16px, 28px, null);
+        }
+        @include mq(small_monitor) {
+          @include quick_type(18px, 32px, null);
         }
       }
       &.sec-five-name {
@@ -140,7 +224,26 @@ img#sec-five-bg-img {
         @include mq(small_tablet) {
           font-size: 16px;
         }
+        @include mq(small_laptop) {
+          margin-top: 25px;
+        }
+        @include mq(large_laptop) {
+          margin-top: 30px;
+        }
+        @include mq(small_monitor) {
+          font-size: 18px;
+          margin-top: 15px;
+        }
       }
     }
+  }
+}
+
+#sec-five-bg {
+  overflow: hidden;
+  @include box(100%, 575px);
+  @include abs(0, null, null, 0);
+  @include mq(small_monitor) {
+    height: 920px;
   }
 }

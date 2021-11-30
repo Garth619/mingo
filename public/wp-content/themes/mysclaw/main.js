@@ -127,7 +127,6 @@ jQuery(document).ready(function ($) {
           adaptiveHeight: false,
           fade: false,
           arrows: false,
-
           slidesToShow: 2,
           slidesToScroll: 2,
         },
@@ -135,8 +134,6 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 1170,
         settings: {
-          adaptiveHeight: false,
-          fade: false,
           slidesToShow: 3,
           slidesToScroll: 3,
         },
@@ -149,8 +146,8 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1,
     mobileFirst: true,
-    arrows: true,
     adaptiveHeight: true,
+    arrows: true,
     prevArrow: ".sec-five-arrow-button-left",
     nextArrow: ".sec-five-arrow-button-right",
     dots: false,
@@ -160,17 +157,13 @@ jQuery(document).ready(function ($) {
         settings: {
           adaptiveHeight: false,
           fade: false,
-          arrows: false,
-
           slidesToShow: 2,
           slidesToScroll: 2,
         },
       },
       {
-        breakpoint: 1170,
+        breakpoint: 1380,
         settings: {
-          adaptiveHeight: false,
-          fade: false,
           slidesToShow: 3,
           slidesToScroll: 3,
         },
@@ -193,9 +186,6 @@ jQuery(document).ready(function ($) {
         settings: {
           adaptiveHeight: false,
           fade: false,
-          arrows: true,
-          prevArrow: ".about-arrow-button-left",
-          nextArrow: ".about-arrow-button-right",
           slidesToShow: 3,
           slidesToScroll: 3,
         },
@@ -203,11 +193,6 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 1093,
         settings: {
-          adaptiveHeight: false,
-          fade: false,
-          arrows: true,
-          prevArrow: ".about-arrow-button-left",
-          nextArrow: ".about-arrow-button-right",
           slidesToShow: 4,
           slidesToScroll: 4,
         },
@@ -215,11 +200,6 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 1380,
         settings: {
-          adaptiveHeight: false,
-          fade: false,
-          arrows: true,
-          prevArrow: ".about-arrow-button-left",
-          nextArrow: ".about-arrow-button-right",
           slidesToShow: 4,
           slidesToScroll: 4,
         },
@@ -227,11 +207,6 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 1800,
         settings: {
-          adaptiveHeight: false,
-          fade: false,
-          arrows: true,
-          prevArrow: ".about-arrow-button-left",
-          nextArrow: ".about-arrow-button-right",
           slidesToShow: 5,
           slidesToScroll: 5,
         },
