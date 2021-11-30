@@ -3226,12 +3226,91 @@ ul#sec-one-selling-points li:first-of-type::before {
 
 #section-four {
   background: #fff;
-  height: 1000px;
+  padding: 60px 30px 30px;
 }
 @media screen and (min-width: 1695px) {
   #section-four {
     margin-top: -40px;
   }
+}
+
+#sec-four-header {
+  max-width: 360px;
+  margin-bottom: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1380px) {
+  #sec-four-header {
+    max-width: 432px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #sec-four-header {
+    margin-top: -30px;
+    margin-bottom: 20px;
+  }
+}
+#sec-four-header img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 30px;
+  height: 70px;
+}
+@media screen and (min-width: 1170px) {
+  #sec-four-header img {
+    width: 45px;
+    height: 95px;
+  }
+}
+#sec-four-header #sec-four-subtitle {
+  width: calc(100% - 90px);
+  margin-top: 15px;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  line-height: 19px;
+  font-family: paralucent, sans-serif;
+  color: #fd3939;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 1380px) {
+  #sec-four-header #sec-four-subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+#sec-four-intro {
+  padding-top: 5px;
+  font-size: 22px;
+  line-height: 32px;
+  font-family: ivypresto-display, serif;
+  color: #222537;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+#sec-four-intro p {
+  margin-bottom: 20px;
+}
+
+.sec-four-button {
+  font-size: 13px;
+  padding: 10px 35px;
+  letter-spacing: 1.63px;
+}
+
+#sec-four-content {
+  padding-top: 75px;
 }
 
 @media screen and (min-width: 1170px) {

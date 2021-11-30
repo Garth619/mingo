@@ -1,7 +1,80 @@
 #section-four {
   background: #fff;
-  height: 1000px;
+  padding: 60px 30px 30px;
   @include mq(small_monitor) {
     margin-top: -40px;
   }
+}
+
+#sec-four-top {
+}
+
+#sec-four-header {
+  max-width: 360px;
+  margin-bottom: 23px;
+  @include margin_lr();
+  @include flex(space-between);
+  @include mq(large_laptop) {
+    max-width: 432px;
+    margin-bottom: 40px;
+  }
+  @include mq(small_monitor) {
+    margin-top: -30px;
+    margin-bottom: 20px;
+  }
+  img {
+    @include image();
+    @include box(30px, 70px);
+    @include mq(small_laptop) {
+      @include box(45px, 95px);
+    }
+  }
+  #sec-four-subtitle {
+    width: calc(100% - 90px);
+    margin-top: 15px;
+    @include type(
+      (
+        size: 16px,
+        height: 19px,
+        spacing: 1.2px,
+        family: $secondaryfont,
+        color: $red,
+        weight: 700,
+        align: center,
+        transform: uppercase,
+      )
+    );
+    @include mq(large_laptop) {
+      @include quick_type(20px, 24px, null);
+    }
+  }
+}
+
+#sec-four-intro {
+  padding-top: 5px;
+  @include type(
+    (
+      size: 22px,
+      height: 32px,
+      family: $thirdfont,
+      color: $blue,
+      align: center,
+    )
+  );
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.sec-four-button {
+  font-size: 13px;
+  padding: 10px 35px;
+  letter-spacing: 1.63px;
+}
+
+#sec-four-content {
+  padding-top: 75px;
+}
+
+.sec-four-col {
 }
