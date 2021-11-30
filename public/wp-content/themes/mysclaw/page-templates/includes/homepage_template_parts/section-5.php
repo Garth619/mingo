@@ -93,4 +93,15 @@
 
   </div><!-- sec-five-inner -->
 
+  <picture>
+
+    <!-- <source media='(min-width: 1170px)' data-srcset='<?php // echo $section_one_image_laptop_webp['url']; ?>' type='image/webp'> -->
+
+    <source media='(min-width: 767px)' data-srcset='<?php bloginfo('template_directory');?>/images/bkg-1-tab.jpg'>
+
+    <img id='sec-five-bg-img' class='lazyload'
+      data-src='<?php bloginfo('template_directory');?>/images/sec-five-placeholder.png' alt='' />
+
+  </picture>
+
 </section><!-- section-five -->

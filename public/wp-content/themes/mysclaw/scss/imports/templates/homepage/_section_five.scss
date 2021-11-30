@@ -1,15 +1,36 @@
 #section-five {
   background: url(images/bkg-pattern.jpg) repeat;
+  position: relative;
+}
+
+img#sec-five-bg-img {
+  display: none;
+  @include mq(small_tablet) {
+    display: block;
+    @include abs(0, null, null, 0);
+  }
 }
 
 #sec-five-inner {
+  max-width: 510px;
+  @include margin_lr();
+  @include mq(small_tablet) {
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 #sec-five-top {
   padding: 55px 30px 32px;
+  @include mq(small_tablet) {
+    padding: 103px 43px 71px;
+  }
 }
 
 #sec-five-title {
+  max-width: 280px;
+  display: block;
   @include type(
     (
       size: 42px,
@@ -21,31 +42,55 @@
       transform: uppercase,
     )
   );
+  @include mq(small_tablet) {
+    max-width: 475px;
+    @include quick_type(68px, 68px, 3.4px);
+  }
 }
 
 #arrow-buttons.sec-five-arrow-buttons {
   margin-top: 17px;
   @include margin_lr(0);
+  @include mq(small_tablet) {
+    margin-top: 25px;
+  }
 }
 
 #sec-five-slider {
   padding: 0 15px;
+  @include mq(small_tablet) {
+    padding: 0 0 0 43px;
+  }
   .slick-track {
-    //@include flex(); makes slides the same height when side by side
+    @include mq(small_tablet) {
+      @include flex();
+    }
   }
   .slick-slide {
-    //height:inherit; makes slides the same height when side by side
     margin: 0 10px;
+    background: $white;
+    border-left: 4px solid $red;
+    @include mq(small_tablet) {
+      margin: 0 24px;
+      height: inherit;
+      border-width: 8px;
+    }
   }
   .slick-list {
     margin: 0 -10px;
+    @include mq(small_tablet) {
+      margin: 0 -24px;
+      width: 1180px;
+    }
   }
 }
 
 .sec-five-slide {
-  background: $white;
-  border-left: 4px solid $red;
   padding: 34px 25px;
+  @include mq(small_tablet) {
+    border-width: 8px;
+    padding: 68px 56px;
+  }
   .sec-five-inner {
     img.stars {
       @include image();
@@ -75,6 +120,9 @@
             weight: 500,
           )
         );
+        @include mq(small_tablet) {
+          margin-top: 14px;
+        }
       }
       &.sec-five-name {
         margin-top: 18px;
@@ -89,6 +137,9 @@
             transform: uppercase,
           )
         );
+        @include mq(small_tablet) {
+          font-size: 16px;
+        }
       }
     }
   }
