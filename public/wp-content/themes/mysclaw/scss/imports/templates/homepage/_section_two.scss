@@ -60,6 +60,7 @@
     }
     @include mq(small_monitor) {
       padding: 185px 95px 0;
+      height: 584px;
     }
     img {
       @include image();

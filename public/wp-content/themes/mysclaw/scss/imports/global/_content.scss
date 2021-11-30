@@ -44,7 +44,7 @@
       color: $black,
     )
   );
-  @include mq(large_laptop) {
+  @include mq(small_monitor) {
     @include quick_type(18px, 32px, null);
   }
   h2 {

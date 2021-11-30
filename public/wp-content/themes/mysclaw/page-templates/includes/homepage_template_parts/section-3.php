@@ -10,7 +10,7 @@
 
     <div id='sec-three-content' class='content'>
 
-      <h1 id='sec-three-title'>Milwaukee Personal Injury Attorneys</h1>
+      <h1 id='sec-three-title'>Milwaukee<br /> Personal Injury Attorneys</h1>
 
       <h2>Lorem ipsum dolor sit amet, dignissim vel tellus eu, malesuada faucibus massa. Nam venenatis lacus ac eleifend
         malesuad.

@@ -1,0 +1,7 @@
+#section-four {
+  background: #fff;
+  height: 1000px;
+  @include mq(small_monitor) {
+    margin-top: -40px;
+  }
+}
