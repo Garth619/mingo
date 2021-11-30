@@ -3455,6 +3455,89 @@ ul#sec-one-selling-points li:first-of-type::before {
   flex-basis: calc(50% - 60px);
 }
 
+#section-five {
+  background: url(images/bkg-pattern.jpg) repeat;
+}
+
+#sec-five-top {
+  padding: 55px 30px 32px;
+}
+
+#sec-five-title {
+  font-size: 42px;
+  letter-spacing: 2.1px;
+  line-height: 44px;
+  font-family: paralucent, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#arrow-buttons.sec-five-arrow-buttons {
+  margin-top: 17px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#sec-five-slider {
+  padding: 0 15px;
+}
+#sec-five-slider .slick-slide {
+  margin: 0 10px;
+}
+#sec-five-slider .slick-list {
+  margin: 0 -10px;
+}
+
+.sec-five-slide {
+  background: #fff;
+  border-left: 4px solid #fd3939;
+  padding: 34px 25px;
+}
+.sec-five-slide .sec-five-inner img.stars {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 150px;
+  margin-bottom: 20px;
+}
+.sec-five-slide .sec-five-inner span {
+  display: block;
+}
+.sec-five-slide .sec-five-inner span.sec-five-title {
+  font-size: 28px;
+  line-height: 31px;
+  font-family: ivypresto-display, serif;
+  color: #fd3939;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+.sec-five-slide .sec-five-inner span.sec-five-descrip {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Inter", sans-serif;
+  color: #676767;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+}
+.sec-five-slide .sec-five-inner span.sec-five-name {
+  margin-top: 18px;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  line-height: 13px;
+  font-family: paralucent, sans-serif;
+  color: #a57d4c;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 1170px) {
   #about-wrapper {
     max-width: 950px;

@@ -62,13 +62,13 @@
 
     <div id='arrow-buttons' class='sec-two-arrow-buttons'>
 
-      <div id='arrow-button-left' class='arrow-button'>
+      <div id='arrow-button-left' class='arrow-button sec-two-arrow-button-left'>
 
         <?php echo file_get_contents(get_template_directory() . '/images/arrow.svg'); ?>
 
       </div><!-- arrow-button-left -->
 
-      <div id='arrow-button-right' class='arrow-button'>
+      <div id='arrow-button-right' class='arrow-button sec-two-arrow-button-right'>
 
         <?php echo file_get_contents(get_template_directory() . '/images/arrow.svg'); ?>
 

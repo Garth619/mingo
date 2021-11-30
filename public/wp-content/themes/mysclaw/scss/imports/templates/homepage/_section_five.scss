@@ -1,0 +1,95 @@
+#section-five {
+  background: url(images/bkg-pattern.jpg) repeat;
+}
+
+#sec-five-inner {
+}
+
+#sec-five-top {
+  padding: 55px 30px 32px;
+}
+
+#sec-five-title {
+  @include type(
+    (
+      size: 42px,
+      height: 44px,
+      spacing: 2.1px,
+      family: $secondaryfont,
+      color: $white,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
+}
+
+#arrow-buttons.sec-five-arrow-buttons {
+  margin-top: 17px;
+  @include margin_lr(0);
+}
+
+#sec-five-slider {
+  padding: 0 15px;
+  .slick-track {
+    //@include flex(); makes slides the same height when side by side
+  }
+  .slick-slide {
+    //height:inherit; makes slides the same height when side by side
+    margin: 0 10px;
+  }
+  .slick-list {
+    margin: 0 -10px;
+  }
+}
+
+.sec-five-slide {
+  background: $white;
+  border-left: 4px solid $red;
+  padding: 34px 25px;
+  .sec-five-inner {
+    img.stars {
+      @include image();
+      width: 150px;
+      margin-bottom: 20px;
+    }
+    span {
+      display: block;
+      &.sec-five-title {
+        @include type(
+          (
+            size: 28px,
+            height: 31px,
+            family: $thirdfont,
+            color: $red,
+          )
+        );
+      }
+      &.sec-five-descrip {
+        margin-top: 18px;
+        @include type(
+          (
+            size: 16px,
+            height: 26px,
+            family: $primaryfont,
+            color: $grey,
+            weight: 500,
+          )
+        );
+      }
+      &.sec-five-name {
+        margin-top: 18px;
+        @include type(
+          (
+            size: 13px,
+            height: 13px,
+            spacing: 1.3px,
+            family: $secondaryfont,
+            color: $brown,
+            weight: 700,
+            transform: uppercase,
+          )
+        );
+      }
+    }
+  }
+}
