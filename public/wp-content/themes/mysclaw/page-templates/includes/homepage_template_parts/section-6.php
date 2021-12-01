@@ -1,4 +1,4 @@
-<div id='section-six'>
+<section id='section-six'>
 
   <div id='sec-six-top'>
 
@@ -104,4 +104,4 @@
 
   </div><!-- sec-six-content -->
 
-</div><!-- section-six -->
+</section><!-- section-six -->

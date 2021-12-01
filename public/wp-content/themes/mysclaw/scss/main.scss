@@ -27,15 +27,13 @@
 
 // page templates
 
-@import "imports/templates/homepage/section_one",
-  "imports/templates/homepage/section_two",
-  "imports/templates/homepage/section_three",
-  "imports/templates/homepage/section_four",
-  "imports/templates/homepage/section_five",
-  "imports/templates/homepage/section_six", "imports/templates/about",
-  "imports/templates/padirectory", "imports/templates/videocenter",
-  "imports/templates/blog", "imports/templates/testimonials",
-  "imports/templates/attprofile", "imports/templates/case-results",
-  "imports/templates/not-found";
+@import "imports/templates/homepage/section_1",
+  "imports/templates/homepage/section_2", "imports/templates/homepage/section_3",
+  "imports/templates/homepage/section_4", "imports/templates/homepage/section_5",
+  "imports/templates/homepage/section_6", "imports/templates/homepage/section_7",
+  "imports/templates/about", "imports/templates/padirectory",
+  "imports/templates/videocenter", "imports/templates/blog",
+  "imports/templates/testimonials", "imports/templates/attprofile",
+  "imports/templates/case-results", "imports/templates/not-found";
 
 @import "imports/layout/animations";
