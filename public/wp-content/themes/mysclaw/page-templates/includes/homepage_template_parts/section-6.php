@@ -4,7 +4,7 @@
 
     <span id='sec-six-title'>Your case is only as good as the lawyer you hire.</span><!-- sec-six-title -->
 
-    <a class='button-two sec-six-button-two' href=''>Meet mark mingo </a>
+    <a class='button-two sec-six-button-two' href='<?php bloginfo('url');?>/attorney-mark-mingo'>Meet mark mingo </a>
 
   </div><!-- sec-six-top -->
 
@@ -27,7 +27,7 @@
             nibh, sed dapibus mauris pulvinar eget.
           </span><!-- sec-six-sp-descrip -->
 
-          <a class='button-one sec-six-sp-button-one' href=''>Learn More</a>
+          <a class='button-one sec-six-sp-button-one' href='<?php bloginfo('url');?>/about-mingo-yankala'>Learn More</a>
 
         </div><!-- sec-six-sp-content -->
 
@@ -48,7 +48,7 @@
             nibh, sed dapibus mauris pulvinar eget.
           </span><!-- sec-six-sp-descrip -->
 
-          <a class='button-one sec-six-sp-button-one' href=''>Learn More</a>
+          <a class='button-one sec-six-sp-button-one' href='<?php bloginfo('url');?>/about-mingo-yankala'>Learn More</a>
 
         </div><!-- sec-six-sp-content -->
 
@@ -73,7 +73,7 @@
             nibh, sed dapibus mauris pulvinar eget.
           </span><!-- sec-six-sp-descrip -->
 
-          <a class='button-one sec-six-sp-button-one' href=''>Learn More</a>
+          <a class='button-one sec-six-sp-button-one' href='<?php bloginfo('url');?>/about-mingo-yankala'>Learn More</a>
 
         </div><!-- sec-six-sp-content -->
 
@@ -94,7 +94,7 @@
             nibh, sed dapibus mauris pulvinar eget.
           </span><!-- sec-six-sp-descrip -->
 
-          <a class='button-one sec-six-sp-button-one' href=''>Learn More</a>
+          <a class='button-one sec-six-sp-button-one' href='<?php bloginfo('url');?>/about-mingo-yankala'>Learn More</a>
 
         </div><!-- sec-six-sp-content -->
 

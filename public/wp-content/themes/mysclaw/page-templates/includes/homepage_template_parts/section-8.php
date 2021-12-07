@@ -12,7 +12,7 @@
 
     <ul>
       <li>
-        <a href=''>
+        <a href='<?php bloginfo('url');?>/milwaukee-personal-injury-attorneys'>
           <span>Practice Area Goes Here</span>
           <div class='arrow-wrapper'>
             <?php echo file_get_contents(get_template_directory() . '/images/ico-arrow.svg', false, $auth); ?>
@@ -20,7 +20,7 @@
         </a>
       </li>
       <li>
-        <a href=''>
+        <a href='<?php bloginfo('url');?>/milwaukee-personal-injury-attorneys'>
           <span>Practice Area Goes Here</span>
           <div class='arrow-wrapper'>
             <?php echo file_get_contents(get_template_directory() . '/images/ico-arrow.svg', false, $auth); ?>
@@ -28,7 +28,7 @@
         </a>
       </li>
       <li>
-        <a href=''>
+        <a href='<?php bloginfo('url');?>/milwaukee-personal-injury-attorneys'>
           <span>Practice Area Goes Here</span>
           <div class='arrow-wrapper'>
             <?php echo file_get_contents(get_template_directory() . '/images/ico-arrow.svg', false, $auth); ?>
@@ -36,7 +36,7 @@
         </a>
       </li>
       <li>
-        <a href=''>
+        <a href='<?php bloginfo('url');?>/milwaukee-personal-injury-attorneys'>
           <span>Practice Area Goes Here</span>
           <div class='arrow-wrapper'>
             <?php echo file_get_contents(get_template_directory() . '/images/ico-arrow.svg', false, $auth); ?>
@@ -44,7 +44,7 @@
         </a>
       </li>
       <li>
-        <a href=''>
+        <a href='<?php bloginfo('url');?>/milwaukee-personal-injury-attorneys'>
           <span>Practice Area Goes Here</span>
           <div class='arrow-wrapper'>
             <?php echo file_get_contents(get_template_directory() . '/images/ico-arrow.svg', false, $auth); ?>
@@ -52,7 +52,7 @@
         </a>
       </li>
       <li>
-        <a href=''>
+        <a href='<?php bloginfo('url');?>/milwaukee-personal-injury-attorneys'>
           <span>Practice Area Goes Here</span>
           <div class='arrow-wrapper'>
             <?php echo file_get_contents(get_template_directory() . '/images/ico-arrow.svg', false, $auth); ?>
@@ -60,7 +60,7 @@
         </a>
       </li>
       <li>
-        <a href=''>
+        <a href='<?php bloginfo('url');?>/milwaukee-personal-injury-attorneys'>
           <span>Practice Area Goes Here</span>
           <div class='arrow-wrapper'>
             <?php echo file_get_contents(get_template_directory() . '/images/ico-arrow.svg', false, $auth); ?>
@@ -68,7 +68,7 @@
         </a>
       </li>
       <li>
-        <a href=''>
+        <a href='<?php bloginfo('url');?>/milwaukee-personal-injury-attorneys'>
           <span>Practice Area Goes Here</span>
           <div class='arrow-wrapper'>
             <?php echo file_get_contents(get_template_directory() . '/images/ico-arrow.svg', false, $auth); ?>

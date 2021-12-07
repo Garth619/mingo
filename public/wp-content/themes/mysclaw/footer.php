@@ -21,7 +21,10 @@
 
     <div id='footer-contact'>
 
-      <span id='footer-address'>330 East Kilbourn Ave<br> Suite 1221<br> Milwaukee, WI 53202</span>
+      <a id='footer-address'
+        href='https://www.google.com/maps/place/330+E+Kilbourn+Ave+Suite+1221,+Milwaukee,+WI+53202/@43.0431442,-87.9096948,17z/data=!3m1!4b1!4m5!3m4!1s0x880519093e955555:0x9ffdbf0039ad4a72!8m2!3d43.0431442!4d-87.9075061'
+        target='_blank' rel='noopener'>330 East Kilbourn Ave<br> Suite 1221<br> Milwaukee,
+        WI 53202</a>
       <!-- footer-address -->
 
       <a id='footer-phone' href='tel:+14142737400'>(414) 273-7400</a><!-- footer-phone -->
@@ -32,8 +35,8 @@
 
       <ul>
         <li>&copy; <?php echo date('Y'); ?> Mingo & Yankala, S.C. All Rights Reserved.</li>
-        <li><a href=''>Privacy Policy</a></li>
-        <li><a href=''>Disclaimer</a></li>
+        <li><a href='<?php bloginfo('url');?>/privacy-policy'>Privacy Policy</a></li>
+        <li><a href='<?php bloginfo('url');?>/disclaimer'>Disclaimer</a></li>
       </ul><!-- copyright -->
 
       <a id='ilawermarketing' href='//ilawyermarketing.com' target='_blank' rel='noopener'>

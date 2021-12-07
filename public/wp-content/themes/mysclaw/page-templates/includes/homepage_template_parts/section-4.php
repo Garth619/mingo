@@ -20,7 +20,8 @@
       <p>If for any reason you’re not completely satisfied with the way your case is being handled within the first 30
         days, you are free to take your case to another lawyer with no charge for costs expended and no fee.</p>
 
-      <a class='button-two sec-four-button' href=''>LEARN MORE</a><!-- button-one -->
+      <a class='button-two sec-four-button' href='<?php bloginfo('url');?>/about-mingo-yankala/'>LEARN
+        MORE</a><!-- button-one -->
 
     </div><!-- sec-four-intro -->
 
