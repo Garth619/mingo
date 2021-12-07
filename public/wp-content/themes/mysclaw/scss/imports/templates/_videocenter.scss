@@ -11,13 +11,11 @@
     padding-top: 15px;
   }
   @include mq(small_laptop) {
-    padding: 0 30px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  @include mq(small_laptop) {
     padding: 0;
     max-width: 1050px;
+    max-width: 1030px;
     margin-bottom: -55px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   @include mq(small_monitor) {
     max-width: 1235px;

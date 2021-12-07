@@ -4550,6 +4550,7 @@ a.sec-six-button-two {
   #about-slider-wrapper {
     padding-top: 80px;
     max-width: 1320px;
+    padding-left: 70px;
   }
 }
 @media screen and (min-width: 1800px) {
@@ -4779,15 +4780,11 @@ span#about-slider-title::before {
 }
 @media screen and (min-width: 1170px) {
   #video-center-wrapper {
-    padding: 0 30px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-@media screen and (min-width: 1170px) {
-  #video-center-wrapper {
     padding: 0;
     max-width: 1050px;
+    max-width: 1030px;
     margin-bottom: -55px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 @media screen and (min-width: 1650px) {
@@ -5327,9 +5324,11 @@ h2.post-header a:hover {
     padding-left: 130px;
   }
 }
-#att-wrapper .content {
-  font-size: 18px;
-  line-height: 32px;
+@media screen and (min-width: 768px) {
+  #att-wrapper .content {
+    font-size: 18px;
+    line-height: 32px;
+  }
 }
 
 #att-left {

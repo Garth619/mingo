@@ -79,6 +79,7 @@
   @include mq(small_monitor) {
     padding-top: 80px;
     max-width: 1320px;
+    padding-left: 70px;
   }
   @include mq(monitor) {
     padding-left: 140px;
