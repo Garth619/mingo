@@ -9,7 +9,7 @@
     z-index: 0;
   }
   @include mq(large_laptop) {
-    padding: 120px 45px 65px;
+    padding: 130px 45px 65px;
   }
   @include mq(small_monitor) {
     padding: 200px 45px 133px;
@@ -36,7 +36,7 @@
 }
 
 #sec-four-header {
-  max-width: 300px;
+  max-width: 263px;
   margin-bottom: 23px;
   @include margin_lr();
   @include flex(space-between);

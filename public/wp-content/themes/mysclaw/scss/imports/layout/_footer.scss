@@ -34,7 +34,7 @@ img#footer-bg {
     max-width: 1250px;
   }
   @include mq(small_monitor) {
-    max-width: 1360px;
+    max-width: 1400px;
     padding: 265px 50px 70px;
   }
 }
@@ -87,7 +87,7 @@ span#footer-form-title {
   padding: 36px 20px 10px;
   @include mq(small_tablet) {
     border-left: 10px solid $red;
-    padding: 63px 20px 10px;
+    padding: 63px 30px 10px;
   }
   @include mq(small_laptop) {
     padding: 74px 90px 45px;

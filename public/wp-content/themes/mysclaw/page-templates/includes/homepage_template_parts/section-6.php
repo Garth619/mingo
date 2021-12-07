@@ -35,7 +35,7 @@
 
       <div class='sec-six-sp'>
 
-        <span class='sec-six-sp-number'>03</span><!-- sec-six-sp-number -->
+        <span class='sec-six-sp-number'>02</span><!-- sec-six-sp-number -->
 
         <div class='sec-six-sp-content'>
 
@@ -60,7 +60,7 @@
 
       <div class='sec-six-sp'>
 
-        <span class='sec-six-sp-number'>02</span><!-- sec-six-sp-number -->
+        <span class='sec-six-sp-number'>03</span><!-- sec-six-sp-number -->
 
         <div class='sec-six-sp-content'>
 

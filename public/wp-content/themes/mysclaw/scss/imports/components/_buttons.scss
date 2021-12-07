@@ -44,6 +44,7 @@
 
 .global-video {
   position: relative;
+  cursor: pointer;
   &:hover {
     .play-button {
       &::before {
@@ -84,6 +85,7 @@
     @include abs(0, 0, 0, 0);
     @include box(38px, 38px);
     @include contentdisplay();
+    transition: all 200ms ease-in-out;
     @include mq(small_tablet) {
       @include box(48px, 48px);
     }
@@ -92,6 +94,7 @@
     }
   }
   &::after {
+    transition: all 200ms ease-in-out;
     @include contentdisplay(block);
     @include tri(right, 7px, 8px, $red);
     margin: auto;

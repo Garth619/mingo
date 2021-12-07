@@ -13,11 +13,14 @@ body.sticky {
 
 #mt-scroll-wrapper {
   display: none;
+  border-right: 1px solid $brown;
+  @include box(60px, 100%);
+  @include abs(0, null, null, 0);
   @include mq(small_laptop) {
     display: block;
-    border-right: 1px solid $brown;
-    @include box(60px, 100%);
-    @include abs(0, null, null, 0);
+  }
+  @include mq(large_laptop) {
+    width: 75px;
   }
   @include mq(small_monitor) {
     @include box(90px, 100%);
@@ -29,9 +32,19 @@ body.sticky {
   margin-top: 53px;
   left: 0;
   width: 100%;
+  @include mq(small_laptop) {
+    margin-top: 30px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 74px;
+  }
   img {
     @include image();
     @include margin_lr();
+    width: 24px;
+    @include mq(large_laptop) {
+      width: 30px;
+    }
   }
   span {
     display: block;

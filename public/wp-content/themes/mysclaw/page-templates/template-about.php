@@ -88,15 +88,21 @@ get_header();?>
 
         <div id='arrow-buttons'>
 
+          <?php $auth = stream_context_create(array(
+    'http' => array(
+        'header' => "Authorization: Basic " . base64_encode("ilawyer:ilawyer")),
+)
+);?>
+
           <div id='arrow-button-left' class='arrow-button about-arrow-button-left'>
 
-            <?php echo file_get_contents(get_template_directory() . '/images/arrow.svg'); ?>
+            <?php echo file_get_contents(get_template_directory() . '/images/arrow.svg', false, $auth); ?>
 
           </div><!-- arrow-button-left -->
 
           <div id='arrow-button-right' class='arrow-button about-arrow-button-right'>
 
-            <?php echo file_get_contents(get_template_directory() . '/images/arrow.svg'); ?>
+            <?php echo file_get_contents(get_template_directory() . '/images/arrow.svg', false, $auth); ?>
 
           </div><!-- arrow-button-right -->
 

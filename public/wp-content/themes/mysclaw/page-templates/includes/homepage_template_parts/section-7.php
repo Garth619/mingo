@@ -15,10 +15,6 @@
         mattis. Sed blandit lacus a consequat iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
         Mauris ut purus sit amet tellus sollicitudin auctor. Orci varius natoque </p>
 
-      <p>Aliquam pellentesque enim urna, id laoreet justo viverra vitae. Proin eleifend tortor consequat elementum
-        mattis. Sed blandit lacus a consequat iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Mauris ut purus sit amet tellus sollicitudin auctor. Orci varius natoque </p>
-
     </div><!-- sec-seven-content -->
 
     <div id='sec-seven-image-wrapper'>

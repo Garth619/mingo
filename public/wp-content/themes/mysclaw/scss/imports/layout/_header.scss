@@ -188,9 +188,11 @@ a.spanish-button {
     display: block;
     font-size: 12px;
     padding: 10px 14px;
+    background: #040f2d;
     color: $brownlight;
     &:hover {
       background: $brownlight;
+      border-color: $brownlight;
     }
   }
   @include mq(large_laptop) {

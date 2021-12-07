@@ -40,7 +40,7 @@ span#sec-six-title {
     max-width: 560px;
     @include quick_type(50px, 58px, 1.25px);
   }
-  @include mq(small_laptop) {
+  @include mq(small_monitor) {
     max-width: 730px;
     @include quick_type(65px, 75px, 1.63px);
   }
@@ -192,6 +192,9 @@ a.sec-six-button-two {
             weight: 500,
           )
         );
+        @include mq(small_laptop) {
+          @include quick_type(14px, 26px, null);
+        }
         @include mq(large_laptop) {
           @include quick_type(17px, 32px, null);
         }
