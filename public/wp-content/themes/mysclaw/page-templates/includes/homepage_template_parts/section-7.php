@@ -25,8 +25,8 @@
 
         <source media='(min-width: 1170px)' data-srcset='<?php bloginfo('template_directory');?>/images/laptop@2x.jpg'>
 
-        <img id='sec-seven-image' class='lazyload' src='<?php bloginfo('template_directory');?>/images/img-profile.jpg'
-          alt='' />
+        <img id='sec-seven-image' class='lazyload'
+          data-src='<?php bloginfo('template_directory');?>/images/img-profile.jpg' alt='' />
 
       </picture>
 

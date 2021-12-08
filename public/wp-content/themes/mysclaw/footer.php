@@ -1,13 +1,17 @@
 <footer id="consultation">
 
-  <picture>
+  <div id='footer-bg-wrapper'>
 
-    <source media='(min-width: 1170px)' data-srcset='<?php bloginfo('template_directory');?>/images/bkg-ft.jpg'>
+    <picture>
 
-    <img id='footer-bg' class='lazyload' src='<?php bloginfo('template_directory');?>/images/mobile-placeholder.png'
-      alt='' />
+      <source media='(min-width: 1170px)' data-srcset='<?php bloginfo('template_directory');?>/images/bkg-ft.jpg'>
 
-  </picture>
+      <img id='footer-bg' class='lazyload'
+        data-src='<?php bloginfo('template_directory');?>/images/mobile-placeholder.png' alt='' />
+
+    </picture>
+
+  </div><!-- footer-bg-wrapper -->
 
   <div id='footer-inner'>
 
@@ -40,7 +44,7 @@
       </ul><!-- copyright -->
 
       <a id='ilawermarketing' href='//ilawyermarketing.com' target='_blank' rel='noopener'>
-        <img src='<?php bloginfo('template_directory');?>/images/ilawyer.svg' alt='' />
+        <img class='lazyload' data-src='<?php bloginfo('template_directory');?>/images/ilawyer.svg' alt='' />
       </a><!-- ilawermarketing -->
 
     </div><!-- copyright -->

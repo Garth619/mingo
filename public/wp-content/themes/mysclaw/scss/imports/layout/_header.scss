@@ -182,6 +182,16 @@ header {
   }
 }
 
+body:not(.page-template-template-home) {
+  a.spanish-button {
+    background: $blue;
+    &:hover {
+      background: $brownlight;
+      border-color: $brownlight;
+    }
+  }
+}
+
 a.spanish-button {
   display: none;
   @include mq(small_laptop) {

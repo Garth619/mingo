@@ -4,7 +4,7 @@
 
     <div id='sec-three-image-wrapper'>
 
-      <img src='<?php bloginfo('template_directory');?>/images/img-1.jpg' alt='' />
+      <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/img-1.jpg' alt='' />
 
     </div><!-- sec-three-image-wrapper -->
 

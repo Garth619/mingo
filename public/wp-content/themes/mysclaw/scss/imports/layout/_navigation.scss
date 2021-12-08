@@ -1,7 +1,7 @@
 body:not(.page-template-template-home) {
   nav {
     @include mq(large_laptop) {
-      margin-top: 8px;
+      margin-top: 13px;
     }
   }
 }

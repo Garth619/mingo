@@ -6,12 +6,12 @@
 
     <div id='sec-four-header'>
 
-      <img src='<?php bloginfo('template_directory');?>/images/ico-wreath-L.svg' alt='' />
+      <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/ico-wreath-L.svg' alt='' />
 
       <span id='sec-four-subtitle'>Our Personal<br> Injury Guarantee</span>
       <!-- sec-four-header -->
 
-      <img src='<?php bloginfo('template_directory');?>/images/ico-wreath-R.svg' alt='' />
+      <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/ico-wreath-R.svg' alt='' />
 
     </div><!-- sec-four-header -->
 

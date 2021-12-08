@@ -1,5 +1,6 @@
 #banner-wrapper {
   position: relative;
+  overflow: hidden;
   padding: 45px 20px;
   @include mq(small_tablet) {
     padding: 66px 20px 53px;

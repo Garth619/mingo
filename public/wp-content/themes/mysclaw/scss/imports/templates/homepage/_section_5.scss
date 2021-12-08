@@ -82,6 +82,7 @@ img#sec-five-bg-img {
   padding: 0 15px;
   @include mq(small_tablet) {
     padding: 0 0 0 43px;
+    overflow: hidden;
   }
   @include mq(small_laptop) {
     padding: 0 93px;

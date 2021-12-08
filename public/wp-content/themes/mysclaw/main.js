@@ -78,6 +78,18 @@ jQuery(document).ready(function ($) {
   }
 
   createWaypoint("section-one", "body", "sticky", 85, null, true);
+  createWaypoint(
+    "section-three",
+    "#section-three",
+    "visible",
+    -100,
+    null,
+    true
+  );
+
+  createWaypoint("sec-five-bg", "#sec-five-bg", "visible", 150, null, true);
+  createWaypoint("section-seven", "#section-seven", "visible", 80, null, true);
+  createWaypoint("consultation", "#consultation", "visible", 380, null, true);
   createWaypoint("internal-main", "body", "sticky", 85, null, true);
 
   /* Smooth Scroll down to section on click (<a href="#id_of_section_to_be_scrolled_to">)

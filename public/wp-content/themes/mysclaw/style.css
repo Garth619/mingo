@@ -484,11 +484,6 @@ textarea {
   box-sizing: border-box;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -802,18 +797,28 @@ body.sticky #internal-main {
 
 #mt-scroll {
   position: sticky;
-  margin-top: 53px;
+  position: -webkit-sticky;
+  padding-top: 53px;
+  padding-bottom: 53px;
   left: 0;
+  top: 0;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  #mt-scroll {
+    padding-top: 123px;
+  }
 }
 @media screen and (min-width: 1170px) {
   #mt-scroll {
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 @media screen and (min-width: 1380px) {
   #mt-scroll {
-    margin-top: 74px;
+    padding-top: 74px;
+    padding-bottom: 74px;
   }
 }
 #mt-scroll img {
@@ -1509,6 +1514,14 @@ header {
   }
 }
 
+body:not(.page-template-template-home) a.spanish-button {
+  background: #222537;
+}
+body:not(.page-template-template-home) a.spanish-button:hover {
+  background: #ccad7d;
+  border-color: #ccad7d;
+}
+
 a.spanish-button {
   display: none;
 }
@@ -1568,7 +1581,7 @@ a.spanish-button {
 
 @media screen and (min-width: 1380px) {
   body:not(.page-template-template-home) nav {
-    margin-top: 8px;
+    margin-top: 13px;
   }
 }
 
@@ -1861,6 +1874,7 @@ nav.open {
 
 #banner-wrapper {
   position: relative;
+  overflow: hidden;
   padding: 45px 20px;
 }
 @media screen and (min-width: 768px) {
@@ -2170,9 +2184,18 @@ footer {
   background: url(images/bkg-pattern.jpg) repeat;
   position: relative;
 }
-img#footer-bg {
+#footer-bg-wrapper {
+  overflow: hidden;
+  position: relative;
   width: 100%;
   height: 508px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#footer-bg-wrapper img#footer-bg {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
@@ -2253,11 +2276,11 @@ span#footer-form-title {
 }
 
 .gform_wrapper.gravity-theme .gform_fields {
-  grid-row-gap: 8px !important;
+  grid-row-gap: 0px !important;
 }
 @media screen and (min-width: 768px) {
   .gform_wrapper.gravity-theme .gform_fields {
-    grid-row-gap: 11px !important;
+    grid-row-gap: 0px !important;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 768px) {
@@ -2300,10 +2323,12 @@ span#footer-form-title {
 }
 #footer-form .gform_wrapper .gfield {
   position: relative;
+  margin-bottom: 8px !important;
 }
 @media screen and (min-width: 768px) {
   #footer-form .gform_wrapper .gfield {
     flex-basis: calc(33% - 4px);
+    margin-bottom: 11px !important;
   }
 }
 #footer-form .gform_wrapper .gfield::after {
@@ -2694,6 +2719,7 @@ body.sticky #section-one {
 @media screen and (min-width: 1170px) {
   #section-one {
     margin-top: 0px;
+    overflow: hidden;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -3624,6 +3650,7 @@ img#sec-five-bg-img {
 @media screen and (min-width: 768px) {
   #sec-five-slider {
     padding: 0 0 0 43px;
+    overflow: hidden;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -5705,5 +5732,219 @@ h2.post-header a:hover {
 @media screen and (min-width: 1650px) {
   .single-case-result-hover .single-case-result-description {
     padding: 0px 75px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  #sec-one-video {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+    transition: opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear;
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #sec-one-title {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+    transition: opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear;
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  ul#sec-one-selling-points {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+    transition: opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear;
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  .sec-one-button {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+    transition: opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear;
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  img#hero {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+    transition: opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear;
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  body.ready #sec-one-video {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+    transition-delay: 300ms, 300ms;
+  }
+  body.ready #sec-one-title {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+    transition-delay: 500ms, 500ms;
+  }
+  body.ready ul#sec-one-selling-points {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+    transition-delay: 700ms, 700ms;
+  }
+  body.ready .sec-one-button {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+    transition-delay: 900ms, 900ms;
+  }
+  body.ready img#hero {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    transition-delay: 0ms, 0ms;
+  }
+
+  #section-three #sec-three-image-wrapper {
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
+    transition: -webkit-transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #section-three #sec-three-image-wrapper img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    transition: -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #section-three.visible #sec-three-image-wrapper {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  #section-three.visible #sec-three-image-wrapper img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  #sec-five-bg img#sec-five-bg-img {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+    transition: opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear;
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #sec-five-bg.visible img#sec-five-bg-img {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    transition-delay: 0ms, 0ms;
+  }
+
+  #section-seven #sec-seven-image-wrapper {
+    overflow: hidden;
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
+    transition: -webkit-transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #section-seven #sec-seven-image-wrapper img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    transition: -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #section-seven.visible #sec-seven-image-wrapper {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  #section-seven.visible #sec-seven-image-wrapper img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  img#footer-bg {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    transition: -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  footer.visible img#footer-bg {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  .about-img-wrapper {
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+    transition: -webkit-transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  .about-img-wrapper img.about-img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    transition: -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  body.ready .about-img-wrapper {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  body.ready .about-img-wrapper img.about-img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  #att-profile {
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+    transition: -webkit-transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #att-profile img#att-img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    transition: -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  body.ready #att-profile {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  body.ready #att-profile img#att-img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  img#banner-image {
+    -webkit-transform: scale(1.15, 1.15);
+            transform: scale(1.15, 1.15);
+    transition: opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear;
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear, -webkit-transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  body.ready img#banner-image {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    transition-delay: 0ms, 0ms;
   }
 }

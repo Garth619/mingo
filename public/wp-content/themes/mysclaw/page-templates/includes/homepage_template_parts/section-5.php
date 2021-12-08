@@ -36,7 +36,7 @@
 
         <div class='sec-five-inner'>
 
-          <img class='stars' src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
+          <img class='stars lazyload' data-src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
 
           <span class='sec-five-title'>Mark & his team go into representing a client&nbsp;110%</span>
           <!-- sec-five-title -->
@@ -57,7 +57,7 @@
 
         <div class='sec-five-inner'>
 
-          <img class='stars' src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
+          <img class='stars lazyload' data-src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
 
           <span class='sec-five-title'>The best attorney in town —hands down!!</span>
           <!-- sec-five-title -->
@@ -77,7 +77,7 @@
 
         <div class='sec-five-inner'>
 
-          <img class='stars' src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
+          <img class='stars lazyload' data-src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
 
           <span class='sec-five-title'>He was the right man for the job!</span>
           <!-- sec-five-title -->
@@ -97,7 +97,7 @@
 
         <div class='sec-five-inner'>
 
-          <img class='stars' src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
+          <img class='stars lazyload' data-src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
 
           <span class='sec-five-title'>Mark & his team go into representing a client&nbsp;110%</span>
           <!-- sec-five-title -->
@@ -118,7 +118,7 @@
 
         <div class='sec-five-inner'>
 
-          <img class='stars' src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
+          <img class='stars lazyload' data-src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
 
           <span class='sec-five-title'>Mark & his team go into representing a client&nbsp;110%</span>
           <!-- sec-five-title -->
@@ -139,7 +139,7 @@
 
         <div class='sec-five-inner'>
 
-          <img class='stars' src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
+          <img class='stars lazyload' data-src='<?php bloginfo('template_directory');?>/images/ico-starz.svg' alt='' />
 
           <span class='sec-five-title'>Mark & his team go into representing a client&nbsp;110%</span>
           <!-- sec-five-title -->

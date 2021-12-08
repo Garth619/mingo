@@ -8,7 +8,7 @@ function load_my_styles_scripts()
 
     // Styles
 
-    wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
+    // wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
 
 }
 
@@ -71,7 +71,7 @@ add_filter('script_loader_tag', function ($tag, $handle, $src) {
 /* CSS in Header for Lighthouse
 -------------------------------------------------------------- */
 
-//add_action('wp_head', 'merge_include_css');
+add_action('wp_head', 'merge_include_css');
 function merge_include_css()
 {
     $theme = wp_get_theme();

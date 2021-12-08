@@ -9,10 +9,16 @@ footer {
   }
 }
 
-img#footer-bg {
+#footer-bg-wrapper {
+  overflow: hidden;
+  position: relative;
   @include box(100%, 508px);
-  object-fit: cover;
   @include abs(0, null, null, 0);
+  img#footer-bg {
+    @include box(100%, 100%);
+    object-fit: cover;
+    @include abs(0, null, null, 0);
+  }
 }
 
 #footer-inner {
@@ -69,9 +75,11 @@ span#footer-form-title {
 }
 
 .gform_wrapper.gravity-theme .gform_fields {
-  grid-row-gap: 8px !important;
+  grid-row-gap: 0px !important;
+
   @include mq(small_tablet) {
-    grid-row-gap: 11px !important;
+    grid-row-gap: 0px !important;
+
     @include mq(small_tablet) {
       display: flex !important;
       justify-content: space-between;
@@ -106,8 +114,10 @@ span#footer-form-title {
     }
     .gfield {
       position: relative;
+      margin-bottom: 8px !important;
       @include mq(small_tablet) {
         flex-basis: calc(33% - 4px);
+        margin-bottom: 11px !important;
       }
       &::after {
         @include abs(19px, 10px, null, null);

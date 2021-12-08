@@ -1,66 +1,170 @@
-// @media screen and (min-width: 1199px) {
-//   // vars and mixins
+@media screen and (min-width: 1199px) {
+  // vars and mixins
 
-//   $transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98),
-//     opacity 500ms linear;
-//   $transition_two: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  $transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98),
+    opacity 500ms linear;
+  $transition_two: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
 
-//   @mixin img_scale($scale) {
-//     transform: scale($scale, $scale);
-//     transition: $transition;
-//   }
+  @mixin img_scale($scale) {
+    transform: scale($scale, $scale);
+    transition: $transition;
+  }
 
-//   @mixin transform_opacity($transform: 0px) {
-//     transform: translateY($transform);
-//     opacity: 0;
-//     transition: $transition;
-//   }
+  @mixin transform_opacity($transform: 0px) {
+    transform: translateY($transform);
+    opacity: 0;
+    transition: $transition;
+  }
 
-//   @mixin fire_transform_opacity($delay) {
-//     transform: translateY(0px);
-//     opacity: 1;
-//     transition-delay: $delay, $delay;
-//   }
+  @mixin fire_transform_opacity($delay) {
+    transform: translateY(0px);
+    opacity: 1;
+    transition-delay: $delay, $delay;
+  }
 
-//   @mixin line_animation($direction) {
-//     transform: scale(0, 1);
-//     transform-origin: top $direction;
-//     transition: $transition_two;
-//   }
+  @mixin line_animation($direction) {
+    transform: scale(0, 1);
+    transform-origin: top $direction;
+    transition: $transition_two;
+  }
 
-//   @mixin fire_return_scale($scale, $delay: 0ms) {
-//     transform: scale($scale, $scale);
-//     transition-delay: $delay, $delay;
-//   }
-//   #sec-one-bottom-inner {
-//     @include transform_opacity(-20px);
-//   }
-//   #sec-one-top .playbook-video img.playbook-video-image {
-//     @include img_scale(1.14);
-//   }
-//   #sec-one-top span#learn-title {
-//     @include transform_opacity(20px);
-//   }
-//   #section-one {
-//     .playbook-play-button {
-//       @include transform_opacity(20px);
-//     }
-//   }
-
-//   body.ready {
-//     #sec-one-bottom-inner {
-//       @include fire_transform_opacity(300ms);
-//     }
-//     #sec-one-top .playbook-video img.playbook-video-image {
-//       @include fire_return_scale(1);
-//     }
-//     #section-one {
-//       .playbook-play-button {
-//         @include fire_transform_opacity(300ms);
-//       }
-//     }
-//     #sec-one-top span#learn-title {
-//       @include fire_transform_opacity(500ms);
-//     }
-//   }
-// }
+  @mixin fire_return_scale($scale, $delay: 0ms) {
+    transform: scale($scale, $scale);
+    transition-delay: $delay, $delay;
+  }
+  #sec-one-video {
+    @include transform_opacity(-20px);
+  }
+  #sec-one-title {
+    @include transform_opacity(-20px);
+  }
+  ul#sec-one-selling-points {
+    @include transform_opacity(-20px);
+  }
+  .sec-one-button {
+    @include transform_opacity(-20px);
+  }
+  img#hero {
+    @include img_scale(1.1);
+  }
+  body.ready {
+    #sec-one-video {
+      @include fire_transform_opacity(300ms);
+    }
+    #sec-one-title {
+      @include fire_transform_opacity(500ms);
+    }
+    ul#sec-one-selling-points {
+      @include fire_transform_opacity(700ms);
+    }
+    .sec-one-button {
+      @include fire_transform_opacity(900ms);
+    }
+    img#hero {
+      @include fire_return_scale(1);
+    }
+  }
+  // section three
+  #section-three {
+    #sec-three-image-wrapper {
+      transform: translateY(75px);
+      transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+      img {
+        transform: scale(1.1);
+        transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+      }
+    }
+  }
+  #section-three.visible {
+    #sec-three-image-wrapper {
+      transform: translateY(0px);
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+  // section five
+  #sec-five-bg {
+    img#sec-five-bg-img {
+      @include img_scale(1.1);
+    }
+  }
+  #sec-five-bg.visible {
+    img#sec-five-bg-img {
+      @include fire_return_scale(1);
+    }
+  }
+  // section seven
+  #section-seven {
+    #sec-seven-image-wrapper {
+      overflow: hidden;
+      transform: translateY(75px);
+      transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+      img {
+        transform: scale(1.1);
+        transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+      }
+    }
+  }
+  #section-seven.visible {
+    #sec-seven-image-wrapper {
+      transform: translateY(0px);
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+  // footer
+  img#footer-bg {
+    transform: scale(1.1);
+    transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  footer.visible {
+    img#footer-bg {
+      transform: scale(1);
+    }
+  }
+  // about
+  .about-img-wrapper {
+    transform: translateY(35px);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    img.about-img {
+      transform: scale(1.1);
+      transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    }
+  }
+  body.ready {
+    .about-img-wrapper {
+      transform: translateY(0px);
+      img.about-img {
+        transform: scale(1);
+      }
+    }
+  }
+  // att
+  #att-profile {
+    transform: translateY(35px);
+    transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    img#att-img {
+      transform: scale(1.1);
+      transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    }
+  }
+  body.ready {
+    #att-profile {
+      transform: translateY(0px);
+      img#att-img {
+        transform: scale(1);
+      }
+    }
+  }
+  // banner
+  img#banner-image {
+    @include img_scale(1.15);
+  }
+  body.ready {
+    img#banner-image {
+      @include fire_return_scale(1);
+    }
+  }
+}

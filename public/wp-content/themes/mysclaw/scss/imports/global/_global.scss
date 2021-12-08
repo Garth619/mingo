@@ -29,14 +29,22 @@ body.sticky {
 
 #mt-scroll {
   position: sticky;
-  margin-top: 53px;
+  position: -webkit-sticky;
+  padding-top: 53px;
+  padding-bottom: 53px;
   left: 0;
+  top: 0;
   width: 100%;
+  @include mq(small_tablet) {
+    padding-top: 123px;
+  }
   @include mq(small_laptop) {
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   @include mq(large_laptop) {
-    margin-top: 74px;
+    padding-top: 74px;
+    padding-bottom: 74px;
   }
   img {
     @include image();
