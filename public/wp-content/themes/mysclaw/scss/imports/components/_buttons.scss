@@ -52,6 +52,12 @@
       }
       &::after {
         @include tri(right, 7px, 8px, $white);
+        @include mq(small_tablet) {
+          @include tri(right, 8px, 10px, $white);
+        }
+        @include mq(large_laptop) {
+          @include tri(right, 11px, 13px, $white);
+        }
       }
     }
   }

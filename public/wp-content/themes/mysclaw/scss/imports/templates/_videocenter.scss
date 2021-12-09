@@ -36,13 +36,15 @@
   }
   &:hover {
     .single-video-thumbnail-wrapper {
-      img:not(.single-video-spacer) {
-        transform: scale(1.1);
-      }
       .single-video-overlay {
-        span.single-play-button {
+        // img {
+        //   &.single-video-thumb {
+        //     transform: scale(1.1);
+        //   }
+        // }
+        span.play-button {
           &::after {
-            @include tri(right, 13px, 20px, $red);
+            @include tri(right, 8px, 10px, $white);
           }
         }
       }
@@ -88,6 +90,7 @@
           @include box(75px, 75px);
         }
         &::before {
+          transition: all 200ms ease-in-out;
           @include box(48px, 48px);
           @include mq(small_tablet) {
             @include box(58px, 58px);

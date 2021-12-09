@@ -4,59 +4,45 @@
 
     <div id='sec-two-slider'>
 
+      <?php if (have_rows('section_two_case_results')): ?>
+      <?php while (have_rows('section_two_case_results')): the_row();?>
+
       <div class='sec-two-slide'>
 
         <div class='sec-two-slide-inner'>
 
-          <img id='medical-icon' src='<?php bloginfo('template_directory');?>/images/ico-01.svg' alt='' />
+          <?php if (get_sub_field('icon') == 'Medical') {?>
 
-          <span class='sec-two-slide-amount'>$320,000</span><!-- sec-two-slide-amount -->
+          <img id='medical-icon' src='<?php bloginfo('template_directory');?>/images/ico-01.svg' alt='medical-icon' />
 
-          <span class='sec-two-slide-type'>MeDICAL MALPRACTICE</span><!-- sec-two-slide-type -->
+          <?php }?>
 
-          <span class='sec-two-slide-descrip'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis
-            lectus, dignissim vel tellus eu, malesuada faucibus massa. Nam venenatis lacus ac eleifend lacinia. </span>
+          <?php if (get_sub_field('icon') == 'Boat') {?>
+
+          <img id='medical-icon' src='<?php bloginfo('template_directory');?>/images/ico-02.svg' alt='boat-icon' />
+
+          <?php }?>
+
+          <?php if (get_sub_field('icon') == 'Car Accident') {?>
+
+          <img id='car-icon' src='<?php bloginfo('template_directory');?>/images/ico-03.svg' alt='car-icon' />
+
+          <?php }?>
+
+          <span class='sec-two-slide-amount'> <?php the_sub_field('amount');?></span><!-- sec-two-slide-amount -->
+
+          <span class='sec-two-slide-type'> <?php the_sub_field('type');?></span><!-- sec-two-slide-type -->
+
+          <span class='sec-two-slide-descrip'><?php the_sub_field('description');?> </span>
           <!-- sec-two-slide-descrip -->
 
         </div><!-- sec-two-slide-inner -->
 
       </div><!-- sec-two-slide -->
 
-      <div class='sec-two-slide'>
+      <?php endwhile;?>
 
-        <div class='sec-two-slide-inner'>
-
-          <img id='boat-icon' src='<?php bloginfo('template_directory');?>/images/ico-03.svg' alt='' />
-
-          <span class='sec-two-slide-amount'>$150,000</span><!-- sec-two-slide-amount -->
-
-          <span class='sec-two-slide-type'>Boat Accident</span><!-- sec-two-slide-type -->
-
-          <span class='sec-two-slide-descrip'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis
-            lectus, dignissim vel tellus eu, malesuada faucibus massa. Nam venenatis lacus ac eleifend lacinia. </span>
-          <!-- sec-two-slide-descrip -->
-
-        </div><!-- sec-two-slide-inner -->
-
-      </div><!-- sec-two-slide -->
-
-      <div class='sec-two-slide'>
-
-        <div class='sec-two-slide-inner'>
-
-          <img id='car-icon' src='<?php bloginfo('template_directory');?>/images/ico-02.svg' alt='' />
-
-          <span class='sec-two-slide-amount'>$125,000</span><!-- sec-two-slide-amount -->
-
-          <span class='sec-two-slide-type'>car accident</span><!-- sec-two-slide-type -->
-
-          <span class='sec-two-slide-descrip'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis
-            lectus, dignissim vel tellus eu, malesuada faucibus massa. Nam venenatis lacus ac eleifend lacinia. </span>
-          <!-- sec-two-slide-descrip -->
-
-        </div><!-- sec-two-slide-inner -->
-
-      </div><!-- sec-two-slide -->
+      <?php endif;?>
 
     </div><!-- sec-two-slider -->
 

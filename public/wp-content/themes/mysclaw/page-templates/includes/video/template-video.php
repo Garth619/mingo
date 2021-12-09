@@ -24,7 +24,7 @@ if ($youtube) {
 
 ?>
 
-<div class='single-video'>
+<div class='single-video global-video'>
 
   <div class='single-video-thumbnail-wrapper'>
 

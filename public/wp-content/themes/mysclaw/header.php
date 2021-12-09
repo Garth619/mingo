@@ -75,9 +75,16 @@ if (!is_front_page()) {
 
           <picture>
 
-            <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory');?>/images/logo.svg'>
+            <?php $logo_light = get_field('logo_light', 'option');?>
+            <?php if ($logo_light) {?>
+            <source media='(min-width: 1170px)' srcset='<?php echo $logo_light['url']; ?>'>
 
-            <img src='<?php bloginfo('template_directory');?>/images/logo-lt.svg' alt='' />
+            <?php }?>
+
+            <?php $logo_dark = get_field('logo_dark', 'option');?>
+            <?php if ($logo_dark) {?>
+            <img src="<?php echo $logo_dark['url']; ?>" alt="<?php echo $logo_dark['alt']; ?>" />
+            <?php }?>
 
           </picture>
 
@@ -91,13 +98,16 @@ if (!is_front_page()) {
 
           <div id='header-free-consult'>
 
-            <span>free consultation</span>
+            <span><?php the_field('free_consultation', 'option');?></span>
 
-            <a id='phone' href='tel:+14142737400'>(414) 273-7400</a><!-- phone -->
+            <a id='phone'
+              href='tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('phone', 'option')); ?>'><?php the_field('phone', 'option');?></a>
+            <!-- phone -->
 
           </div><!-- header-free-consult -->
 
-          <a class='button-one spanish-button' href='/espanol'>español</a>
+          <a class='button-one spanish-button'
+            href='<?php the_field('spanish_button_link', 'option');?>'><?php the_field('spanish_button_verbiage', 'option');?></a>
           <!-- button spanish-button -->
 
         </div><!-- header-right-contact -->

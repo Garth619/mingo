@@ -4,27 +4,19 @@
 
     <div id='sec-three-image-wrapper'>
 
-      <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/img-1.jpg' alt='' />
+      <?php $section_three_image = get_field('section_three_image');?>
+      <?php if ($section_three_image) {?>
+      <img class="lazyload" data-src="<?php echo $section_three_image['url']; ?>"
+        alt="<?php echo $section_three_image['alt']; ?>" />
+      <?php }?>
 
     </div><!-- sec-three-image-wrapper -->
 
     <div id='sec-three-content' class='content'>
 
-      <h1 id='sec-three-title'>Milwaukee<br /> Personal Injury Attorneys</h1>
+      <h1 id='sec-three-title'><?php the_field('section_three_title');?></h1>
 
-      <h2>Lorem ipsum dolor sit amet, dignissim vel tellus eu, malesuada faucibus massa. Nam venenatis lacus ac eleifend
-        malesuad.
-      </h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis lectus, dignissim vel tellus eu,
-        malesuada faucibus massa. Nam venenatis lacus ac eleifend lacinia. Orci varius natoque penatibus et magnis dis
-        parturient montes, nascetur ridiculus mus. Aliquam in sem venenatis, rutrum dui at, commodo metus. </p>
-
-      <p>Aliquam pellentesque enim urna, id laoreet justo viverra vitae. Proin eleifend tortor consequat elementum
-        mattis. Sed blandit lacus a consequat iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Mauris ut purus sit amet tellus sollicitudin auctor. Orci varius natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus. Mauris tempus elementum neque ac imperdiet. Nullam porttitor aliquet faucibus.
-      </p>
+      <?php the_field('section_three_content');?>
 
     </div><!-- sec-three-content-->
 

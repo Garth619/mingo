@@ -1022,6 +1022,26 @@ body.sticky #internal-main {
   border-left: 8px solid #fff;
   border-right: none;
 }
+@media screen and (min-width: 768px) {
+  .global-video:hover .play-button::after {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid #fff;
+    border-right: none;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .global-video:hover .play-button::after {
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 13px solid #fff;
+    border-right: none;
+  }
+}
 
 .mywistia {
   position: absolute;
@@ -3477,32 +3497,37 @@ ul#sec-one-selling-points li:first-of-type::before {
   margin-bottom: 20px;
 }
 
-.sec-four-button {
+.content .sec-four-button {
   font-size: 13px;
   padding: 10px 35px;
   letter-spacing: 1.63px;
+  text-decoration: none;
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
-  .sec-four-button {
+  .content .sec-four-button {
     padding: 6px 35px;
   }
 }
 @media screen and (min-width: 1170px) {
-  .sec-four-button {
+  .content .sec-four-button {
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 1380px) {
-  .sec-four-button {
+  .content .sec-four-button {
     font-size: 16px;
     letter-spacing: 2px;
     padding: 6px 42px;
   }
 }
 @media screen and (min-width: 1650px) {
-  .sec-four-button {
+  .content .sec-four-button {
     padding: 0px 42px;
   }
+}
+.content .sec-four-button:hover {
+  color: #fff;
 }
 
 #sec-four-content {
@@ -4837,16 +4862,12 @@ span#about-slider-title::before {
     margin-bottom: 55px;
   }
 }
-.single-video:hover .single-video-thumbnail-wrapper img:not(.single-video-spacer) {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-.single-video:hover .single-video-thumbnail-wrapper .single-video-overlay span.single-play-button::after {
+.single-video:hover .single-video-thumbnail-wrapper .single-video-overlay span.play-button::after {
   width: 0;
   height: 0;
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
-  border-left: 20px solid #fd3939;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid #fff;
   border-right: none;
 }
 .single-video .single-wistia {
@@ -4914,6 +4935,7 @@ span#about-slider-title::before {
   }
 }
 .single-video .single-video-thumbnail-wrapper .single-video-overlay span.play-button::before {
+  transition: all 200ms ease-in-out;
   width: 48px;
   height: 48px;
 }
