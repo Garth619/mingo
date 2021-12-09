@@ -4,16 +4,7 @@
 
     <div id='sec-seven-content' class='content'>
 
-      <h2>Lorem ipsum dolor sit amet, dignissim vel tellus eu, malesuada faucibus massa. Nam venenatis lacus ac eleifend
-        malesuad.</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis lectus, dignissim vel tellus eu,
-        malesuada faucibus massa. Nam venenatis lacus ac eleifend lacinia. Orci varius natoque penatibus et magnis dis
-        parturient montes, nascetur ridiculus mus. Aliquam in sem venenatis, rutrum dui at, commodo metus. </p>
-
-      <p>Aliquam pellentesque enim urna, id laoreet justo viverra vitae. Proin eleifend tortor consequat elementum
-        mattis. Sed blandit lacus a consequat iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Mauris ut purus sit amet tellus sollicitudin auctor. Orci varius natoque </p>
+      <?php the_field('section_seven_content');?>
 
     </div><!-- sec-seven-content -->
 
@@ -21,12 +12,20 @@
 
       <picture>
 
-        <source media='(min-width: 1650px)' data-srcset='<?php bloginfo('template_directory');?>/images/Img-2.jpg'>
+        <?php $section_seven_image_desktop = get_field('section_seven_image_desktop');?>
+        <?php if ($section_seven_image_desktop) {?>
+        <source media='(min-width: 1650px)' data-srcset='<?php echo $section_seven_image_desktop['url']; ?>'>
+        <?php }?>
 
-        <source media='(min-width: 1170px)' data-srcset='<?php bloginfo('template_directory');?>/images/laptop@2x.jpg'>
+        <?php $section_seven_image_laptop = get_field('section_seven_image_laptop');?>
+        <?php if ($section_seven_image_laptop) {?>
+        <source media='(min-width: 1170px)' data-srcset='<?php echo $section_seven_image_laptop['url']; ?>'>
+        <?php }?>
 
-        <img id='sec-seven-image' class='lazyload'
-          data-src='<?php bloginfo('template_directory');?>/images/img-profile.jpg' alt='' />
+        <?php $section_seven_image_mobile = get_field('section_seven_image_mobile');?>
+
+        <img id='sec-seven-image' class='lazyload' data-src='<?php echo $section_seven_image_mobile['url']; ?>'
+          alt='<?php echo $section_seven_image_mobile['alt']; ?>' />
 
       </picture>
 

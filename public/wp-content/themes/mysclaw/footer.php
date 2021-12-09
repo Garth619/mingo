@@ -4,7 +4,11 @@
 
     <picture>
 
-      <source media='(min-width: 1170px)' data-srcset='<?php bloginfo('template_directory');?>/images/bkg-ft.jpg'>
+      <?php $footer_background_desktop = get_field('footer_background_desktop', 'option');?>
+      <?php if ($footer_background_desktop) {?>
+
+      <source media='(min-width: 1170px)' data-srcset='<?php echo $footer_background_desktop['url']; ?>'>
+      <?php }?>
 
       <img id='footer-bg' class='lazyload'
         data-src='<?php bloginfo('template_directory');?>/images/mobile-placeholder.png' alt='' />
@@ -17,7 +21,7 @@
 
     <div id='footer-form'>
 
-      <span id='footer-form-title'>FREe CASE CONSULTATION</span><!-- footer-form-title -->
+      <span id='footer-form-title'><?php the_field('footer_form_title', 'option');?></span><!-- footer-form-title -->
 
       <?php gravity_form(1, false, false, false, '', true, 1233);?>
 
@@ -25,22 +29,25 @@
 
     <div id='footer-contact'>
 
-      <a id='footer-address'
-        href='https://www.google.com/maps/place/330+E+Kilbourn+Ave+Suite+1221,+Milwaukee,+WI+53202/@43.0431442,-87.9096948,17z/data=!3m1!4b1!4m5!3m4!1s0x880519093e955555:0x9ffdbf0039ad4a72!8m2!3d43.0431442!4d-87.9075061'
-        target='_blank' rel='noopener'>330 East Kilbourn Ave<br> Suite 1221<br> Milwaukee,
-        WI 53202</a>
+      <a id='footer-address' href='<?php the_field('google_address_link', 'option');?>' target='_blank'
+        rel='noopener'><?php the_field('address', 'option');?></a>
       <!-- footer-address -->
 
-      <a id='footer-phone' href='tel:+14142737400'>(414) 273-7400</a><!-- footer-phone -->
+      <a id='footer-phone'
+        href='tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('footer_phone', 'option')); ?>'><?php the_field('footer_phone', 'option');?></a>
+      <!-- footer-phone -->
 
     </div><!-- footer-contact -->
 
     <div id='copyright'>
 
       <ul>
-        <li>&copy; <?php echo date('Y'); ?> Mingo & Yankala, S.C. All Rights Reserved.</li>
-        <li><a href='<?php bloginfo('url');?>/privacy-policy'>Privacy Policy</a></li>
-        <li><a href='<?php bloginfo('url');?>/disclaimer'>Disclaimer</a></li>
+        <li>&copy; <?php echo date('Y'); ?> <?php the_field('copyright', 'option');?></li>
+        <li><a
+            href='<?php the_field('privacy_policy_link', 'option');?>'><?php the_field('privacy_policy', 'option');?></a>
+        </li>
+        <li><a href='<?php the_field('disclaimer_link', 'option');?>'><?php the_field('disclaimer', 'option');?></a>
+        </li>
       </ul><!-- copyright -->
 
       <a id='ilawermarketing' href='//ilawyermarketing.com' target='_blank' rel='noopener'>
